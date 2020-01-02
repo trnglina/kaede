@@ -1,0 +1,9 @@
+<footer class="footer">
+    <p>{{ .Site.Title }} &copy; {{ now.Format "2006"}}</p>
+    <p>
+        {{ $len := (len .Site.Data.external.links) }}
+        {{ range $index, $element := .Site.Data.external.links }}
+        <a href="{{ $element.link }}">{{ $element.title }}</a> {{ if not (eq $index (sub $len 1)) }}|{{ end }}
+        {{ end }}
+    </p>
+</footer>

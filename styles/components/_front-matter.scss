@@ -1,0 +1,32 @@
+.front-matter {
+  margin-bottom: 1em;
+
+  color: $colour--dark;
+
+  .front-matter-tags-list {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    white-space: wrap;
+
+    list-style: none;
+
+    > li {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .tag {
+      padding: 5px;
+
+      background: rgba(0, 0, 0, 0.05);
+
+      line-height: 2.1;
+
+      &::before {
+        content: "#";
+      }
+    }
+  }
+}

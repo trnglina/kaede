@@ -1,0 +1,10 @@
+{{ if .Pages }}
+<ol class="post-list">
+    {{ range .Pages }}
+    <li>
+        {{- partial "front-matter.html" . -}}
+        {{- partial "post-card.html" . -}}
+    </li>
+    {{ end }}
+</ol>
+{{ end }}

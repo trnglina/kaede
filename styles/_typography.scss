@@ -1,0 +1,43 @@
+body {
+  font-family: $font--general;
+  font-size: $type--base-size;
+  font-weight: normal;
+  line-height: $type--base-line-height;
+
+  @media only screen and (max-width: $breakpoint) {
+    font-size: 0.8 * $type--base-size;
+  }
+
+  *::selection {
+    background-color: $colour--selection;
+    color: $colour--light;
+  }
+}
+
+a {
+  color: $colour--link;
+
+  &:focus {
+    outline: 3px solid $colour__accent;
+    outline-offset: 2px;
+  }
+}
+
+hr {
+  border-bottom: 1px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+figure,
+ul,
+ol {
+  display: block;
+  margin: 1em auto;
+}

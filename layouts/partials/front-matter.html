@@ -1,0 +1,13 @@
+<div class="front-matter">
+    {{ if .Date }}
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 02" }}</time>
+    {{ end }}
+    
+    {{ if .Params.tags }}
+    <ul class="front-matter-tags-list">
+        {{ range .Params.tags }}
+        <li><a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>

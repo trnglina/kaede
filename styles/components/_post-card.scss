@@ -1,0 +1,110 @@
+.post-card {
+  display: block;
+  position: relative;
+  width: 400px;
+  margin: 0 $spacing--body $spacing--body 0;
+  overflow-y: visible;
+  z-index: 1;
+
+  text-decoration: none;
+
+  transition: $transition-general;
+
+  &:hover,
+  &:focus {
+    > h1 {
+      color: $colour--light !important;
+      font-style: italic;
+      text-shadow: 1px 1px $colour--dark, -1px -1px $colour--dark,
+        1px -1px $colour--dark, -1px 1px $colour--dark, 3px 3px $colour--dark;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    > p {
+      transform: translateY(0);
+      opacity: 1;
+
+      transition: $transition-general;
+
+      &::after {
+        opacity: 1;
+
+        transition: $transition-general;
+      }
+    }
+  }
+
+  > h1 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+
+    color: $colour--dark;
+    font-size: 400%;
+    font-weight: 600;
+    hyphens: auto;
+    line-height: 1;
+    text-shadow: 1px 1px transparent, -1px -1px transparent,
+      1px -1px transparent, -1px 1px transparent;
+
+    &::after {
+      content: "\00a0→";
+
+      color: $colour--link;
+
+      opacity: 0;
+    }
+  }
+
+  > p {
+    color: $colour--dark;
+    hyphens: auto;
+
+    transform: translateY(1em);
+    opacity: 0.2;
+
+    transition: $transition-general;
+
+    &::after {
+      content: " Continue\00a0→";
+
+      color: $colour--link;
+
+      opacity: 0;
+
+      transition: $transition-general;
+    }
+  }
+
+  &.has-thumbnail {
+    &:hover,
+    &:focus {
+      > img {
+        transform: translateY(-2em);
+        opacity: 1;
+        filter: saturate(0.6);
+
+        transition: transform 0.1s $easing-general;
+      }
+    }
+
+    > img {
+      display: block;
+      width: 100%;
+      z-index: -1;
+
+      transform: translateY(-1em);
+      opacity: 0.2;
+      filter: saturate(0);
+
+      transition: transform 0.1s $easing-general;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint) {
+    width: auto;
+  }
+}

@@ -1,0 +1,12 @@
+<a href="{{ .Permalink }}"
+   class="post-card
+          {{ if .Params.thumbnail }}
+          has-thumbnail
+          {{ end }}">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.thumbnail }}
+    <img src="{{ .Params.thumbnail }}">
+    {{ else }}
+    <p>{{ .Summary }}</p>
+    {{ end }}
+</a>

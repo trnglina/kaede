@@ -1,0 +1,12 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="{{ "/styles/single.css" | absURL }}">
+{{ end }}
+
+{{ define "main" }}
+<main aria-role="main">
+    <h1>{{ .Title }}</h1>
+    <article class="article">
+        {{ .Content }}
+    </article>
+</main>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ $description := .Site.Params.description }}
+{{ if .Description }}
+    {{ $description = .Description }}
+{{ else if .Summary }}
+    {{ $description = .Summary }}
+{{ end }}
+
+{{ $author := .Site.Params.author }}
+
+{{ $title := .Site.Title }}
+{{ if .IsHome }}
+    {{ $description = .Site.Params.description }}
+{{ else if .Title }}
+    {{ $description = .Title }}
+{{ end }}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ $author }}">
+<meta name="developer" content="{{ $author }}">
+<meta name="designer" content="{{ $author }}">
+{{ hugo.Generator }}
+
+<meta name="twitter:card" content="summary" />
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ $title }}">
+{{ if .Params.thumbnail }}
+<meta name="twitter:image:src" content="{{ .Params.thumbnail | absURL }}" />
+<meta property="og:image" content="{{ .Params.thumbnail | absURL }}">
+{{ else }}
+<meta name="twitter:image:src" content="{{ "/images/banners/default.png" | absURL }}" />
+<meta property="og:image" content="{{ "/images/banners/default.png" | absURL }}">
+{{ end }}
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+<title>{{ $title }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}</title>
+
+<link rel="stylesheet" href="{{ "/styles/screen.css" | absURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/images/icons/apple-touch-icon.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "/images/icons/favicon-32x32.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "/images/icons/favicon-16x16.png" | absURL }}">

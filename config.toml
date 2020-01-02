@@ -1,0 +1,10 @@
+baseURL = "https://trnglina.org"
+languageCode = "en-gb"
+title = "trnglina"
+
+[params]
+  author = "trnglina"
+  description = "trnglina's software, design, and words"
+
+[taxonomies]
+  tag = "tags"
