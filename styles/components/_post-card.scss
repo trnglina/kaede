@@ -12,6 +12,8 @@
 
   &:hover,
   &:focus {
+    outline: none;
+
     > h1 {
       color: $colour--light !important;
       font-style: italic;
@@ -108,14 +110,23 @@
   @media only screen and (max-width: $breakpoint) {
     width: auto;
     margin-right: 0;
-    margin-bottom: $spacing--body;
+    margin-bottom: $spacing--base;
 
     > h1 {
       font-size: 300%;
+
+      &::after {
+        opacity: 1;
+      }
     }
 
     > p {
+      transform: translateY(0);
       opacity: 1;
+
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }

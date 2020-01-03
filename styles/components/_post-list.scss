@@ -4,8 +4,8 @@
   left: -$spacing--body;
   right: -$spacing--body;
   width: 100%;
-  margin: 0;
-  padding: $spacing--base $spacing--body;
+  margin: 0 0 $spacing--body / 2 0;
+  padding: $spacing--base $spacing--body $spacing--body / 2 $spacing--body;
   overflow-y: hidden;
   overflow-x: auto;
 
