@@ -1,6 +1,14 @@
 .article {
   max-width: 800px;
 
+  .article-title {
+    margin-top: 0;
+  }
+
+  .front-matter {
+    margin-top: 2em;
+  }
+
   figure {
     margin: 2em 0;
     max-width: inherit;

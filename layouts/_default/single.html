@@ -4,8 +4,9 @@
 
 {{ define "main" }}
 <main aria-role="main">
-    <h1>{{ .Title }}</h1>
     <article class="article">
+        {{- partial "front-matter.html" . -}}
+        <h1 class="article-title">{{ .Title }}</h1>
         {{ .Content }}
     </article>
 </main>

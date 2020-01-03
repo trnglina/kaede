@@ -1,6 +1,4 @@
 .front-matter {
-  margin-bottom: 5px;
-
   color: $colour--dark;
 
   .front-matter-tags-list {
@@ -18,11 +16,7 @@
     }
 
     .tag {
-      padding: 5px;
-
-      background: rgba(0, 0, 0, 0.05);
-
-      line-height: 2.1;
+      text-transform: lowercase;
 
       &::before {
         content: "#";

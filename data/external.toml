@@ -3,10 +3,6 @@
   link = "https://twitter.com/trnglina"
 
 [[links]]
-  title = "contact@trnglina.org"
-  link = "mailto:contact@trnglina.org"
-
-[[links]]
   title = "github/trnglina"
   link = "https://github.com/trnglina/amelie"
 
@@ -17,3 +13,7 @@
 [[links]]
   title = "mal/trnglina"
   link = "https://myanimelist.net/animelist/trnglina"
+
+[[links]]
+  title = "contact@trnglina.org"
+  link = "mailto:contact@trnglina.org"
