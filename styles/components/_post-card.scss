@@ -1,9 +1,8 @@
 .post-card {
   display: block;
   position: relative;
-  width: 400px;
-  margin-right: $spacing--body;
   overflow-y: visible;
+  margin: 0;
   z-index: 1;
 
   text-decoration: none;
@@ -13,30 +12,6 @@
   &:hover,
   &:focus {
     outline: none;
-
-    > h1 {
-      color: $colour--light !important;
-      font-style: italic;
-      text-shadow: 1px 1px $colour--dark, -1px -1px $colour--dark,
-        1px -1px $colour--dark, -1px 1px $colour--dark, 3px 3px $colour--dark;
-
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    > p {
-      transform: translateY(0);
-      opacity: 1;
-
-      transition: $transition-general;
-
-      &::after {
-        opacity: 1;
-
-        transition: $transition-general;
-      }
-    }
   }
 
   > h1 {
@@ -104,6 +79,38 @@
       filter: saturate(0);
 
       transition: transform 0.1s $easing-general;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint) {
+    width: 400px;
+    margin-right: $spacing--body;
+
+    &:hover,
+    &:focus {
+      > h1 {
+        color: $colour--light !important;
+        font-style: italic;
+        text-shadow: 1px 1px $colour--dark, -1px -1px $colour--dark,
+          1px -1px $colour--dark, -1px 1px $colour--dark, 3px 3px $colour--dark;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      > p {
+        transform: translateY(0);
+        opacity: 1;
+
+        transition: $transition-general;
+
+        &::after {
+          opacity: 1;
+
+          transition: $transition-general;
+        }
+      }
     }
   }
 
