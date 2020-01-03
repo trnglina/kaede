@@ -3,7 +3,7 @@
     <p>
         {{ $len := (len .Site.Data.external.links) }}
         {{ range $index, $element := .Site.Data.external.links }}
-        <a href="{{ $element.link }}">{{ $element.title }}</a> {{ if not (eq $index (sub $len 1)) }}|{{ end }}
+        <a href="{{ $element.link }}">{{ $element.title }}</a>{{ if not (eq $index (sub $len 1)) }}&nbsp;|{{ end }}
         {{ end }}
     </p>
 </footer>
