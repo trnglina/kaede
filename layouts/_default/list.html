@@ -5,8 +5,6 @@
 {{ define "main" }}
 <main aria-role="main">
     <h1>{{ .Title }}</h1>
-    <section>
-        {{- partial "post-list.html" . -}}
-    </section>
+    {{- partial "post-list.html" . -}}
 </main>
 {{ end }}

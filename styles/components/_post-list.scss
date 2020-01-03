@@ -17,8 +17,10 @@
 
   @media only screen and (max-width: $breakpoint) {
     flex-wrap: wrap;
-    padding: $spacing--base $spacing--body;
-    overflow-y: visible;
-    overflow-x: visible;
+    left: 0;
+    right: 0;
+    padding: $spacing--base 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 }
