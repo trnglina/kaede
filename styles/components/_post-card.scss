@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   width: 400px;
-  margin: 0 $spacing--body $spacing--body 0;
+  margin-right: $spacing--body;
   overflow-y: visible;
   z-index: 1;
 
@@ -106,5 +106,11 @@
 
   @media only screen and (max-width: $breakpoint) {
     width: auto;
+    margin-right: 0;
+    margin-bottom: $spacing--body;
+
+    > h1 {
+      font-size: 300%;
+    }
   }
 }

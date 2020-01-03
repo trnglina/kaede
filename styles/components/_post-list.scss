@@ -11,8 +11,14 @@
 
   list-style: none;
 
+  > li {
+    max-width: 100%;
+  }
+
   @media only screen and (max-width: $breakpoint) {
     flex-wrap: wrap;
-    align-content: stretch;
+    padding: $spacing--base $spacing--body;
+    overflow-y: visible;
+    overflow-x: visible;
   }
 }
