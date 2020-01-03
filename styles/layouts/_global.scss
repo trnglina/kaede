@@ -5,7 +5,14 @@ body {
 
   background: $colour--light;
 
+  color: $colour--dark;
+
   @media only screen and (max-width: $breakpoint) {
     padding: $spacing--body / 2;
   }
+}
+
+body.dark {
+  color: $colour--light;
+  background: $colour--dark;
 }

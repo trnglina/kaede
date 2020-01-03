@@ -7,7 +7,7 @@
 
   text-decoration: none;
 
-  transition: $transition-general;
+  transition: $transition--general;
 
   &:hover,
   &:focus {
@@ -44,7 +44,7 @@
     transform: translateY(1em);
     opacity: 0.2;
 
-    transition: $transition-general;
+    transition: $transition--general;
 
     &::after {
       content: " Continue\00a0→";
@@ -53,7 +53,7 @@
 
       opacity: 0;
 
-      transition: $transition-general;
+      transition: $transition--general;
     }
   }
 
@@ -65,7 +65,7 @@
         opacity: 1;
         filter: saturate(0.6);
 
-        transition: transform 0.1s $easing-general;
+        transition: transform 0.1s $easing--general;
       }
     }
 
@@ -78,7 +78,7 @@
       opacity: 0.2;
       filter: saturate(0);
 
-      transition: transform 0.1s $easing-general;
+      transition: transform 0.1s $easing--general;
     }
   }
 
@@ -92,7 +92,8 @@
         color: $colour--light !important;
         font-style: italic;
         text-shadow: 1px 1px $colour--dark, -1px -1px $colour--dark,
-          1px -1px $colour--dark, -1px 1px $colour--dark, 3px 3px $colour--dark;
+          1px -1px $colour--dark, -1px 1px $colour--dark, 2px 2px $colour--dark,
+          3px 3px $colour--dark;
 
         &::after {
           opacity: 1;
@@ -103,12 +104,12 @@
         transform: translateY(0);
         opacity: 1;
 
-        transition: $transition-general;
+        transition: $transition--general;
 
         &::after {
           opacity: 1;
 
-          transition: $transition-general;
+          transition: $transition--general;
         }
       }
     }
@@ -133,6 +134,26 @@
 
       &::after {
         opacity: 1;
+      }
+    }
+  }
+}
+
+body.dark .post-card {
+  > h1,
+  > p {
+    color: $colour--light;
+  }
+
+  @media only screen and (min-width: $breakpoint) {
+    &:hover,
+    &:focus {
+      > h1 {
+        color: $colour--dark !important;
+        font-style: italic;
+        text-shadow: 1px 1px $colour--light, -1px -1px $colour--light,
+          1px -1px $colour--light, -1px 1px $colour--light,
+          2px 2px $colour--light, 3px 3px $colour--light;
       }
     }
   }

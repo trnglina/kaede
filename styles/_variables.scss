@@ -4,7 +4,7 @@ $spacing--body: 2 * $spacing--base;
 
 $colour--light: #fff;
 
-$colour--dark: #000;
+$colour--dark: #0a0a0b;
 
 $colour--accent: #fe5f55;
 
@@ -20,8 +20,8 @@ $font--general: "Suisse Intl", "Helvetica Neue", Helvetica,
   "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo,
   "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
-$easing-general: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easing--general: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
-$transition-general: all 0.1s $easing-general;
+$transition--general: all 0.1s $easing--general;
 
 $breakpoint: 768px;
