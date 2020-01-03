@@ -9,9 +9,9 @@
 
 {{ $title := .Site.Title }}
 {{ if .IsHome }}
-    {{ $description = .Site.Params.description }}
+    {{ $title = .Site.Params.description }}
 {{ else if .Title }}
-    {{ $description = .Title }}
+    {{ $title = .Title }}
 {{ end }}
 
 <meta charset="UTF-8">
