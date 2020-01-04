@@ -2,6 +2,7 @@
 title: "The CrW"
 date: 2019-12-09T18:21:43-07:00
 draft: false
+page: false
 thumbnail: /images/banners/the-crw.png
 accent: "#453C75"
 tags:

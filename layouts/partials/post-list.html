@@ -1,6 +1,6 @@
 {{ if .Pages }}
 <ol class="post-list">
-    {{ range .Pages }}
+    {{ range where .Pages ".Params.page" false }}
     <li>
         {{- partial "front-matter.html" . -}}
         {{- partial "post-card.html" . -}}

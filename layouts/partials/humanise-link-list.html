@@ -1,5 +1,5 @@
 {{ $items := . }}
 {{ $len := (len $items) }}
 {{ range $index, $element := $items }}
-<a href="{{ $element.link }}">{{ $element.title | safeHTML }}</a>{{ if lt $index (sub $len 2) }},{{ else if (eq $index (sub $len 2)) }}, and{{else}}.{{ end }}
+<a href="{{ $element.link }}">{{ $element.title | markdownify }}</a>{{ if lt $index (sub $len 2) }},{{ else if (eq $index (sub $len 2)) }}, and{{else}}.{{ end }}
 {{ end }}

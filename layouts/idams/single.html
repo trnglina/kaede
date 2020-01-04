@@ -1,0 +1,27 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="{{ "/styles/pages/idams.css" | absURL }}">
+{{ end }}
+
+{{ define "main" }}
+<main aria-role="main">
+    <article class="article">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        {{ range .Site.Data.idams }}
+        <h2 id="{{ .term | urlize }}">{{ .term | humanize }}</h2>
+        <div class="info-box">
+            {{ if .native }}
+            <p class="info-text">native: <span>{{ .native }}</span></p>
+            {{ end }}
+            {{ if .alt }}
+            <p class="info-text">alternatively: {{- partial "humanise-list.html" .alt -}}</p>
+            {{ end }}
+            {{ if .examples }}
+            <p class="info-text">e.g: {{- partial "humanise-list.html" .examples -}}</p class="info-text">
+            {{ end }}
+        </div>
+        <p>{{ .definition | markdownify }}</p>
+        {{ end }}
+    </article>
+</main>
+{{ end }}
