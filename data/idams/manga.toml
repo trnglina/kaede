@@ -1,5 +1,5 @@
 term = "manga"
 native = "まんが"
 alt = ["comics"]
-definition = ""
-examples = []
+definition = "Japanese comics or graphic novels, usually identifiable by a distinct visual style. Manga cover a broad set of genres, themes, and target audiences. Manga are often serialised in a magazine first, before being published in collected volumes."
+examples = ["Doraemon", "One piece"]
