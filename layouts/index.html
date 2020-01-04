@@ -7,8 +7,8 @@
     <h1 style="margin-bottom: 0;">Hi, I’m trnglina.</h1>
     <p>I’m a developer, designer, and I enjoy writing. Here are my most recent posts:</p>
     {{- partial "post-list.html" . -}}
-    <p>I’m reading {{- partial "humanise-link-list.html" .Site.Data.reading.works -}}</p>
-    <p>I’m watching {{- partial "humanise-link-list.html" .Site.Data.watching.works -}}</p>
-    <p>I’m playing {{- partial "humanise-link-list.html" .Site.Data.playing.works -}}</p>
+    <p>I’m reading {{- partial "humanise-link-list.html" .Site.Data.rwp.reading -}}</p>
+    <p>I’m watching {{- partial "humanise-link-list.html" .Site.Data.rwp.watching -}}</p>
+    <p>I’m playing {{- partial "humanise-link-list.html" .Site.Data.rwp.playing -}}</p>
 </main>
 {{ end }}
