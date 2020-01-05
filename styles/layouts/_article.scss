@@ -28,5 +28,14 @@
         font-size: 80%;
       }
     }
+
+    @media only screen and (max-width: $breakpoint) {
+      margin: 2em (-$spacing--body / 2);
+
+      figcaption {
+        margin-left: $spacing--body / 2;
+        margin-right: $spacing--body / 2;
+      }
+    }
   }
 }
