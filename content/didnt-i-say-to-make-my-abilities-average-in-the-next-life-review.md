@@ -1,5 +1,5 @@
 ---
-title: "Didn’t I say to make my abilities average in the next life?!"
+title: "Didn’t I say to make my abilities average in the next life?! Review"
 date: 2020-01-05T08:58:17-07:00
 draft: false
 page: false
