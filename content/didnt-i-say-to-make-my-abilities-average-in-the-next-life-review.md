@@ -10,9 +10,7 @@ tags:
 - Anime
 ---
 
-*This review may contain only minor spoilers.*
-
-*Didn’t I say to make my abilities average in the next life?! is known as 私、能力は平均値でって言ったよね！ (Watashi, nouryoku wa heikinchi de tte itta yo ne!) in Japanese, and is often shorted to のうきん (Noukin).*
+*This review may contain minor spoilers.*
 
 The thing with Noukin is that it doesn't have a serious bone in its body. Not a single one. No matter what serious topic comes up, it'll top it off with some comedic relief and leave you feeling either uncomfortably unsatisfied, or, if you quickly came to like the characters like I did, with mixed feelings of genuine relief.
 
@@ -31,3 +29,5 @@ Noukin is a comedy through and through--and if you don't find the first couple o
 [Gabriel DropOut / ガヴリールドロップアウト](https://www.crunchyroll.com/gabriel-dropout) is another show by the same director, and in my opinion, that particular director at his best. If you liked the comedy of Noukin, you might enjoy Gabriel DropOut as well. If Noukin struck you as unexceptional, you still might enjoy Gabriel DropOut's Japanese-school-life-fantasy-fusion setting, but just like with Noukin, there won't be much there other than comedy.
 
 [KONOSUBA -God's blessing on this wonderful world! / この素晴らしい世界に祝福を！ (Kono subarashii sekai ni shukufuku wo!)](https://www.crunchyroll.com/konosuba-gods-blessing-on-this-wonderful-world) is pretty much the show for you if you like comedic [isekai](/idams#isekai) shows. Like with Noukin, you won't find any serious topics, but Konosuba boasts a similar setting with different comedic styles. If you didn't find Noukin particularly funny, but like the setting and premise, Konosuba may be worth a try.
+
+*Didn’t I say to make my abilities average in the next life?! is known as 私、能力は平均値でって言ったよね！ (Watashi, nouryoku wa heikinchi de tte itta yo ne!) in Japanese, and is often shorted to のうきん (Noukin).*
