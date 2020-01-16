@@ -8,3 +8,7 @@
     {{- partial "post-list.html" . -}}
 </main>
 {{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "/scripts/scale-post-card.js" | absURL }}"></script>
+{{ end }}

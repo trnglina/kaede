@@ -12,3 +12,7 @@
     <p>I’m playing {{- partial "humanise-link-list.html" .Site.Data.rwp.playing -}}</p>
 </main>
 {{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "/scripts/scale-post-card.js" | absURL }}"></script>
+{{ end }}
