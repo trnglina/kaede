@@ -3,6 +3,10 @@
 
   .article-title {
     margin-top: 0;
+
+    font-size: 300%;
+    font-weight: 600;
+    line-height: 1;
   }
 
   .front-matter {
@@ -30,7 +34,7 @@
     }
 
     @media only screen and (max-width: $breakpoint) {
-      margin: 2em (-$spacing--body-small / 2);
+      margin: 2em (-$spacing--body-small);
 
       figcaption {
         margin-left: $spacing--body-small / 2;
