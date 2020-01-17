@@ -2,10 +2,16 @@
 
 (() => {
   const postCards = document.getElementsByClassName('post-card');
-  for (let i = 0; i < postCards.length; i++) {
-    const heading = postCards[i].getElementsByTagName('h1')[0];
-    if (heading.clientHeight > 400) {
-      postCards[i].classList.add('small-heading');
+
+  function updateHeadings() {
+    for (let i = 0; i < postCards.length; i++) {
+      const testHeight = window.innerWidth < 768 ? 300 : 400;
+      if (postCards[i].getElementsByTagName('h1')[0].clientHeight > testHeight) {
+        postCards[i].classList.add('small-heading');
+      }
     }
   }
+
+  window.addEventListener('resize', () => updateHeadings());
+  updateHeadings();
 })();
