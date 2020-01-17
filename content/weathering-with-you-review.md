@@ -16,6 +16,6 @@ Weathering with you is a demonstration of director Shinkai Makoto's stellar dire
 
 Weathering with you is an optimistic tale, bursting with the flavours of youth. If you have the chance, see it. If it's no longer in cinemas where you are, wait for a physical or streaming release. It's good enough to warrant a little wait.
 
-*Weathering With You is known as 天気の子 (Tenki no ko) in Japanese.*
+*Weathering with you is known as 天気の子 (Tenki no ko) in Japanese.*
 
 *Without a physical release, the visuals used in this review come from GKIDS' press kit.*
