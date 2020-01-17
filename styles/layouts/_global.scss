@@ -8,7 +8,7 @@ body {
   color: $colour--dark;
 
   @media only screen and (max-width: $breakpoint) {
-    padding: $spacing--body / 2;
+    padding: $spacing--body-small;
   }
 }
 
