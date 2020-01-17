@@ -30,11 +30,11 @@
     }
 
     @media only screen and (max-width: $breakpoint) {
-      margin: 2em (-$spacing--body / 2);
+      margin: 2em (-$spacing--body-small / 2);
 
       figcaption {
-        margin-left: $spacing--body / 2;
-        margin-right: $spacing--body / 2;
+        margin-left: $spacing--body-small / 2;
+        margin-right: $spacing--body-small / 2;
       }
     }
   }
