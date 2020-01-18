@@ -31,4 +31,4 @@ gulp.task('watch', () => {
 
 gulp.task('build', gulp.series(['styles', 'js']));
 
-gulp.task('default', gulp.series('watch'));
+gulp.task('default', gulp.series('build', 'watch'));
