@@ -63,7 +63,7 @@
       > img {
         transform: translateY(-2em);
         opacity: 1;
-        filter: saturate(0.6);
+        filter: saturate(1);
 
         transition: transform 0.1s $easing--general;
       }
