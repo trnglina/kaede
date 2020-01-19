@@ -1,0 +1,12 @@
+@import "../variables";
+
+main {
+  > h1:first-child {
+    margin-bottom: 0;
+  }
+
+  > p {
+    max-width: 800px;
+    float: left;
+  }
+}
