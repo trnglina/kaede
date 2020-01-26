@@ -30,4 +30,4 @@ Noukin is a comedy through and through--and if you don't find the first couple o
 
 [Kono subarashii sekai ni shukufuku wo!](https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo) is pretty much the show for you if you like comedic [isekai](/idams#isekai) shows. Like with Noukin, you won't find any serious topics, but Konosuba boasts a similar setting with different comedic styles. If you didn't find Noukin particularly funny, but like the setting and premise, Konosuba may be worth a try.
 
-*Didn’t I say to make my abilities average in the next life?! is known as {{Watashi, nouryoku wa heikinchi de tte itta yo ne!}} in Japanese, and is often shorted to {{Noukin}}.*
+*Didn’t I say to make my abilities average in the next life?! is known as Watashi, nouryoku wa heikinchi de tte itta yo ne! in Japanese, and is often shorted to Noukin.*
