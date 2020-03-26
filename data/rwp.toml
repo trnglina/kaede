@@ -6,22 +6,23 @@
   title = "Sasami-san@ganbaranai"
   link = "https://gagagabunko.jp/specal/sasamisan/index.html"
 
+[[reading]]
+  title = "Sketchbook"
+  link = "https://comic.mag-garden.co.jp/sketchbook/"
+
+[[reading]]
+  title = "Houkago teibou nisshi"
+  link = "https://www.akitashoten.co.jp/comics/4253257364"
+
 # -------- #
 # watching #
 # -------- #
 
-[[watching]]
-  title = "Saenai heroine no sodatekata"
-  link = "https://myanimelist.net/anime/23277/Saenai_Heroine_no_Sodatekata"
-
-[[watching]]
-  title = "Tamayura: more aggressive"
-  link = "https://myanimelist.net/anime/15731/Tamayura__More_Aggressive"
 
 # ------- #
 # playing #
 # ------- #
 
 [[playing]]
-    title = "Team Sonic racing"
-    link = "https://www.sonicthehedgehog.com/teamsonicracing/"
+    title = "Atsumare doubutsu no mori"
+    link = "https://www.nintendo.co.jp/switch/acbaa/index.html"
