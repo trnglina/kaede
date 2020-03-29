@@ -15,11 +15,38 @@ body {
 }
 
 a {
+  position: relative;
+
   color: $colour--link;
 
+  transition: padding 0.1s $easing--general, color 0.1s $easing--general;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 110%;
+    bottom: -1px;
+    right: 0;
+    left: 0;
+    background: $colour--link;
+    z-index: -1;
+
+    transition: top 0.1s $easing--general;
+  }
+
+  &:hover,
   &:focus {
-    outline: 3px solid $colour__accent;
-    outline-offset: 2px;
+    padding: 0 5px;
+
+    color: $colour--light;
+
+    transition: padding 0.1s $easing--general, color 0.1s $easing--general;
+
+    &::after {
+      top: 0;
+
+      transition: top 0.1s $easing--general;
+    }
   }
 }
 

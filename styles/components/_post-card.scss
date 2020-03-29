@@ -9,9 +9,9 @@
 
   transition: $transition--general;
 
-  &:hover,
-  &:focus {
-    outline: none;
+  &::after,
+  &::after {
+    display: none;
   }
 
   > h1 {
@@ -60,12 +60,14 @@
   &.has-thumbnail {
     &:hover,
     &:focus {
+      padding: 0;
+
       > img {
         transform: translateY(-2em);
         opacity: 1;
         filter: saturate(1);
 
-        transition: transform 0.1s $easing--general;
+        transition: transform 0.2s $easing--general;
       }
     }
 
@@ -78,7 +80,7 @@
       opacity: 0.2;
       filter: saturate(0);
 
-      transition: transform 0.1s $easing--general;
+      transition: transform 0.2s $easing--general;
     }
   }
 
@@ -88,6 +90,8 @@
 
     &:hover,
     &:focus {
+      padding: 0;
+
       > h1 {
         color: $colour--light !important;
         font-style: italic;
@@ -128,8 +132,14 @@
     margin-right: 0;
     margin-bottom: $spacing--base;
 
+    &:hover,
+    &:focus {
+      padding: 0;
+    }
+
     > h1 {
       font-size: 300%;
+      text-decoration: underline;
 
       &::after {
         opacity: 1;
@@ -156,6 +166,8 @@ body.dark .post-card {
   @media only screen and (min-width: $breakpoint) {
     &:hover,
     &:focus {
+      padding: 0;
+
       > h1 {
         color: $colour--dark !important;
         font-style: italic;
