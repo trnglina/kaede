@@ -19,33 +19,27 @@ a {
 
   color: $colour--link;
 
-  transition: padding 0.1s $easing--general, color 0.1s $easing--general;
-
   &::after {
     content: "";
     position: absolute;
-    top: 110%;
-    bottom: -1px;
-    right: 0;
-    left: 0;
+    top: -1px;
+    bottom: -2px;
+    right: -5px;
+    left: -5px;
     background: $colour--link;
     z-index: -1;
 
-    transition: top 0.1s $easing--general;
+    opacity: 0;
   }
 
   &:hover,
   &:focus {
-    padding: 0 5px;
+    z-index: 999;
 
     color: $colour--light;
 
-    transition: padding 0.1s $easing--general, color 0.1s $easing--general;
-
     &::after {
-      top: 0;
-
-      transition: top 0.1s $easing--general;
+      opacity: 1;
     }
   }
 }

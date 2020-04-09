@@ -9,7 +9,7 @@
 
     &:hover,
     &:focus {
-      padding: 0;
+      z-index: initial;
     }
 
     &::after {
