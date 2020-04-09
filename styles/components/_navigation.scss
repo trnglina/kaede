@@ -7,11 +7,6 @@
     width: 80px;
     height: 80px;
 
-    &:hover,
-    &:focus {
-      z-index: initial;
-    }
-
     &::after {
       display: none;
     }

@@ -15,33 +15,7 @@ body {
 }
 
 a {
-  position: relative;
-
   color: $colour--link;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    bottom: -2px;
-    right: -5px;
-    left: -5px;
-    background: $colour--link;
-    z-index: -1;
-
-    opacity: 0;
-  }
-
-  &:hover,
-  &:focus {
-    z-index: 999;
-
-    color: $colour--light;
-
-    &::after {
-      opacity: 1;
-    }
-  }
 }
 
 hr {
