@@ -61,3 +61,10 @@
   font-weight: 700;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Jost";
+  src: url("/fonts/Jost-MediumItalic.woff2") format("woff2"),
+    url("/fonts/Jost-MediumItalic.woff") format("woff");
+  font-weight: 400;
+}

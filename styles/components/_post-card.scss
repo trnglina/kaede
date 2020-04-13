@@ -5,11 +5,10 @@
   margin: 0;
   z-index: 1;
 
-  text-decoration: none;
+  font-family: $font--general;
 
   transition: $transition--general;
 
-  &::after,
   &::after {
     display: none;
   }
@@ -17,29 +16,20 @@
   > h1 {
     position: relative;
     display: inline-block;
-    margin: 8px 0 0 0;
+    margin: 8px 0 0 -3px;
     z-index: 1;
 
     color: $colour--dark;
-    font-size: 400%;
+    font-size: 320%;
     font-weight: 600;
     hyphens: auto;
     line-height: 1;
-    text-shadow: 1px 1px transparent, -1px -1px transparent,
-      1px -1px transparent, -1px 1px transparent;
-
-    &::after {
-      content: "\00a0→";
-
-      color: $colour--link;
-
-      opacity: 0;
-    }
   }
 
   > p {
     color: $colour--dark;
     hyphens: auto;
+    margin-top: 0.6em;
 
     transform: translateY(1em);
     opacity: 0.2;
@@ -49,6 +39,7 @@
     &::after {
       content: " Continue\00a0→";
 
+      font-family: $font--special;
       color: $colour--link;
 
       opacity: 0;
@@ -58,9 +49,12 @@
   }
 
   &.has-thumbnail {
+    text-shadow: 1px 1px 1px $colour--light, -1px 1px 1px $colour--light,
+      1px -1px 1px $colour--light, -1px -1px 1px $colour--light;
+
     &:hover,
     &:focus {
-      padding: 0;
+      transform: none;
 
       > img {
         transform: translateY(-2em);
@@ -90,19 +84,7 @@
 
     &:hover,
     &:focus {
-      padding: 0;
-
-      > h1 {
-        color: $colour--light !important;
-        font-style: italic;
-        text-shadow: 1px 1px $colour--dark, -1px -1px $colour--dark,
-          1px -1px $colour--dark, -1px 1px $colour--dark, 2px 2px $colour--dark,
-          3px 3px $colour--dark;
-
-        &::after {
-          opacity: 1;
-        }
-      }
+      transform: none;
 
       > p {
         transform: translateY(0);
@@ -117,14 +99,6 @@
         }
       }
     }
-
-    &.small-heading {
-      > h1 {
-        margin: 10px 0 0 0;
-
-        font-size: 300%;
-      }
-    }
   }
 
   @media only screen and (max-width: $breakpoint) {
@@ -134,16 +108,11 @@
 
     &:hover,
     &:focus {
-      padding: 0;
+      transform: none;
     }
 
     > h1 {
-      font-size: 300%;
-      text-decoration: underline;
-
-      &::after {
-        opacity: 1;
-      }
+      font-size: 280%;
     }
 
     > p {
@@ -152,6 +121,16 @@
 
       &::after {
         opacity: 1;
+      }
+    }
+
+    &.has-thumbnail {
+      > img {
+        transform: translateY(-2em);
+        opacity: 1;
+        filter: saturate(1);
+
+        transition: transform 0.2s $easing--general;
       }
     }
   }
@@ -163,18 +142,8 @@ body.dark .post-card {
     color: $colour--light;
   }
 
-  @media only screen and (min-width: $breakpoint) {
-    &:hover,
-    &:focus {
-      padding: 0;
-
-      > h1 {
-        color: $colour--dark !important;
-        font-style: italic;
-        text-shadow: 1px 1px $colour--light, -1px -1px $colour--light,
-          1px -1px $colour--light, -1px 1px $colour--light,
-          2px 2px $colour--light, 3px 3px $colour--light;
-      }
-    }
+  &.has-thumbnail > h1 {
+    text-shadow: 1px 1px 1px $colour--dark, -1px 1px 1px $colour--dark,
+      1px -1px 1px $colour--dark, -1px -1px 1px $colour--dark;
   }
 }

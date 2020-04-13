@@ -15,7 +15,52 @@ body {
 }
 
 a {
+  display: inline-block;
+  position: relative;
+
+  font-family: $font--special;
   color: $colour--link;
+  text-decoration: none;
+
+  transition: all 0.2s $easing--general;
+
+  &::after {
+    content: '';
+
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    z-index: -1;
+    opacity: 0;
+    background-color: $colour--link;
+
+    transition: all 0.2s $easing--general;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    z-index: 999;
+
+    color: $colour--light;
+    text-decoration: none;
+
+    transition: all 0.2s $easing--general;
+
+    &::after {
+      left: -5px;
+      right: -5px;
+      top: -1px;
+      bottom: -2px;
+      opacity: 1;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+
+      transition: all 0.2s $easing--general;
+    }
+  }
 }
 
 hr {
