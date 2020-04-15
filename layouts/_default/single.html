@@ -1,5 +1,8 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="{{ "/styles/single.css" | absURL }}">
+<link rel="stylesheet" href="{{ "/styles/single.css" | absURL }}" media="print" onload="this.media='all'">
+<noscript>
+    <link rel="stylesheet" href="{{ "/styles/single.css" | absURL }}">
+</noscript>
 {{ end }}
 
 {{ define "main" }}
