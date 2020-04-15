@@ -6,8 +6,5 @@ title = "trnglina"
   author = "trnglina"
   description = "Software, design, and words"
 
-[taxonomies]
-  tag = "tags"
-
 [markup.goldmark.renderer]
   unsafe = true

@@ -4,7 +4,6 @@ date: 2020-01-05T08:58:17-07:00
 draft: false
 page: false
 thumbnail: /images/banners/noukin.png
-accent:
 tags:
 - Quick review
 - Anime

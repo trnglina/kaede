@@ -3,8 +3,6 @@ title: "A warm place"
 date: 2019-12-30T13:55:00-07:00
 draft: false
 page: false
-thumbnail:
-accent:
 tags:
 - Writing
 - Fiction

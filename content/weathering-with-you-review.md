@@ -4,7 +4,6 @@ date: 2020-01-16T16:11:00-07:00
 draft: false
 page: false
 thumbnail: /images/banners/tenki.jpg
-accent:
 tags:
   - Quick review
   - Anime

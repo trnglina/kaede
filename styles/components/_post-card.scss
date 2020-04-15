@@ -6,8 +6,7 @@
   z-index: 1;
 
   font-family: $font--general;
-
-  transition: $transition--general;
+  text-decoration: none;
 
   &::after {
     display: none;
@@ -20,10 +19,13 @@
     z-index: 1;
 
     color: $colour--dark;
-    font-size: 320%;
-    font-weight: 600;
+    font-size: 280%;
+    font-weight: 400;
     hyphens: auto;
     line-height: 1;
+    text-decoration: underline;
+
+    transition: all 0.1s $easing--general;  
   }
 
   > p {
@@ -40,7 +42,7 @@
       content: " Continue\00a0→";
 
       font-family: $font--special;
-      color: $colour--link;
+      color: darken($colour--accent, 20%);
 
       opacity: 0;
 
@@ -49,9 +51,6 @@
   }
 
   &.has-thumbnail {
-    text-shadow: 1px 1px 1px $colour--light, -1px 1px 1px $colour--light,
-      1px -1px 1px $colour--light, -1px -1px 1px $colour--light;
-
     &:hover,
     &:focus {
       transform: none;
@@ -87,7 +86,10 @@
       transform: none;
       
       > h1 {
-        color: $colour--link;
+        color: darken($colour--accent, 20%);
+        text-decoration: none;
+
+        transition: all 0.1s $easing--general;
       }
 
       > p {
@@ -113,10 +115,6 @@
     &:hover,
     &:focus {
       transform: none;
-    }
-
-    > h1 {
-      font-size: 280%;
     }
 
     > p {
@@ -146,16 +144,15 @@ body.dark .post-card {
     color: $colour--light;
   }
 
-  &.has-thumbnail > h1 {
-    text-shadow: 1px 1px 1px $colour--dark, -1px 1px 1px $colour--dark,
-      1px -1px 1px $colour--dark, -1px -1px 1px $colour--dark;
+  > p::after {
+    color: darken($colour--accent, 5%);
   }
 
   @media only screen and (min-width: $breakpoint) {
     &:hover,
     &:focus {
       > h1 {
-        color: $colour--link;
+        color: darken($colour--accent, 5%);
       }
     }
   }

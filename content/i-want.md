@@ -3,8 +3,6 @@ title: "I want"
 date: 2019-12-22T21:52:43-07:00
 draft: false
 page: false
-thumbnail:
-accent:
 tags:
 - Writing
 - Non-fiction
