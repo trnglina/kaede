@@ -85,6 +85,10 @@
     &:hover,
     &:focus {
       transform: none;
+      
+      > h1 {
+        color: $colour--link;
+      }
 
       > p {
         transform: translateY(0);
@@ -145,5 +149,14 @@ body.dark .post-card {
   &.has-thumbnail > h1 {
     text-shadow: 1px 1px 1px $colour--dark, -1px 1px 1px $colour--dark,
       1px -1px 1px $colour--dark, -1px -1px 1px $colour--dark;
+  }
+
+  @media only screen and (min-width: $breakpoint) {
+    &:hover,
+    &:focus {
+      > h1 {
+        color: $colour--link;
+      }
+    }
   }
 }

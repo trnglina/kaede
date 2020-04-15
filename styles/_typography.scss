@@ -42,7 +42,6 @@ a {
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
     z-index: 999;
 
     color: $colour--light;
@@ -51,8 +50,8 @@ a {
     transition: all 0.2s $easing--general;
 
     &::after {
-      left: -5px;
-      right: -5px;
+      left: -7px;
+      right: -7px;
       top: -1px;
       bottom: -2px;
       opacity: 1;
