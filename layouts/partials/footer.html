@@ -1,6 +1,5 @@
 <footer class="footer">
-    <a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>&nbsp;&copy;&nbsp;{{ now.Format "2006"}}&emsp;
-    <ul>
+    <span class="copyright"><a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>&nbsp;&copy;&nbsp;{{ now.Format "2006"}}</span><ul>
         {{ $len := (len .Site.Data.external.links) }}
         {{ range $index, $element := .Site.Data.external.links }}<li><a href="{{ $element.link }}">{{ $element.title }}</a></li>{{ end }}
     </ul>

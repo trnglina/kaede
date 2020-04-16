@@ -1,6 +1,10 @@
 .footer {
   margin-top: $spacing--body;
 
+  .copyright {
+    margin-right: 1em;
+  }
+
   > ul {
     margin: 0;
     padding: 0;
