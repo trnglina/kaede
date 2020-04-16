@@ -39,9 +39,8 @@
       transform: none;
     }
 
-    img {
-      width: inherit;
-      height: inherit;
+    .st0 {
+      fill: $colour--accent;
     }
 
     @media only screen and (max-width: $breakpoint) {
