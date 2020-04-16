@@ -64,6 +64,13 @@
       }
     }
 
+    > h1 {
+      text-shadow: 1px  1px 0px $colour--light,
+                  -1px  1px 0px $colour--light,
+                   1px -1px 0px $colour--light,
+                  -1px -1px 0px $colour--light;
+    }
+
     > img {
       display: block;
       width: 100%;
@@ -146,6 +153,13 @@ body.dark .post-card {
 
   > p::after {
     color: darken($colour--accent, 5%);
+  }
+
+  &.has-thumbnail > h1 {
+    text-shadow: 1px  1px 0px $colour--dark,
+                -1px  1px 0px $colour--dark,
+                 1px -1px 0px $colour--dark,
+                -1px -1px 0px $colour--dark;
   }
 
   @media only screen and (min-width: $breakpoint) {

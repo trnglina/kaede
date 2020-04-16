@@ -1,9 +1,6 @@
 <footer class="footer">
     <p>
-        <a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>&nbsp;&copy;&nbsp;{{ now.Format "2006"}}&nbsp;|
         {{ $len := (len .Site.Data.external.links) }}
-        {{ range $index, $element := .Site.Data.external.links }}
-        <a href="{{ $element.link }}">{{ $element.title }}</a>{{ if not (eq $index (sub $len 1)) }}&nbsp;|{{ end }}
-        {{ end }}
+        <a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>&nbsp;&copy;&nbsp;{{ now.Format "2006"}}・{{ range $index, $element := .Site.Data.external.links }}<a href="{{ $element.link }}">{{ $element.title }}</a>{{ if not (eq $index (sub $len 1)) }}・{{ end }}{{ end }}
     </p>
 </footer>

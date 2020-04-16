@@ -11,21 +11,18 @@
     list-style: none;
     
     li {
-      margin: 8px 0 0 $spacing--base;
+      margin: 8px 0 0 1em;
       display: inline-block;
 
       &:first-child {
         margin: 0;
       }
-
-      @media only screen and (max-width: $breakpoint) {
-        margin: 8px 0 0 $spacing--base / 2;
-      }    
     }
   }
 
   .logo {
     display: block;
+    margin-right: 10px;
     width: 80px;
     height: 80px;
     z-index: 500;
