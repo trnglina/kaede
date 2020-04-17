@@ -2,34 +2,38 @@
 # reading #
 # ------- #
 
-#[[reading]]
-#  title = "Sasami-san@ganbaranai"
-#  link = "https://gagagabunko.jp/specal/sasamisan/index.html"
-
 [[reading]]
   title = "Sketchbook"
   link = "https://comic.mag-garden.co.jp/sketchbook/"
 
-[[reading]]
-  title = "Flying witch"
-  link = "https://pocket.shonenmagazine.com/episode/13932016480029113141"
+# [[reading]]
+#   title = "Sasami-san@ganbaranai"
+#   link = "https://gagagabunko.jp/specal/sasamisan/index.html"
+
+# [[reading]]
+#   title = "Flying witch"
+#   link = "https://pocket.shonenmagazine.com/episode/13932016480029113141"
 
 # -------- #
 # watching #
 # -------- #
 
-[[watching]]
-  title = "Nekopara"
-  link = "https://myanimelist.net/anime/38924/Nekopara"
+# [[watching]]
+#   title = "Nekopara"
+#   link = "https://myanimelist.net/anime/38924/Nekopara"
 
-[[watching]]
-  title = "Ojamajo Doremi"
-  link = "https://myanimelist.net/anime/350/Ojamajo_Doremi"
+# [[watching]]
+#   title = "Ojamajo Doremi"
+#   link = "https://myanimelist.net/anime/350/Ojamajo_Doremi"
 
 # ------- #
 # playing #
 # ------- #
 
 [[playing]]
-    title = "Ayesha no atelier ~tasogare no daichi no renkinjutsushi~ DX"
-    link = "https://www.gamecity.ne.jp/atelier/duskdx/"
+  title = "Ayesha no atelier ~tasogare no daichi no renkinjutsushi~ DX"
+  link = "https://www.gamecity.ne.jp/atelier/duskdx/"
+
+[[playing]]
+  title = "Dishonored"
+  link = "https://store.steampowered.com/app/205100/Dishonored/"

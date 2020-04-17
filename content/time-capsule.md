@@ -1,7 +1,7 @@
 ---
 title: "Time capsule"
 date: 2020-04-16T20:24:00-06:00
-draft: false
+draft: true
 page: false
 tags:
 - Writing
