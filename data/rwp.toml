@@ -2,9 +2,9 @@
 # reading #
 # ------- #
 
-[[reading]]
-  title = "Sketchbook"
-  link = "https://comic.mag-garden.co.jp/sketchbook/"
+# [[reading]]
+#   title = "Sketchbook"
+#   link = "https://comic.mag-garden.co.jp/sketchbook/"
 
 # [[reading]]
 #   title = "Sasami-san@ganbaranai"
@@ -18,9 +18,13 @@
   title = "Tsuredzure Children"
   link = "https://comic.pixiv.net/works/3017"
 
+# [[reading]]
+#   title = "Sou iu toshigoro ni nacchatta toshi no sa shimai"
+#   link = "https://comic-walker.com/contents/detail/KDCW_MF01201492010000_68/"
+
 [[reading]]
-  title = "Sou iu toshigoro ni nacchatta toshi no sa shimai"
-  link = "https://comic-walker.com/contents/detail/KDCW_MF01201492010000_68/"
+  title = "Senryuu shoujo"
+  link = "https://comic.pixiv.net/works/4113"
 
 # -------- #
 # watching #
@@ -41,3 +45,7 @@
 [[playing]]
   title = "Ayesha no atelier ~tasogare no daichi no renkinjutsushi~ DX"
   link = "https://www.gamecity.ne.jp/atelier/duskdx/"
+
+[[playing]]
+  title = "Maitetsu pure station"
+  link = "https://maitetsupurestation.com/"
