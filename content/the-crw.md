@@ -5,7 +5,7 @@ draft: false
 page: false
 thumbnail: /images/banners/the-crw.png
 tags:
-- Design
+  - Design
 ---
 
 ## Anthology project

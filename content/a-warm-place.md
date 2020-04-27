@@ -4,9 +4,9 @@ date: 2019-12-30T13:55:00-07:00
 draft: false
 page: false
 tags:
-- Writing
-- Fiction
-- Vignette
+  - Writing
+  - Fiction
+  - Vignette
 ---
 
 I used to stare at the ceiling fan in my room before I went to sleep. Wrapped in a blanket, with the flickers and shimmers of a city at night behind me, I traced the shapes of fan blades above me. I could pick up a pencil, place it to the air in front of my eyes, and sketch out each stroke as I followed their edges. One, two. One, two.
@@ -25,7 +25,7 @@ What if it suddenly changes colours?
 
 What if it turns off?
 
-These little anxieties nibble away at my mind like termites at a chair. I'm going to tip over if this continues. 
+These little anxieties nibble away at my mind like termites at a chair. I'm going to tip over if this continues.
 
 But what am I thinking? The machine can't _keep at it_, it simply _does_.
 
@@ -33,7 +33,7 @@ Maybe it's just me. Maybe I can't do it after all—sleep in someone else's hous
 
 I turn over a bit more, away from the air conditioner, and look at the back of his head. He's wrapped up in a duvet next to mine. He's my boyfriend, as of a week ago. He asked me out, and I didn't reject him, and so now, he's my boyfriend.
 
-Though I still don't know what it means. Is it to sleep in the same room, like this? My friends gave me an scandalous look when I told them I was spending the night at his house. 
+Though I still don't know what it means. Is it to sleep in the same room, like this? My friends gave me an scandalous look when I told them I was spending the night at his house.
 
 I wonder why? Perhaps they knew I'd have so much trouble sleeping.
 
@@ -47,7 +47,7 @@ So I climb out; and crawling over on my knees, I raise myself up, and plop over 
 
 The outside of his duvet is cold and smooth, even through my nightgown, but I feel I can make the best of it. I scrunch up the edge, and bring it to my face. There, the fabric is downy, and soft, and warm.
 
-When there's no reaction, I lie like that for a while, on top of him, and really try to sleep. I imagine being that grey cat, and lazily drifting off as my soft fur rubs against his. 
+When there's no reaction, I lie like that for a while, on top of him, and really try to sleep. I imagine being that grey cat, and lazily drifting off as my soft fur rubs against his.
 
 But it's no use. I don't have fur.
 

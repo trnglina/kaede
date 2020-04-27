@@ -4,8 +4,8 @@ date: 2019-12-22T21:52:43-07:00
 draft: false
 page: false
 tags:
-- Writing
-- Non-fiction
+  - Writing
+  - Non-fiction
 ---
 
 It's not often I mention the things I want.
@@ -24,7 +24,7 @@ When I can't keep my eyes open any longer, and settle in under my blankets, I wa
 
 I want to be able to think about the day, and not relive the mortification of every imperfect action, every word I misheard and misunderstood, and every faux-pas (both the well-promulgated, and the yet-to-be-discovered) that I made.
 
-I want to never say anything to hurt someone else. But I want to be able to raise my voice for something I believe in. 
+I want to never say anything to hurt someone else. But I want to be able to raise my voice for something I believe in.
 
 I want every person I meet to think well of me, and I want the energy to make it so.
 
