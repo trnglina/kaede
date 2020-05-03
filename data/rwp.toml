@@ -18,13 +18,13 @@
   title = "Tsuredzure children"
   link = "https://comic.pixiv.net/works/3017"
 
-# [[reading]]
-#   title = "Sou iu toshigoro ni nacchatta toshi no sa shimai"
-#   link = "https://comic-walker.com/contents/detail/KDCW_MF01201492010000_68/"
-
 [[reading]]
-  title = "Senryuu shoujo"
-  link = "https://comic.pixiv.net/works/4113"
+  title = "Uchi no class no joshi ga yabai"
+  link = "http://magazine-edge.jp/contents/classmate.html"
+
+# [[reading]]
+#   title = "Senryuu shoujo"
+#   link = "https://comic.pixiv.net/works/4113"
 
 # -------- #
 # watching #
@@ -37,6 +37,14 @@
 # [[watching]]
 #   title = "Ojamajo doremi"
 #   link = "https://myanimelist.net/anime/350/Ojamajo_Doremi"
+
+[[watching]]
+  title = "Non non biyori"
+  link = "https://myanimelist.net/anime/17549/Non_Non_Biyori"
+
+[[watching]]
+  title = "Ichigo marshmallow"
+  link = "https://myanimelist.net/anime/488/Ichigo_Mashimaro"
 
 # ------- #
 # playing #
