@@ -11,7 +11,7 @@
 <main aria-role="main">
     <h1>Hi, I’m trnglina.</h1>
     <p>I’m a developer, designer, and I enjoy writing. This is my personal little corner of the internet. Find here my most recent posts:</p>
-    {{- partial "post-list.html" . -}}
+    {{- partial "post-list.html" .Site -}}
     {{ if .Site.Data.rwp.reading }}
     <p>I’m reading {{- partial "humanise-link-list.html" .Site.Data.rwp.reading -}}</p>
     {{ end }}
