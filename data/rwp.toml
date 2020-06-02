@@ -10,17 +10,17 @@
 #   title = "Sasami-san@ganbaranai"
 #   link = "https://gagagabunko.jp/specal/sasamisan/index.html"
 
-# [[reading]]
-#   title = "Flying witch"
-#   link = "https://pocket.shonenmagazine.com/episode/13932016480029113141"
+[[reading]]
+  title = "Flying witch"
+  link = "https://pocket.shonenmagazine.com/episode/13932016480029113141"
 
 [[reading]]
   title = "Tsuredzure children"
   link = "https://comic.pixiv.net/works/3017"
 
-[[reading]]
-  title = "Uchi no class no joshi ga yabai"
-  link = "http://magazine-edge.jp/contents/classmate.html"
+# [[reading]]
+#   title = "Uchi no class no joshi ga yabai"
+#   link = "http://magazine-edge.jp/contents/classmate.html"
 
 # [[reading]]
 #   title = "Senryuu shoujo"
