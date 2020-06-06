@@ -6,15 +6,15 @@
   "author": "trnglina",
   "license": "CC0-1.0",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
     "eslint": "^6.5.1",
     "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.14.1"
   }
 }

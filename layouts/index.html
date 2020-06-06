@@ -12,14 +12,14 @@
     <h1>Hi, I’m trnglina.</h1>
     <p>I write software, make designs, and enjoy writing. This is my personal little corner of the internet. Find here my most recent posts:</p>
     {{- partial "post-list.html" .Site -}}
-    {{ if .Site.Data.rwp.reading }}
-    <p>I’m reading {{- partial "humanise-link-list.html" .Site.Data.rwp.reading -}}</p>
+    {{ if .Site.Data.reading }}
+    <p>I’m reading {{- partial "humanise-rwp.html" .Site.Data.reading -}}</p>
     {{ end }}
-    {{ if .Site.Data.rwp.watching }}
-    <p>I’m watching {{- partial "humanise-link-list.html" .Site.Data.rwp.watching -}}</p>
+    {{ if .Site.Data.watching }}
+    <p>I’m watching {{- partial "humanise-rwp.html" .Site.Data.watching -}}</p>
     {{ end }}
-    {{ if .Site.Data.rwp.playing }}
-    <p>I’m playing {{- partial "humanise-link-list.html" .Site.Data.rwp.playing -}}</p>
+    {{ if .Site.Data.playing }}
+    <p>I’m playing {{- partial "humanise-rwp.html" .Site.Data.playing -}}</p>
     {{ end }}
 </main>
 {{ end }}

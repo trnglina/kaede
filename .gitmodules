@@ -1,3 +1,6 @@
 [submodule "content"]
 	path = content
-	url = https://github.com/trnglina/trnglina.org.git
+	url = https://github.com/trnglina/posts.git
+[submodule "data"]
+	path = data
+	url = https://github.com/trnglina/data.git

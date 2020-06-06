@@ -1,0 +1,6 @@
+{{ $len := (len .) }}
+{{ $index := 0 }}
+{{ range . }}
+    <a href="{{ .link }}">{{ .title | markdownify }}</a>{{ if lt $index (sub $len 2) }},{{ else if (eq $index (sub $len 2)) }}, and{{else}}.{{ end }}
+    {{ $index = add $index 1 }}
+{{ end }}
