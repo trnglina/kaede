@@ -1,10 +1,10 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const babel = require('gulp-babel')
+const uglify = require('gulp-uglify')
 
-sass.compiler = require('node-sass');
+sass.compiler = require('node-sass')
 
 gulp.task(
     'styles',
@@ -13,7 +13,7 @@ gulp.task(
         .pipe(sass({ outputStyle: 'compressed', includePaths: ['styles'] })
             .on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('static/styles')));
+        .pipe(gulp.dest('static/styles')))
 
 gulp.task(
     'js',
@@ -22,13 +22,13 @@ gulp.task(
         .pipe(babel({ presets: ['@babel/preset-env'] }))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('static/scripts')));
+        .pipe(gulp.dest('static/scripts')))
 
 gulp.task('watch', () => {
-    gulp.watch('./styles/**/*.scss', gulp.series('styles'));
-    gulp.watch('./scripts/**/*.js', gulp.series('js'));
-});
+  gulp.watch('./styles/**/*.scss', gulp.series('styles'))
+  gulp.watch('./scripts/**/*.js', gulp.series('js'))
+})
 
-gulp.task('build', gulp.series(['styles', 'js']));
+gulp.task('build', gulp.series(['styles', 'js']))
 
-gulp.task('default', gulp.series('build', 'watch'));
+gulp.task('default', gulp.series('build', 'watch'))
