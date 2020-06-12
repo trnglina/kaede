@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const babel = require('gulp-babel')
+const { spawn } = require('child_process')
 
 sass.compiler = require('node-sass')
 
@@ -17,11 +18,18 @@ function scripts() {
       .pipe(gulp.dest('static/scripts'))
 }
 
-function watch() {
+function hugo(cb) {
+  const hg = spawn('hugo', ['server'], { stdio: 'inherit' })
+  hg.on('exit', (code) => {
+    cb(code === 0 ? null : code)
+  })
+}
+
+function watch(cb) {
   gulp.watch('./styles/**/*.scss', styles)
   gulp.watch('./scripts/**/*.js', scripts)
 }
 
 exports.build = gulp.parallel(styles, scripts)
-exports.watch = gulp.series(exports.build, watch)
+exports.watch = gulp.series(exports.build, gulp.parallel(watch, hugo))
 exports.default = exports.build
