@@ -10,7 +10,7 @@ gulp.task(
     'styles',
     () => gulp.src('styles/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed', includePaths: ['styles']})
+        .pipe(sass({ outputStyle: 'compressed', includePaths: ['styles'] })
             .on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('static/styles')));
@@ -19,14 +19,14 @@ gulp.task(
     'js',
     () => gulp.src('scripts/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(babel({presets: ['@babel/preset-env']}))
+        .pipe(babel({ presets: ['@babel/preset-env'] }))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('static/scripts')));
 
 gulp.task('watch', () => {
-  gulp.watch('./styles/**/*.scss', gulp.series('styles'));
-  gulp.watch('./scripts/**/*.js', gulp.series('js'));
+    gulp.watch('./styles/**/*.scss', gulp.series('styles'));
+    gulp.watch('./scripts/**/*.js', gulp.series('js'));
 });
 
 gulp.task('build', gulp.series(['styles', 'js']));

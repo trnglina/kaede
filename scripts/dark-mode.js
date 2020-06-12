@@ -1,9 +1,7 @@
-/* eslint-disable require-jsdoc */
-
 (() => {
   const body = document.getElementsByTagName('body')[0];
 
-  const button = (function() {
+  const button = (function () {
     const template = document.createElement('div');
     template.innerHTML = `
       <button class="dark-mode-button" aria-hidden="true" tabindex="-1">
@@ -50,7 +48,7 @@
     }
   }
 
-  body.addEventListener('keydown', ({ctrlKey, altKey, keyCode}) => {
+  body.addEventListener('keydown', ({ ctrlKey, altKey, keyCode }) => {
     if (ctrlKey && altKey && keyCode == 68) {
       toggleDarkMode();
       setState(button, isDarkMode());
