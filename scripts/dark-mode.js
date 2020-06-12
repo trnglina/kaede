@@ -48,7 +48,7 @@
     }
   }
 
-  body.addEventListener('keydown', ({ctrlKey, altKey, keyCode}) => {
+  body.addEventListener('keydown', ({ ctrlKey, altKey, keyCode }) => {
     if (ctrlKey && altKey && keyCode == 68) {
       toggleDarkMode()
       setState(button, isDarkMode())

@@ -22,6 +22,7 @@ module.exports = {
     }],
     'max-len': 'off',
     'require-jsdoc': 'off',
+    'linebreak-style': 'off',
     'semi': ['error', 'never'],
     'object-curly-spacing': ['error', 'always']
   },
