@@ -11,7 +11,6 @@ function styles() {
       .pipe(gulp.dest('static/styles'))
 }
 
-
 function scripts() {
   return gulp.src('scripts/**/*.js')
       .pipe(babel({ presets: ['@babel/preset-env'] }))
