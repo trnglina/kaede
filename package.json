@@ -1,8 +1,8 @@
 {
   "name": "trnglina.org",
   "private": true,
-  "version": "8.0.0",
-  "description": "trnglina.org, version 8",
+  "version": "9.0.0",
+  "description": "trnglina.org",
   "author": "trnglina",
   "license": "CC0-1.0",
   "devDependencies": {

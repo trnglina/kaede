@@ -15,5 +15,14 @@ module.exports = {
     'sourceType': 'module',
   },
   'rules': {
+    'space-before-function-paren': ['error', {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    'max-len': 'off',
+    'require-jsdoc': 'off',
+    'semi': ['error', 'never'],
+    'object-curly-spacing': ['error', 'always']
   },
 };

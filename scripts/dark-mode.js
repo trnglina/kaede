@@ -1,10 +1,8 @@
-/* eslint-disable require-jsdoc */
-
 (() => {
-  const body = document.getElementsByTagName('body')[0];
+  const body = document.getElementsByTagName('body')[0]
 
-  const button = (function() {
-    const template = document.createElement('div');
+  const button = (function () {
+    const template = document.createElement('div')
     template.innerHTML = `
       <button class="dark-mode-button" aria-hidden="true" tabindex="-1">
         <svg enable-background="new 0 0 20 20" version="1.1" viewBox="0 0 20 20" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -22,49 +20,49 @@
           <path class="vector-path" d="m17.1 17.1c-0.4 0.4-1 0.4-1.4 0l-2.1-2.1c-0.4-0.4-0.4-1 0-1.4s1-0.4 1.4 0l2.1 2.1c0.4 0.3 0.4 1 0 1.4z"/>
         </svg>
       </button>
-      `.trim();
-    return template.firstChild;
-  })();
+      `.trim()
+    return template.firstChild
+  })()
 
   function isDarkMode() {
-    return body.classList.contains('dark');
+    return body.classList.contains('dark')
   }
 
   function toggleDarkMode() {
     if (isDarkMode()) {
-      body.classList.remove('dark');
-      localStorage.setItem('dark-mode', false);
+      body.classList.remove('dark')
+      localStorage.setItem('dark-mode', false)
     } else {
-      body.classList.add('dark');
-      localStorage.setItem('dark-mode', true);
+      body.classList.add('dark')
+      localStorage.setItem('dark-mode', true)
     }
   }
 
   function setState(button, isDark) {
     if (isDark) {
-      button.children[0].style.display = 'none';
-      button.children[1].style.display = 'inline-block';
+      button.children[0].style.display = 'none'
+      button.children[1].style.display = 'inline-block'
     } else {
-      button.children[0].style.display = 'inline-block';
-      button.children[1].style.display = 'none';
+      button.children[0].style.display = 'inline-block'
+      button.children[1].style.display = 'none'
     }
   }
 
   body.addEventListener('keydown', ({ctrlKey, altKey, keyCode}) => {
     if (ctrlKey && altKey && keyCode == 68) {
-      toggleDarkMode();
-      setState(button, isDarkMode());
+      toggleDarkMode()
+      setState(button, isDarkMode())
     }
-  });
+  })
 
   button.addEventListener('click', () => {
-    toggleDarkMode();
-    setState(button, isDarkMode());
-  });
+    toggleDarkMode()
+    setState(button, isDarkMode())
+  })
 
   if (localStorage.getItem('dark-mode') == 'true') {
-    body.classList.add('dark');
+    body.classList.add('dark')
   }
-  setState(button, isDarkMode());
-  document.getElementsByClassName('navigation')[0].appendChild(button);
-})();
+  setState(button, isDarkMode())
+  document.getElementsByClassName('navigation')[0].appendChild(button)
+})()
