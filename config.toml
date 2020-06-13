@@ -1,12 +1,18 @@
 baseURL = "https://trnglina.org"
 languageCode = "en-gb"
-title = "trnglina"
+title = "Trnglina"
 
 ignoreFiles = [ ".git/.*" ]
 
 [params]
-  author = "trnglina"
+  author = "Trnglina"
   description = "Software, design, and words"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 2
 
 [markup.goldmark.renderer]
   unsafe = true

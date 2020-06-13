@@ -1,25 +1,30 @@
 {{ define "styles" }}
 <link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ "/styles/pages/index.css" | absURL }}" media="print" onload="this.media='all'">
 <noscript>
     <link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "/styles/pages/index.css" | absURL }}">
 </noscript>
 {{ end }}
 
 {{ define "main" }}
 <main aria-role="main">
-    <h1>Hi, I’m trnglina.</h1>
-    <p>I write software, make designs, and enjoy writing. This is my personal little corner of the internet. Find here my most recent posts:</p>
-    {{- partial "post-list.html" .Site -}}
+    <h1>Hi, I’m {{ .Site.Params.author }}.</h1>
+    <p>I write software, make designs, and enjoy writing. This is my personal little corner of the internet.</p>
+    <p>You can find some of the stuff I've done over the years here:</p>
+
+    <ul class="section-list">
+        {{ range $key, $value := .Site.Taxonomies.tags }}
+        <li><h2><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a></h2></li>
+        {{ end }}    
+    </ul>
+
     {{ if .Site.Data.reading }}
-    <p>I’m reading {{- partial "humanise-rwp.html" .Site.Data.reading -}}</p>
+    <p>I’m reading {{- partial "rwp-list.html" .Site.Data.reading -}}</p>
     {{ end }}
     {{ if .Site.Data.watching }}
-    <p>I’m watching {{- partial "humanise-rwp.html" .Site.Data.watching -}}</p>
+    <p>I’m watching {{- partial "rwp-list.html" .Site.Data.watching -}}</p>
     {{ end }}
     {{ if .Site.Data.playing }}
-    <p>I’m playing {{- partial "humanise-rwp.html" .Site.Data.playing -}}</p>
+    <p>I’m playing {{- partial "rwp-list.html" .Site.Data.playing -}}</p>
     {{ end }}
 </main>
 {{ end }}

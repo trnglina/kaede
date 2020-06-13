@@ -8,6 +8,10 @@
 {{ define "main" }}
 <main aria-role="main">
     <h1>{{ .Title }}</h1>
-    {{- partial "post-list.html" . -}}
+    <ol class="section-list">
+        {{ range where .Pages ".Params.page" false }}
+        <li><h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2></li>
+        {{ end }}
+    </ol>
 </main>
 {{ end }}

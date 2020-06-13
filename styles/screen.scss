@@ -1,0 +1,90 @@
+@import 'variables';
+@import 'fonts';
+
+/* Typography */
+
+body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+
+  @media screen and (max-width: 768px) {
+    font-size: $body-font-size * 0.8;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  font-size: 210%;
+}
+
+h3 {
+  font-size: 170%;
+}
+
+h4 {
+  font-size: 150%;
+}
+
+h5 {
+  font-size: 130%;
+}
+
+h6 {
+  font-size: 120%;
+}
+
+p {
+  margin: 1em 0;
+}
+
+/* Inline lists */
+
+.inline-list {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+    margin-left: $inline-list-spacing;
+  }
+}
+
+/* Global navigation */
+
+.global-navigation {
+  align-items: center;
+  display: flex;
+
+  .logo {
+    margin-right: $inline-list-spacing;
+    width: $logo-width;
+
+    > * {
+      fill: $accent-colour;
+      width: inherit;
+    }
+  }
+}
+
+/* Global footer */
+
+.global-footer {
+  .copyright {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

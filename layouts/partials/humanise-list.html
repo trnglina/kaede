@@ -1,5 +1,0 @@
-{{ $items := . }}
-{{ $len := (len $items) }}
-{{ range $index, $element := $items }}
-<span>{{ $element | markdownify }}</span>{{ if lt $index (sub $len 2) }},{{ else if (eq $index (sub $len 2)) }}, and{{else}}.{{ end }}
-{{ end }}

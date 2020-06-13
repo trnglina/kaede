@@ -7,8 +7,7 @@
 
 {{ define "main" }}
 <main aria-role="main">
-    <article class="article" style="max-width: 800px;">
-        {{- partial "front-matter.html" . -}}
+    <article class="article">
         <h1 class="article-title">{{ .Title }}</h1>
         {{ .Content }}
     </article>
