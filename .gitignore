@@ -25,6 +25,8 @@ projectFilesBackup
 
 public
 resources
+content
+data
 
 static/**/*
 !static/images
