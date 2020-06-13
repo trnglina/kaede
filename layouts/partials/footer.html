@@ -1,6 +1,0 @@
-<footer class="global-footer">
-    <p class="copyright"><a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>&nbsp;&copy;&nbsp;{{ now.Format "2006"}}</p><ul class="inline-list">
-        {{ $len := (len .Site.Data.links) }}
-        {{ range $index, $element := .Site.Data.links }}<li><a href="{{ $element.url }}">{{ $element.label }}</a></li>{{ end }}
-    </ul>
-</footer>

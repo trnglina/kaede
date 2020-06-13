@@ -8,15 +8,21 @@
 {{ define "main" }}
 <main aria-role="main">
     <h1>Hi, I’m {{ .Site.Params.author }}.</h1>
-    <p>I write software, make designs, and enjoy writing. This is my personal little corner of the internet.</p>
-    <p>You can find some of the stuff I've done over the years here:</p>
+    <p>I write software, make designs, and enjoy writing. This is my personal little corner of the internet. Feel free to read a little more <a href="/about">about me</a>, or take a look at some of the stuff I've made.</p>
 
+    <h2>In categories</h2>
     <ul class="section-list">
         {{ range $key, $value := .Site.Taxonomies.tags }}
-        <li><h2><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a></h2></li>
+        <li>
+            <h3><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a></h3>
+            {{ $count := len $value }}
+            {{ $lastUp := dateFormat "2 Jan, 2006" (index $value 0).Params.date }}
+            <p class="details">{{ $count }} {{ if gt $count 1 }}posts{{ else }}post{{ end }}. Last updated {{ $lastUp }}.</p>
+        </li>
         {{ end }}    
     </ul>
 
+    <h2>My media diet</h2>
     {{ if .Site.Data.reading }}
     <p>I’m reading {{- partial "rwp-list.html" .Site.Data.reading -}}</p>
     {{ end }}

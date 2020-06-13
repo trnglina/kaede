@@ -10,7 +10,7 @@
     <h1>{{ .Title }}</h1>
     <ol class="section-list">
         {{ range where .Pages ".Params.page" false }}
-        <li><h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2></li>
+        <li><h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3></li>
         {{ end }}
     </ol>
 </main>

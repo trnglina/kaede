@@ -6,9 +6,13 @@
 body {
   font-family: $body-font;
   font-size: $body-font-size;
+  line-height: $body-line-height;
+  padding: $body-padding;
 
   @media screen and (max-width: 768px) {
     font-size: $body-font-size * 0.8;
+    padding: ($body-padding + 20px) ($body-padding * 0.5) ($body-padding * 0.5)
+      ($body-padding * 0.5);
   }
 }
 
@@ -19,7 +23,7 @@ h4,
 h5,
 h6 {
   font-family: $title-font;
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 h1 {
@@ -47,7 +51,20 @@ h6 {
 }
 
 p {
+  hyphens: auto;
   margin: 1em 0;
+  text-align: justify;
+}
+
+a:focus {
+  outline: 2px #ff8b00 solid;
+}
+
+/* Layout */
+
+main {
+  max-width: $main-width;
+  word-spacing: -2px;
 }
 
 /* Inline lists */
@@ -55,6 +72,7 @@ p {
 .inline-list {
   display: inline-block;
   list-style: none;
+  margin: 0;
   padding: 0;
 
   > li {
@@ -67,16 +85,52 @@ p {
 
 .global-navigation {
   align-items: center;
+  background-color: $accent-colour;
+  color: #fff;
   display: flex;
+  font-size: $nav-font-size;
+  left: 0;
+  line-height: 1.5;
+  padding: $nav-padding;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  @media screen and (max-width: 400px) {
+    li:first-child,
+    .wrapper-list > li {
+      margin-left: 0;
+    }
+
+    .logo {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    li {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
 
   .logo {
-    margin-right: $inline-list-spacing;
-    width: $logo-width;
+    height: $nav-logo-height;
 
     > * {
-      fill: $accent-colour;
-      width: inherit;
+      fill: #fff;
+      height: inherit;
     }
+  }
+
+  .wrapper-list {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
