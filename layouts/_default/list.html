@@ -5,12 +5,27 @@
 {{ define "main" }}
 <main aria-role="main">
     <h1>{{ .Title }}</h1>
-    <ol class="section-list">
-        {{ range where .Pages ".Params.page" false }}
+    <ul class="section-list">
+        {{ $posts := where .Pages ".Params.page" false }}
+        {{ if gt (len $posts) 0 }}
+        {{ range $posts }}
         <li>
             {{- partial "post-card.html" . -}}
         </li>
         {{ end }}
-    </ol>
+        {{ else }}
+        {{ range .Pages }}
+        <li>
+            <div>
+                <h3><a href="{{ .Permalink  }}">{{ .Title }}</a></h3>
+                {{ $lastUp := dateFormat "02 Jan, 2006" (index .Pages 0).Params.date }}
+                <p class="details">
+                    <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
+                </p>
+            </div>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
 </main>
 {{ end }}
