@@ -1,0 +1,16 @@
+@import 'variables';
+
+/* Section lists */
+.section-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  li {
+    margin-right: $section-list-spacing;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

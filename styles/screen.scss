@@ -23,6 +23,7 @@ h4,
 h5,
 h6 {
   font-family: $title-font;
+  line-height: 1;
   margin: 1em 0 0;
 }
 
@@ -53,18 +54,41 @@ h6 {
 p {
   hyphens: auto;
   margin: 1em 0;
-  text-align: justify;
 }
 
-a:focus {
-  outline: 2px #ff8b00 solid;
+a {
+  color: $link-colour;
+
+  &:focus {
+    outline: 2px #ff8b00 solid;
+  }
+
+  &:focus,
+  &:hover {
+    color: $link-hover-colour;
+  }
 }
 
 /* Layout */
 
 main {
-  max-width: $main-width;
   word-spacing: -2px;
+
+  p,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  code,
+  pre,
+  ul,
+  ol,
+  figure {
+    max-width: $main-width;
+  }
 }
 
 /* Inline lists */
@@ -141,4 +165,23 @@ main {
     display: inline-block;
     margin-right: 1em;
   }
+}
+
+/* Colour spans */
+
+.side {
+  color: $side-colour;
+  font-style: italic;
+}
+
+/* Section lists */
+.section-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.details {
+  font-size: 80%;
+  margin: 0;
 }

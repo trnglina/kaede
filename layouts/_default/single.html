@@ -9,6 +9,7 @@
 <main aria-role="main">
     <article class="article">
         <h1 class="article-title">{{ .Title }}</h1>
+        {{- partial "post-details.html" . -}}
         {{ .Content }}
     </article>
 </main>

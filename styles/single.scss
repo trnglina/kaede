@@ -1,1 +1,23 @@
 @import 'variables';
+
+figure {
+  margin: 1em 0 2em;
+  width: auto;
+
+  img {
+    border: 5px $accent-colour dashed;
+    height: auto;
+    max-width: inherit;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      border-width: 2px;
+    }
+  }
+
+  figcaption {
+    color: $side-colour;
+    font-size: 90%;
+    font-style: italic;
+  }
+}
