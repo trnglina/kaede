@@ -71,7 +71,7 @@ function scripts() {
 }
 
 function compile(cb) {
-  const hg = spawn('hugo', [], { stdio: 'inherit' })
+  const hg = spawn('hugo', ['--minify'], { stdio: 'inherit' })
   hg.on('exit', (code) => {
     cb(code === 0 ? null : code)
   })
