@@ -4,15 +4,15 @@ figure {
   margin: 1em 0 2em;
   width: auto;
 
+  @media screen and (max-width: 768px) {
+    margin: 0 ($body-padding * -0.5);
+  }
+
   img {
-    border: 5px $accent-colour dashed;
+    border-radius: $border-radius;
     height: auto;
     max-width: inherit;
     width: 100%;
-
-    @media screen and (max-width: 768px) {
-      border-width: 2px;
-    }
   }
 
   figcaption {

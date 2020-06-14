@@ -11,8 +11,7 @@
     <ol class="section-list">
         {{ range where .Pages ".Params.page" false }}
         <li>
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            {{- partial "post-details.html" . -}}
+            {{- partial "post-card.html" . -}}
         </li>
         {{ end }}
     </ol>

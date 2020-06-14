@@ -1,0 +1,13 @@
+<div class="post-card {{ if .Params.thumbnail }}has-thumbnail{{ end }}">
+    {{ if .Params.thumbnail }}
+    <img aria-hidden="true" src="{{ .Params.thumbnail }}">
+    {{ end }}
+    
+    <div class="post-card-text">
+        <h3 class="post-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{- partial "post-details.html" . -}}
+        {{ if not .Params.thumbnail }}
+        <p class="post-card-summary">{{ .Summary }} <a href="{{ .Permalink }}">Read more →</a></p>
+        {{ end }}
+    </div>
+</div>

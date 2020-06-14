@@ -1,7 +1,7 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="{{ "/styles/index.css" | absURL }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}" media="print" onload="this.media='all'">
 <noscript>
-    <link rel="stylesheet" href="{{ "/styles/index.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
 </noscript>
 {{ end }}
 
@@ -15,7 +15,7 @@
     </p>
 
     <h2>In categories</h2>
-    <ul class="section-list">
+    <ul class="section-list category-list">
         {{ range $key, $value := .Site.Taxonomies.tags }}
         <li>
             <h3><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a></h3>
@@ -23,6 +23,15 @@
             <p class="details">
                 <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
             </p>
+        </li>
+        {{ end }}    
+    </ul>
+
+    <h2>Most recent</h2>
+    <ul class="section-list">
+        {{ range first 4 (where .Site.Pages ".Params.page" false) }}
+        <li>
+            {{- partial "post-card.html" . -}}
         </li>
         {{ end }}    
     </ul>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 
-{{ $description := .Site.Params.description }}
-{{ if .Description }}
-    {{ $description = .Description }}
-{{ else if .Summary }}
-    {{ $description = .Summary }}
-{{ end }}
-    
-{{ $title := .Site.Title }}
-{{ if .IsHome }}
-    {{ $title = .Site.Params.description }}
-{{ else if .Title }}
-    {{ $title = .Title }}
-{{ end }}
-
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    {{ $description := .Site.Params.description }}
+    {{ if .Description }}
+        {{ $description = .Description }}
+    {{ else if .Summary }}
+        {{ $description = .Summary }}
+    {{ end }}
+        
+    {{ $title := .Site.Title }}
+    {{ if .IsHome }}
+        {{ $title = .Site.Params.description }}
+    {{ else if .Title }}
+        {{ $title = .Title }}
+    {{ end }}    
+
     <meta name="description" content="{{ $description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     <meta name="developer" content="{{ .Site.Params.author }}">

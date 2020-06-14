@@ -1,6 +1,6 @@
 {{ $len := (len .) }}
 {{ $index := 0 }}
 {{ range . }}
-    <a href="{{ .link }}">{{ .title | markdownify }}</a>{{ if lt $index (sub $len 2) }},{{ else if (eq $index (sub $len 2)) }}, <span class="side">and</span>{{else}}.{{ end }}
+    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .title | markdownify }}</a>{{ if lt $index (sub $len 2) }},{{ else if (eq $index (sub $len 2)) }}, <span class="side">and</span>{{else}}.{{ end }}
     {{ $index = add $index 1 }}
 {{ end }}
