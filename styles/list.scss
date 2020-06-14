@@ -11,8 +11,8 @@
   padding: 0;
 
   li {
+    display: flex;
     margin-right: $section-list-spacing;
-    max-width: inherit;
 
     &:last-child {
       margin-right: 0;
@@ -29,7 +29,6 @@
   &.has-thumbnail {
     align-items: end;
     align-items: flex-end;
-    display: flex;
     position: relative;
 
     &::before {
@@ -58,7 +57,10 @@
     }
 
     .post-card-text {
+      bottom: 0;
+      left: 0;
       position: absolute;
+      right: 0;
       z-index: 1;
     }
   }

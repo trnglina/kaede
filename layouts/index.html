@@ -18,11 +18,13 @@
     <ul class="section-list category-list">
         {{ range $key, $value := .Site.Taxonomies.tags }}
         <li>
-            <h3><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a></h3>
-            {{ $lastUp := dateFormat "02 Jan, 2006" (index $value 0).Params.date }}
-            <p class="details">
-                <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
-            </p>
+            <div>
+                <h3><a href="/tags/{{ $key | urlize  }}">{{ $key | humanize }}</a></h3>
+                {{ $lastUp := dateFormat "02 Jan, 2006" (index $value 0).Params.date }}
+                <p class="details">
+                    <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
+                </p>    
+            </div>
         </li>
         {{ end }}    
     </ul>
