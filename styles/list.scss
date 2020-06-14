@@ -24,11 +24,12 @@
 
 .post-card {
   margin-top: $body-font-size + 10px;
-  max-width: 600px;
+  max-width: 768px;
 
   &.has-thumbnail {
     align-items: end;
     align-items: flex-end;
+    display: flex;
     position: relative;
 
     &::before {
@@ -76,19 +77,22 @@
   @media screen and (max-width: 768px) {
     margin-left: ($body-padding * -0.5);
     margin-right: ($body-padding * -0.5);
-    max-width: 100vw;
     overflow: hidden;
-
-    img {
-      border-radius: 0;
-    }
+    width: 100vw;
 
     .post-card-text {
       margin: 0 ($body-padding * 0.5);
     }
 
-    &.has-thumbnail::before {
-      bottom: 0;
+    &.has-thumbnail {
+      &::before {
+        bottom: 0;
+      }
+
+      img {
+        border-radius: 0;
+        margin: 0;
+      }
     }
   }
 

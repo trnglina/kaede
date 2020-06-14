@@ -7,7 +7,7 @@
         <h3 class="post-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         {{- partial "post-details.html" . -}}
         {{ if not .Params.thumbnail }}
-        <p class="post-card-summary">{{ .Summary }} <a href="{{ .Permalink }}">Read more →</a></p>
+        <p class="post-card-summary">{{ .Summary }} <a style="font-style: italic;" href="{{ .Permalink }}">Read more&nbsp;→</a></p>
         {{ end }}
     </div>
 </div>

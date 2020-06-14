@@ -57,6 +57,11 @@ p {
   margin: 1em 0;
 }
 
+.side {
+  color: $side-colour;
+  font-style: italic;
+}
+
 a {
   color: $link-colour;
 
@@ -176,11 +181,4 @@ main {
     display: inline-block;
     margin-right: 1em;
   }
-}
-
-/* Colour spans */
-
-.side {
-  color: $side-colour;
-  font-style: italic;
 }
