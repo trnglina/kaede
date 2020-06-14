@@ -24,7 +24,7 @@ h4,
 h5,
 h6 {
   font-family: $title-font;
-  line-height: 1;
+  line-height: 0.8;
   margin: 1em 0 0;
 }
 
@@ -95,7 +95,7 @@ main {
 
 .details {
   font-size: 80%;
-  margin: 0;
+  margin: 8px 0 0;
 }
 
 /* Inline lists */

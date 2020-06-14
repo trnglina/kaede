@@ -23,5 +23,9 @@ figure {
     img {
       border-radius: 0;
     }
+
+    figcaption {
+      margin: 0.25em ($body-padding * 0.5);
+    }
   }
 }
