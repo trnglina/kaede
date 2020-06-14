@@ -129,6 +129,8 @@ main {
   z-index: 999;
 
   @media screen and (max-width: 400px) {
+    padding-left: $body-padding * 0.5;
+
     li:first-child,
     .wrapper-list > li {
       margin-left: 0;
@@ -139,7 +141,7 @@ main {
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 350px) {
     li {
       margin-left: 0;
     }
