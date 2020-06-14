@@ -4,10 +4,6 @@ figure {
   margin: 1em 0 2em;
   width: auto;
 
-  @media screen and (max-width: 768px) {
-    margin: 0 ($body-padding * -0.5);
-  }
-
   img {
     border-radius: $border-radius;
     height: auto;
@@ -19,5 +15,13 @@ figure {
     color: $side-colour;
     font-size: 90%;
     font-style: italic;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 ($body-padding * -0.5);
+
+    img {
+      border-radius: 0;
+    }
   }
 }
