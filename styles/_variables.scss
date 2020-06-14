@@ -1,6 +1,8 @@
 $accent-colour: #c94c45;
 $alt-accent-colour: #148189;
 
+$border-radius: 5px;
+
 $inline-list-spacing: 10px;
 
 $title-font: 'Libre Caslon Display';
@@ -22,5 +24,3 @@ $link-colour: $alt-accent-colour;
 $link-hover-colour: darken($alt-accent-colour, 20%);
 
 $side-colour: #283946;
-
-$border-radius: 5px;
