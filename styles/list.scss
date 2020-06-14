@@ -1,5 +1,9 @@
 @import 'variables';
 
+body {
+  overflow-x: hidden;
+}
+
 /* Section lists */
 
 .section-list {
@@ -74,12 +78,12 @@
     margin-right: ($body-padding * -0.5);
     max-width: 100vw;
 
-    .post-card-text {
-      margin: 0 ($body-padding * 0.5);
+    img {
+      border-radius: 0;
     }
 
-    .post-card-summary {
-      margin-right: ($body-padding * -0.5);
+    .post-card-text {
+      margin: 0 ($body-padding * 0.5);
     }
   }
 
