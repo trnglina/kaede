@@ -1,6 +1,6 @@
 <div class="post-card {{ if .Params.thumbnail }}has-thumbnail{{ end }}">
     {{ if .Params.thumbnail }}
-    <img aria-hidden="true" src="{{ .Params.thumbnail }}">
+    <img aria-hidden="true" src='{{ ((.Resources.GetMatch .Params.thumbnail).Resize "800x").Permalink }}'>
     {{ end }}
     
     <div class="post-card-text">
