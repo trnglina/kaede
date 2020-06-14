@@ -1,9 +1,5 @@
 @import 'variables';
 
-body {
-  overflow-x: hidden;
-}
-
 /* Section lists */
 
 .section-list {
@@ -29,6 +25,7 @@ body {
 .post-card {
   margin-top: $body-font-size + 10px;
   max-width: 600px;
+  overflow: hidden;
 
   &.has-thumbnail {
     align-items: end;
@@ -84,6 +81,10 @@ body {
 
     .post-card-text {
       margin: 0 ($body-padding * 0.5);
+    }
+
+    &.has-thumbnail::before {
+      bottom: 0;
     }
   }
 
