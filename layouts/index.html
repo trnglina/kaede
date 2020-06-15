@@ -40,13 +40,13 @@
 
     <h2>My media diet</h2>
     {{ if .Site.Data.reading }}
-    <p><span class="side">I’m reading</span> {{- partial "rwp-list.html" .Site.Data.reading -}}</p>
+    <p style="text-align: left;"><span class="side">I’m reading</span> {{- partial "rwp-list.html" .Site.Data.reading -}}</p>
     {{ end }}
     {{ if .Site.Data.watching }}
-    <p><span class="side">I’m watching</span> {{- partial "rwp-list.html" .Site.Data.watching -}}</p>
+    <p style="text-align: left;"><span class="side">I’m watching</span> {{- partial "rwp-list.html" .Site.Data.watching -}}</p>
     {{ end }}
     {{ if .Site.Data.playing }}
-    <p><span class="side">I’m playing</span> {{- partial "rwp-list.html" .Site.Data.playing -}}</p>
+    <p style="text-align: left;"><span class="side">I’m playing</span> {{- partial "rwp-list.html" .Site.Data.playing -}}</p>
     {{ end }}
 </main>
 {{ end }}
