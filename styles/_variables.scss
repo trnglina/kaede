@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital@0;1&display=swap');
+
 $accent-colour: #c94c45;
 $alt-accent-colour: #148189;
 
@@ -5,11 +7,12 @@ $border-radius: 5px;
 
 $inline-list-spacing: 10px;
 
-$title-font: 'Times New Roman', Times, 'Liberation Serif', 'DejaVu Serif', serif;
+$title-font: 'Playfair Display', 'Times New Roman', Times, 'Liberation Serif',
+  'DejaVu Serif', serif;
 
-$body-font: 'Georgia Pro', Georgia, 'Gelasio', 'Bitstream Charter', 'ET Book',
-  'EB Garamond', 'Droid Serif', serif;
-$body-font-size: 16pt;
+$body-font: 'EB Garamond', 'Georgia Pro', Georgia, 'Gelasio',
+  'Bitstream Charter', 'ET Book', 'EB Garamond', 'Droid Serif', serif;
+$body-font-size: 18pt;
 $body-padding: 50px;
 $body-line-height: 1.5;
 
@@ -27,3 +30,4 @@ $link-hover-colour: darken($alt-accent-colour, 20%);
 $side-colour: #283946;
 
 $post-card-width: 768px;
+$post-card-image-offset: 10px;
