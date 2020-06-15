@@ -111,8 +111,12 @@ main {
   padding: 0;
 
   > li {
-    display: inline-block;
+    display: inline;
     margin-left: $inline-list-spacing;
+
+    @media screen and (max-width: 400px) {
+      margin-left: $inline-list-spacing / 2;
+    }
   }
 }
 
@@ -142,12 +146,6 @@ main {
 
     .logo {
       display: none;
-    }
-  }
-
-  @media screen and (max-width: 350px) {
-    li {
-      margin-left: 0;
     }
   }
 

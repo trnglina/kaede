@@ -83,7 +83,7 @@ function watch(cb) {
 }
 
 function serve(cb) {
-  const hg = spawn('hugo', ['server'], { stdio: 'inherit' })
+  const hg = spawn('hugo', ['server', '--minify'], { stdio: 'inherit' })
   hg.on('exit', (code) => {
     cb(code === 0 ? null : code)
   })
