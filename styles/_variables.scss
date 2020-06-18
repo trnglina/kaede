@@ -2,6 +2,8 @@
 
 $accent-colour: #c94c45;
 $alt-accent-colour: #148189;
+$acc-colour: #ffcd71;
+$side-colour: #283946;
 
 $border-radius: 5px;
 
@@ -26,8 +28,7 @@ $section-list-spacing: 40px;
 
 $link-colour: $alt-accent-colour;
 $link-hover-colour: darken($alt-accent-colour, 20%);
-
-$side-colour: #283946;
+$link-visited-colour: adjust-hue($alt-accent-colour, 60deg);
 
 $post-card-width: 768px;
 $post-card-image-offset: 10px;

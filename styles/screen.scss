@@ -7,12 +7,9 @@ body {
   font-size: $body-font-size;
   line-height: $body-line-height;
   margin: 0;
-  padding: $body-padding;
 
   @media screen and (max-width: 768px) {
     font-size: $body-font-size * 0.8;
-    padding: ($body-padding + 20px) ($body-padding * 0.5) ($body-padding * 0.5)
-      ($body-padding * 0.5);
   }
 }
 
@@ -65,21 +62,49 @@ p {
 
 a {
   color: $link-colour;
+  display: inline-block;
 
   &:focus {
-    outline: 2px #ff8b00 dashed;
-    outline-offset: -2px;
+    outline: none;
+    position: relative;
+    text-shadow: none;
+    z-index: 99999;
+
+    &::after {
+      background: $acc-colour;
+      bottom: -0.1em;
+      box-shadow: 0 0 6px rgba($color: #000, $alpha: 0.2);
+      color: black;
+      content: '';
+      display: block;
+      left: -0.15em;
+      position: absolute;
+      right: -0.15em;
+      top: 0;
+      z-index: -1;
+    }
   }
 
   &:focus,
   &:hover {
     color: $link-hover-colour;
   }
+
+  &:visited {
+    color: $link-visited-colour;
+  }
 }
 
 /* Layout */
 
 main {
+  padding: $body-padding;
+
+  @media screen and (max-width: 768px) {
+    padding: ($body-padding + 20px) ($body-padding * 0.5) ($body-padding * 0.5)
+      ($body-padding * 0.5);
+  }
+
   p,
   blockquote,
   h1,
@@ -151,6 +176,14 @@ main {
 
   a {
     color: #fff;
+
+    &:focus {
+      outline: 2px solid $acc-colour;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 
   .logo {
