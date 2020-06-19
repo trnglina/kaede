@@ -62,27 +62,9 @@ p {
 
 a {
   color: $link-colour;
-  display: inline-block;
 
   &:focus {
-    outline: none;
-    position: relative;
-    text-shadow: none;
-    z-index: 99999;
-
-    &::after {
-      background: $acc-colour;
-      bottom: -0.1em;
-      box-shadow: 0 0 6px rgba($color: #000, $alpha: 0.2);
-      color: black;
-      content: '';
-      display: block;
-      left: -0.15em;
-      position: absolute;
-      right: -0.15em;
-      top: 0;
-      z-index: -1;
-    }
+    outline: 2px solid $acc-colour;
   }
 
   &:focus,
@@ -98,11 +80,10 @@ a {
 /* Layout */
 
 main {
-  padding: $body-padding;
+  padding: 0 $body-padding $body-padding $body-padding;
 
   @media screen and (max-width: 768px) {
-    padding: ($body-padding + 20px) ($body-padding * 0.5) ($body-padding * 0.5)
-      ($body-padding * 0.5);
+    padding: 0 ($body-padding * 0.5) ($body-padding * 0.5) ($body-padding * 0.5);
   }
 
   p,
@@ -153,12 +134,8 @@ main {
   color: #fff;
   display: flex;
   font-size: $nav-font-size;
-  left: 0;
   line-height: 1.5;
   padding: $nav-padding;
-  position: fixed;
-  right: 0;
-  top: 0;
   z-index: 999;
 
   @media screen and (max-width: 400px) {
@@ -179,10 +156,6 @@ main {
 
     &:focus {
       outline: 2px solid $acc-colour;
-
-      &::after {
-        display: none;
-      }
     }
   }
 
