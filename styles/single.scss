@@ -1,31 +1,13 @@
 @import 'variables';
 
 figure {
-  margin: 1em 0 2em;
   width: auto;
 
   img {
-    border-radius: $border-radius;
     height: auto;
-    max-width: inherit;
     width: 100%;
   }
 
   figcaption {
-    color: $side-colour;
-    font-size: 90%;
-    font-style: italic;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin: 0 ($body-padding * -0.5);
-
-    img {
-      border-radius: 0;
-    }
-
-    figcaption {
-      margin: 0.25em ($body-padding * 0.5);
-    }
   }
 }

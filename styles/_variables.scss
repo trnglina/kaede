@@ -1,34 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital@0;1&display=swap');
+$base-padding: 50px;
 
-$accent-colour: #c94c45;
-$alt-accent-colour: #148189;
-$acc-colour: #ffcd71;
-$side-colour: #283946;
+$background-colour: #fff;
+$body-colour: #302025;
+$accent-colour: #fe5f55;
 
-$border-radius: 5px;
+$double-breakpoint: 800px;
+$single-breakpoint: 500px;
 
-$inline-list-spacing: 10px;
+$heading-line-height: 1;
 
-$title-font: 'Playfair Display', 'Times New Roman', Times, 'Liberation Serif',
-  'DejaVu Serif', serif;
-
-$body-font: 'EB Garamond', 'Georgia Pro', Georgia, 'Gelasio',
+$heading-font-family: 'Suisse Works', 'Georgia Pro', Georgia, 'Gelasio',
   'Bitstream Charter', 'ET Book', 'EB Garamond', 'Droid Serif', serif;
-$body-font-size: 18pt;
-$body-padding: 50px;
-$body-line-height: 1.3;
-
-$nav-logo-height: 25px;
-$nav-font-size: 12pt;
-$nav-padding: $inline-list-spacing ($inline-list-spacing + 8px);
-
-$main-width: 800px;
-
-$section-list-spacing: 40px;
-
-$link-colour: $alt-accent-colour;
-$link-hover-colour: darken($alt-accent-colour, 20%);
-$link-visited-colour: adjust-hue($alt-accent-colour, 60deg);
-
-$post-card-width: 768px;
-$post-card-image-offset: 10px;

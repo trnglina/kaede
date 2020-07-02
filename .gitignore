@@ -27,4 +27,6 @@ public
 resources
 content
 data
-static
+static/styles/
+static/scripts/
+static/fonts/

@@ -4,27 +4,25 @@
 
 {{ define "main" }}
 <main aria-role="main">
-    <h1>{{ .Title }}</h1>
-    <ul class="section-list">
-        {{ $posts := where .Pages ".Params.page" false }}
-        {{ if gt (len $posts) 0 }}
-        {{ range $posts }}
-        <li>
-            {{- partial "post-card.html" . -}}
-        </li>
-        {{ end }}
-        {{ else }}
+    <div class="list-sidebar">
+        {{- partial "breadcrumb.html" . -}}
+    </div>
+    <ul class="list-view">
         {{ range .Pages }}
-        <li>
-            <div>
-                <h3><a href="{{ .Permalink  }}">{{ .Title }}</a></h3>
-                {{ $lastUp := dateFormat "02 Jan, 2006" (index .Pages 0).Params.date }}
-                <p class="details">
-                    <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
-                </p>
-            </div>
+        <li class="list-card
+                {{ if .Params.thumbnail }}
+                   has-thumbnail
+                {{ end }}">
+            <h2>
+                <a href="{{ .Permalink  }}">
+                    {{ .Title }}
+                    {{ if .Params.thumbnail }}
+                    <span class="thumbnail-wrapper" aria-hidden="true"
+                        style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></span>
+                    {{ end }}        
+                </a>
+            </h2>
         </li>
-        {{ end }}
         {{ end }}
     </ul>
 </main>
