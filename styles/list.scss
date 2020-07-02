@@ -4,7 +4,8 @@ body {
   background-color: $background-colour;
   color: $body-colour;
   cursor: url('/images/icons/cursor-default.cur'), default; // IE fallback
-  cursor: url('/images/icons/cursor-default.cur') 32 32, default;
+  cursor: url('/images/icons/cursor-default.png') 24 24,
+    url('/images/icons/cursor-default.cur') 24 24, default;
   min-height: 100vh;
 }
 
@@ -14,6 +15,12 @@ main {
   @media screen and (max-width: $double-breakpoint) {
     flex-wrap: wrap;
   }
+}
+
+a {
+  cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
+  cursor: url('/images/icons/cursor-pointer.png') 24 24,
+    url('/images/icons/cursor-pointer.cur') 24 24, pointer;
 }
 
 .list-sidebar {
@@ -93,8 +100,6 @@ main {
 
   a {
     color: $accent-colour;
-    cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
-    cursor: url('/images/icons/cursor-pointer.cur') 32 32, pointer;
     display: inline-block;
     position: relative;
     text-decoration: none;
