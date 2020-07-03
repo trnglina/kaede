@@ -21,7 +21,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
-  margin: 0 0 15px;
+  margin: 0 0 12px;
   padding: 0 $base-padding;
 
   @media screen and (max-width: $double-breakpoint) {
@@ -130,7 +130,7 @@ a {
     font-family: $heading-font-family;
     font-size: 7vw;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 1.05;
     margin: 0.2em 0 0.1em -3px;
 
     @media screen and (min-width: 2000px) {
