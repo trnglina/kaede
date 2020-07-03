@@ -82,7 +82,6 @@ a {
       content: '';
       display: block;
       left: $base-padding;
-      mix-blend-mode: darken;
       opacity: 0;
       pointer-events: none;
       position: fixed;
@@ -106,7 +105,6 @@ a {
     background-size: cover;
     bottom: $base-padding;
     left: $base-padding;
-    opacity: $base-padding;
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
