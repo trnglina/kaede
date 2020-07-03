@@ -1,21 +1,25 @@
 @import 'variables';
 
 body {
-  background-color: $background-colour;
-  color: $body-colour;
   cursor: url('/images/icons/cursor-default.png') 24 24,
     url('/images/icons/cursor-default.cur') 24 24, default;
   min-height: 100vh;
 }
 
 .list-view {
-  display: flex;
   flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: space-between;
   list-style: none;
   margin: 0 0 12px;
   padding: 0 $base-padding;
+
+  li {
+    position: relative;
+
+    &:focus,
+    &:hover {
+      z-index: 200;
+    }
+  }
 
   @media screen and (max-width: $double-breakpoint) {
     flex-basis: 100%;
@@ -28,8 +32,6 @@ body {
     url('/images/icons/cursor-pointer.cur') 24 24, pointer;
   display: inline-block;
   margin-bottom: 2em;
-  position: relative;
-  width: 100%;
 
   &:first-child .list-card-heading {
     margin-top: 0;
@@ -37,8 +39,6 @@ body {
 
   &:focus,
   &:hover {
-    z-index: 200;
-
     a {
       color: $background-colour;
       transition: color 0.1s cubic-bezier(0.65, 0, 0.35, 1);
@@ -110,6 +110,7 @@ body {
   .list-card-information {
     color: $background-colour;
     display: inline-block;
+    left: 0;
     margin: 0;
     opacity: 0;
     pointer-events: none;
