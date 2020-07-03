@@ -13,7 +13,7 @@
                 {{ if .Params.thumbnail }}
                    has-thumbnail
                 {{ end }}">
-            <h2 class="list-card-heading">
+            <h2 class="list-card-heading article-title">
                 <a href="{{ .Permalink  }}">
                     {{ .Title }}
                 </a>
@@ -24,7 +24,7 @@
             </div>
             {{ end }}
             {{ if or .Date .Params.tags }}
-            <p class="list-card-information">
+            <p class="list-card-information article-information">
                 {{ if .Date }}
                     Published <time>{{ dateFormat "02 Jan, 2006" .Date }}</time>
                 {{ end }}

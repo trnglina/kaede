@@ -67,3 +67,36 @@ code,
 figure {
   margin: $block-padding 0;
 }
+
+.article-title {
+  font-size: 7vw;
+  font-weight: normal;
+  line-height: 1.05;
+  margin: 0 0 0.1em;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 120pt;
+  }
+
+  @media screen and (max-width: $double-breakpoint) {
+    font-size: 42pt;
+  }
+
+  @media screen and (max-width: $single-breakpoint) {
+    font-size: 32pt;
+  }
+}
+
+.article-information {
+  font-size: 24pt;
+  font-weight: 200;
+  margin-top: 0;
+
+  @media screen and (max-width: $double-breakpoint) {
+    font-size: 16pt;
+  }
+
+  @media screen and (max-width: $single-breakpoint) {
+    font-size: 14pt;
+  }
+}

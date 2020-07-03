@@ -8,38 +8,6 @@
   }
 }
 
-.article-title {
-  font-size: 7vw;
-  font-weight: normal;
-  line-height: 1.05;
-  margin: 0 0 0.1em -3px;
-
-  @media screen and (min-width: 2000px) {
-    font-size: 120pt;
-  }
-
-  @media screen and (max-width: $double-breakpoint) {
-    font-size: 42pt;
-  }
-
-  @media screen and (max-width: $single-breakpoint) {
-    font-size: 32pt;
-  }
-}
-
-.article-information {
-  font-size: 24pt;
-  margin-top: 0;
-
-  @media screen and (max-width: $double-breakpoint) {
-    font-size: 18pt;
-  }
-
-  @media screen and (max-width: $single-breakpoint) {
-    font-size: 16pt;
-  }
-}
-
 .article {
   flex-grow: 1;
   max-width: $body-column-width;

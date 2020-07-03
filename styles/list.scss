@@ -45,6 +45,8 @@ a {
 
   &:focus,
   &:hover {
+    z-index: 200;
+
     a {
       color: $background-colour;
       transition: color 0.1s cubic-bezier(0.65, 0, 0.35, 1);
@@ -60,6 +62,11 @@ a {
     .list-card-information {
       opacity: 1;
       transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .list-card-information {
+      color: $background-colour;
+      transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
     }
   }
 
@@ -113,7 +120,6 @@ a {
     top: $base-padding;
     transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
     width: calc(100% - (2 * #{$base-padding}));
-    z-index: 50;
 
     @media screen and (max-width: $double-breakpoint) {
       bottom: 0;
@@ -124,43 +130,21 @@ a {
     }
   }
 
-  .list-card-heading {
-    font-family: $heading-font-family;
-    font-size: 7vw;
-    font-weight: normal;
-    line-height: 1.05;
-    margin: 0.2em 0 0.1em -3px;
-
-    @media screen and (min-width: 2000px) {
-      font-size: 120pt;
-    }
-
-    @media screen and (max-width: $double-breakpoint) {
-      font-size: 42pt;
-    }
-
-    @media screen and (max-width: $single-breakpoint) {
-      font-size: 32pt;
-    }
-  }
-
   .list-card-information {
     color: $background-colour;
     display: inline-block;
-    font-size: 24pt;
     margin: 0;
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-    z-index: 150;
-
-    @media screen and (max-width: $double-breakpoint) {
-      font-size: 18pt;
-    }
+    transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1),
+      color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 100;
 
     @media screen and (max-width: $single-breakpoint) {
-      font-size: 16pt;
+      color: inherit;
+      opacity: 1;
+      pointer-events: all;
     }
   }
 
@@ -185,5 +169,9 @@ a {
       transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
       z-index: -3;
     }
+  }
+
+  @media screen and (max-width: $single-breakpoint) {
+    margin-bottom: 3em;
   }
 }
