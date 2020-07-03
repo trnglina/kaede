@@ -41,10 +41,10 @@ figure {
 
     @media screen and (min-width: $single-breakpoint) {
       bottom: 4px;
-      display: inline-block;
-      max-width: $side-column-width;
+      display: block;
       position: absolute;
-      right: -($side-column-width + $block-padding);
+      right: -($side-column-width + $side-column-padding);
+      width: $side-column-width;
     }
   }
 }
