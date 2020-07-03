@@ -13,15 +13,30 @@
                 {{ if .Params.thumbnail }}
                    has-thumbnail
                 {{ end }}">
-            <h2>
+            <h2 class="list-card-heading">
                 <a href="{{ .Permalink  }}">
                     {{ .Title }}
-                    {{ if .Params.thumbnail }}
-                    <span class="thumbnail-wrapper" aria-hidden="true"
-                        style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></span>
-                    {{ end }}        
                 </a>
             </h2>
+            {{ if .Params.thumbnail }}
+            <div class="thumbnail-wrapper" aria-hidden="true"
+                style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'>
+            </div>
+            {{ end }}
+            {{ if or .Date .Params.tags }}
+            <p class="list-card-information">
+                {{ if .Date }}
+                    Published <time>{{ dateFormat "02 Jan, 2006" .Date }}</time>
+                {{ end }}
+                {{ if and .Date .Params.tags }}in{{ end }}
+                {{ if .Params.tags }}
+                    {{ $len := len .Params.tags }}
+                    {{ range $index, $element := .Params.tags }}
+                    {{ $element }}{{ if ne $index (sub $len 1) }},{{ end }}
+                    {{ end }}
+                {{ end }}
+            </p>
+            {{ end }}
         </li>
         {{ end }}
     </ul>

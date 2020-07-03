@@ -10,7 +10,7 @@
     <ul class="list-view">
         {{ range .Site.Menus.index }}
         <li class="list-card">
-            <h2><a href="{{ .URL }}">{{ .Name }}</a></h2>
+            <h2 class="list-card-heading"><a href="{{ .URL }}">{{ .Name }}</a></h2>
         </li>
         {{ end }}
     </ul>

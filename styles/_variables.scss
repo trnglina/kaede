@@ -8,9 +8,9 @@ $accent-colour: #fe5f55;
 $body-column-width: 750px;
 $side-column-width: 300px;
 
-$double-breakpoint: (4 * $base-padding) + $body-column-width +
+$double-breakpoint: (3 * $base-padding) + $block-padding + $body-column-width +
   (2 * $side-column-width);
-$single-breakpoint: (3 * $base-padding) + $body-column-width +
+$single-breakpoint: (2 * $base-padding) + $block-padding + $body-column-width +
   $side-column-width;
 
 $heading-font-family: 'Suisse Works', 'Georgia Pro', Georgia, 'Gelasio',

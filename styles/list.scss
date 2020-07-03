@@ -22,7 +22,7 @@ a {
   justify-content: space-between;
   line-height: 1;
   list-style: none;
-  margin: 0 0 0 -3px;
+  margin: 0 0 $base-padding -3px;
   padding: 0 $base-padding;
 
   @media screen and (max-width: $double-breakpoint) {
@@ -32,43 +32,22 @@ a {
 }
 
 .list-card {
+  cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
+  cursor: url('/images/icons/cursor-pointer.png') 24 24,
+    url('/images/icons/cursor-pointer.cur') 24 24, pointer;
   display: inline-block;
+  margin-bottom: 1.5em;
+  position: relative;
   width: 100%;
 
-  &:first-child h2 {
+  &:first-child .list-card-heading {
     margin-top: 0;
   }
 
-  h2 {
-    font-family: $heading-font-family;
-    font-size: 7vw;
-    font-weight: normal;
-    margin: 0.35em 0;
-
-    @media screen and (min-width: 2000px) {
-      font-size: 120pt;
-    }
-
-    @media screen and (max-width: $double-breakpoint) {
-      font-size: 42pt;
-    }
-
-    @media screen and (max-width: $single-breakpoint) {
-      font-size: 32pt;
-    }
-  }
-
-  a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    transition: color 0.1s cubic-bezier(0.65, 0, 0.35, 1);
-    z-index: 10;
-
-    &:focus,
-    &:hover {
+  &:focus,
+  &:hover {
+    a {
       color: $background-colour;
-      outline: none;
       transition: color 0.1s cubic-bezier(0.65, 0, 0.35, 1);
       z-index: 100;
 
@@ -76,69 +55,29 @@ a {
         opacity: 1;
         transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
       }
-
-      .thumbnail-wrapper {
-        opacity: 1;
-        transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      }
     }
 
-    &::after {
-      background-color: $accent-colour;
-      bottom: 0;
-      content: '';
-      display: block;
-      left: 0;
-      opacity: 0;
-      pointer-events: none;
-      position: fixed;
-      right: 0;
-      top: 0;
+    .thumbnail-wrapper,
+    .list-card-information {
+      opacity: 1;
       transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      z-index: -3;
-    }
-
-    .thumbnail-wrapper {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      bottom: $base-padding;
-      left: $base-padding;
-      opacity: $base-padding;
-      opacity: 0;
-      overflow: hidden;
-      pointer-events: none;
-      position: fixed;
-      right: $base-padding;
-      top: $base-padding;
-      transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      width: calc(100% - (2 * #{$base-padding}));
-      z-index: -2;
-
-      @media screen and (max-width: $double-breakpoint) {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        width: 100%;
-      }
     }
   }
 
-  &.has-thumbnail a {
+  &.has-thumbnail {
     &:focus,
     &:hover {
-      &::before {
+      a::before {
         opacity: 0.6;
         transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
       }
+
+      a::after {
+        opacity: 0;
+      }
     }
 
-    &::after {
-      background-color: $background-colour;
-    }
-
-    &::before {
+    a::before {
       background-color: $accent-colour;
       bottom: $base-padding;
       content: '';
@@ -159,6 +98,94 @@ a {
         right: 0;
         top: 0;
       }
+    }
+  }
+
+  .thumbnail-wrapper {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: $base-padding;
+    left: $base-padding;
+    opacity: $base-padding;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    right: $base-padding;
+    top: $base-padding;
+    transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+    width: calc(100% - (2 * #{$base-padding}));
+    z-index: 50;
+
+    @media screen and (max-width: $double-breakpoint) {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .list-card-heading {
+    font-family: $heading-font-family;
+    font-size: 7vw;
+    font-weight: normal;
+    margin: 0.2em 0;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 120pt;
+    }
+
+    @media screen and (max-width: $double-breakpoint) {
+      font-size: 42pt;
+    }
+
+    @media screen and (max-width: $single-breakpoint) {
+      font-size: 32pt;
+    }
+  }
+
+  .list-card-information {
+    color: $background-colour;
+    display: inline-block;
+    font-size: 24pt;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 150;
+
+    @media screen and (max-width: $double-breakpoint) {
+      font-size: 18pt;
+    }
+
+    @media screen and (max-width: $single-breakpoint) {
+      font-size: 16pt;
+    }
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.1s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 10;
+
+    &::after {
+      background-color: $accent-colour;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+      z-index: -3;
     }
   }
 }

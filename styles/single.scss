@@ -1,5 +1,36 @@
 @import 'variables';
 
+.header {
+  padding: 0 $base-padding;
+
+  @media screen and (max-width: $double-breakpoint) {
+    padding: 0;
+  }
+}
+
+.article-title {
+  font-size: 7vw;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0 0.2em -3px;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 120pt;
+  }
+
+  @media screen and (max-width: $double-breakpoint) {
+    font-size: 42pt;
+  }
+
+  @media screen and (max-width: $single-breakpoint) {
+    font-size: 32pt;
+  }
+}
+
+.article-information {
+  margin-top: 10px;
+}
+
 .article {
   flex-grow: 1;
   max-width: $body-column-width;
@@ -11,13 +42,7 @@
   }
 }
 
-.article-title {
-  line-height: 1;
-  margin-top: 0;
-}
-
 figure {
-  margin: 0;
   position: relative;
   width: auto;
 
@@ -27,7 +52,6 @@ figure {
   }
 
   figcaption {
-    font-size: 80%;
     font-style: italic;
     opacity: 0.8;
 
@@ -36,7 +60,7 @@ figure {
       display: inline-block;
       max-width: $side-column-width;
       position: absolute;
-      right: -($side-column-width + $base-padding);
+      right: -($side-column-width + $block-padding);
     }
   }
 }
