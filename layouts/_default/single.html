@@ -4,12 +4,28 @@
 
 {{ define "main" }}
 <main aria-role="main">
-    <header>
-        <h1 class="article-title">{{ .Title }}</h1>
-        {{- partial "post-details.html" . -}}    
-    </header>
-    <article class="article">
-        {{ .Content }}
-    </article>
+    <nav class="breadcrumb">
+        {{- partial "breadcrumb.html" . -}}
+    </nav>
+    <div>
+        <header class="header">
+            <h1 class="article-title">{{ .Title }}</h1>
+            <p class="article-information">
+                {{ if .Date }}
+                    Published <time>{{ dateFormat "02 Jan, 2006" .Date }}</time>
+                {{ end }}
+                {{ if and .Date .Params.tags }}in{{ end }}
+                {{ if .Params.tags }}
+                    {{ $len := len .Params.tags }}
+                    {{ range $index, $element := .Params.tags }}
+                    <a href="{{ (printf "/tags/%s" ($element | urlize)) | absURL }}">{{ $element }}</a>{{ if ne $index (sub $len 1) }},{{ end }}
+                    {{ end }}
+                {{ end }}
+            </p>
+        </header>
+        <article class="article">
+            {{ .Content }}
+        </article>    
+    </div>
 </main>
 {{ end }}

@@ -1,52 +1,18 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}" media="print" onload="this.media='all'">
-<noscript>
-    <link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
-</noscript>
+<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
 {{ end }}
 
 {{ define "main" }}
 <main aria-role="main">
-    <h1>Hi, I’m {{ .Site.Params.author }}.</h1>
-    <p>
-        I write software, make designs, and enjoy writing. This is my personal little corner of the
-        internet. Feel free to read a little more <a href="/about">about me</a>, or take a look at
-        some of the stuff I've made.
-    </p>
-
-    <h2>In categories</h2>
-    <ul class="section-list">
-        {{ range $key, $value := .Site.Taxonomies.tags }}
-        <li>
-            <div>
-                <h3><a href="{{ ($.Site.GetPage $key).Permalink }}">{{ ($.Site.GetPage $key).Title }}</a></h3>
-                {{ $lastUp := dateFormat "02 Jan, 2006" (index $value 0).Params.date }}
-                <p class="details">
-                    <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
-                </p>    
-            </div>
+    <nav class="breadcrumb">
+        <h1>Home</h1>
+    </nav>
+    <ul class="list-view">
+        {{ range .Site.Menus.index }}
+        <li class="list-card">
+            <h2 class="list-card-heading"><a href="{{ .URL }}">{{ .Name }}</a></h2>
         </li>
-        {{ end }}    
+        {{ end }}
     </ul>
-
-    <h2>Most recent</h2>
-    <ul class="section-list">
-        {{ range first 4 (where .Site.Pages ".Params.page" false) }}
-        <li>
-            {{- partial "post-card.html" . -}}
-        </li>
-        {{ end }}    
-    </ul>
-
-    <h2>My media diet</h2>
-    {{ if .Site.Data.reading }}
-    <p style="text-align: left;"><span class="side">I’m reading</span> {{- partial "rwp-list.html" .Site.Data.reading -}}</p>
-    {{ end }}
-    {{ if .Site.Data.watching }}
-    <p style="text-align: left;"><span class="side">I’m watching</span> {{- partial "rwp-list.html" .Site.Data.watching -}}</p>
-    {{ end }}
-    {{ if .Site.Data.playing }}
-    <p style="text-align: left;"><span class="side">I’m playing</span> {{- partial "rwp-list.html" .Site.Data.playing -}}</p>
-    {{ end }}
 </main>
 {{ end }}

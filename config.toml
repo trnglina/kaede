@@ -9,14 +9,22 @@ ignoreFiles = [ ".git/.*" ]
   description = "Software, design, and words"
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
+  [[menu.index]]
+    name = "Posts"
+    url = "/posts"
     weight = 1
-  [[menu.main]]
-    name = "About Me"
-    url = "/about"
+  [[menu.index]]
+    name = "Works"
+    url = "/works"
     weight = 2
+  [[menu.index]]
+    name = "About"
+    url = "/about"
+    weight = 3
+  [[menu.index]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4
 
 [markup.goldmark.renderer]
   unsafe = true

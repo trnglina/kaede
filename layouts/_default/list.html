@@ -4,27 +4,40 @@
 
 {{ define "main" }}
 <main aria-role="main">
-    <h1>{{ .Title }}</h1>
-    <ul class="section-list">
-        {{ $posts := where .Pages ".Params.page" false }}
-        {{ if gt (len $posts) 0 }}
-        {{ range $posts }}
-        <li>
-            {{- partial "post-card.html" . -}}
-        </li>
-        {{ end }}
-        {{ else }}
+    <nav class="breadcrumb">
+        {{- partial "breadcrumb.html" . -}}
+    </nav>
+    <ul class="list-view">
         {{ range .Pages }}
-        <li>
-            <div>
-                <h3><a href="{{ .Permalink  }}">{{ .Title }}</a></h3>
-                {{ $lastUp := dateFormat "02 Jan, 2006" (index .Pages 0).Params.date }}
-                <p class="details">
-                    <span class="side">Last updated</span> <time>{{ $lastUp }}</time>.
-                </p>
+        <li class="list-card
+                {{ if .Params.thumbnail }}
+                   has-thumbnail
+                {{ end }}">
+            <h2 class="list-card-heading">
+                <a href="{{ .Permalink  }}">
+                    {{ .Title }}
+                </a>
+            </h2>
+            {{ if .Params.thumbnail }}
+            <div class="thumbnail-wrapper" aria-hidden="true"
+                style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'>
             </div>
+            {{ end }}
+            {{ if or .Date .Params.tags }}
+            <p class="list-card-information">
+                {{ if .Date }}
+                    Published <time>{{ dateFormat "02 Jan, 2006" .Date }}</time>
+                {{ end }}
+                {{ if and .Date .Params.tags }}in{{ end }}
+                {{ if .Params.tags }}
+                    {{ $len := len .Params.tags }}
+                    {{ range $index, $element := .Params.tags }}
+                    {{ $element }}{{ if ne $index (sub $len 1) }},{{ end }}
+                    {{ end }}
+                {{ end }}
+            </p>
+            {{ end }}
         </li>
-        {{ end }}
         {{ end }}
     </ul>
 </main>

@@ -6,8 +6,6 @@ const { spawn } = require('child_process')
 const { existsSync } = require('fs')
 
 const POSTS_REPO = 'https://github.com/trnglina/posts'
-const DATA_REPO = 'https://github.com/trnglina/data'
-const STATIC_REPO = 'https://github.com/trnglina/static'
 
 const DEPLOY_USER = 'sysadmin'
 const DEPLOY_HOST = 'trnglina.org'
@@ -22,34 +20,6 @@ function fetchContent(cb) {
     })
   } else {
     process.chdir('./content/')
-    git.pull('origin', 'master', {}, function (err) {
-      cb(err)
-    })
-    process.chdir('../')
-  }
-}
-
-function fetchData(cb) {
-  if (!existsSync('data')) {
-    git.clone(DATA_REPO, { args: 'data' }, function (err) {
-      cb(err)
-    })
-  } else {
-    process.chdir('./data/')
-    git.pull('origin', 'master', {}, function (err) {
-      cb(err)
-    })
-    process.chdir('../')
-  }
-}
-
-function fetchStatic(cb) {
-  if (!existsSync('static')) {
-    git.clone(STATIC_REPO, { args: 'static' }, function (err) {
-      cb(err)
-    })
-  } else {
-    process.chdir('./static/')
     git.pull('origin', 'master', {}, function (err) {
       cb(err)
     })
@@ -103,7 +73,7 @@ function deploy(cb) {
   })
 }
 
-exports.build = gulp.series(gulp.parallel(fetchContent, fetchData, fetchStatic), gulp.parallel(styles, scripts, compile))
+exports.build = gulp.series(fetchContent, gulp.parallel(styles, scripts, compile))
 exports.dev = gulp.series(exports.build, gulp.parallel(watch, serve))
 exports.deploy = gulp.series(exports.build, deploy)
 exports.default = exports.build

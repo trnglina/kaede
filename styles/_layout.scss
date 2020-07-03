@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  font-family: $body-font-family;
+  padding: $base-padding;
+
+  @media screen and (max-width: $double-breakpoint) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: $single-breakpoint) {
+    margin: 0 auto;
+    max-width: $body-column-width;
+    padding: $base-padding / 2;
+  }
+}
