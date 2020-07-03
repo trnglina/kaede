@@ -20,9 +20,8 @@ a {
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-between;
-  line-height: 1;
   list-style: none;
-  margin: 0 0 $base-padding -3px;
+  margin: 0 0 15px;
   padding: 0 $base-padding;
 
   @media screen and (max-width: $double-breakpoint) {
@@ -131,7 +130,8 @@ a {
     font-family: $heading-font-family;
     font-size: 7vw;
     font-weight: normal;
-    margin: 0.2em 0;
+    line-height: 1.1;
+    margin: 0.2em 0 0.1em -3px;
 
     @media screen and (min-width: 2000px) {
       font-size: 120pt;
