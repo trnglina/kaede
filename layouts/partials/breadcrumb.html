@@ -1,3 +1,4 @@
-{{ $levels := (split (.URL | relURL) "/") | complement (slice "") }}
+{{ $levels := (split .RelPermalink "/") | complement (slice "") }}
 {{ $len := len $levels }}
-<h1><a href="{{ "/" | absURL }}">home</a>{{ range $index, $element := $levels }}&nbsp;→ {{ if ne $index (sub $len 1) }}<a href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ end }}{{ $element }}</a>{{ end }}</h1>
+{{ $page := . }}
+<h1><a href="{{ "/" | absURL }}">Home</a>{{ range $index, $element := $levels }}&nbsp;→ {{ if ne $index (sub $len 1) }}<a href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize $element }}</a>{{ else }}{{ $page.Title }}{{ end }}{{ end }}</h1>

@@ -1,13 +1,18 @@
 $base-padding: 50px;
+$block-padding: 30px;
 
 $background-colour: #fff;
 $body-colour: #302025;
 $accent-colour: #fe5f55;
 
-$double-breakpoint: 800px;
-$single-breakpoint: 500px;
+$body-column-width: 750px;
+$side-column-width: 300px;
 
-$heading-line-height: 1;
+$double-breakpoint: (4 * $base-padding) + $body-column-width +
+  (2 * $side-column-width);
+$single-breakpoint: (3 * $base-padding) + $body-column-width +
+  $side-column-width;
 
 $heading-font-family: 'Suisse Works', 'Georgia Pro', Georgia, 'Gelasio',
-  'Bitstream Charter', 'ET Book', 'EB Garamond', 'Droid Serif', serif;
+  'Bitstream Charter', 'ET Book', 'EB Garamond', serif;
+$body-font-family: 'Suisse Intl', 'Helvetica Neue', Helvetica, Arial, sans-serif;

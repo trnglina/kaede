@@ -4,9 +4,9 @@
 
 {{ define "main" }}
 <main aria-role="main">
-    <div class="list-sidebar">
+    <nav class="breadcrumb">
         {{- partial "breadcrumb.html" . -}}
-    </div>
+    </nav>
     <ul class="list-view">
         {{ range .Pages }}
         <li class="list-card
