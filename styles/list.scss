@@ -9,12 +9,6 @@ body {
   min-height: 100vh;
 }
 
-a {
-  cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
-  cursor: url('/images/icons/cursor-pointer.png') 24 24,
-    url('/images/icons/cursor-pointer.cur') 24 24, pointer;
-}
-
 .list-view {
   display: flex;
   flex-grow: 1;
@@ -35,7 +29,7 @@ a {
   cursor: url('/images/icons/cursor-pointer.png') 24 24,
     url('/images/icons/cursor-pointer.cur') 24 24, pointer;
   display: inline-block;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   position: relative;
   width: 100%;
 
@@ -149,6 +143,9 @@ a {
   }
 
   a {
+    cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
+    cursor: url('/images/icons/cursor-pointer.png') 24 24,
+      url('/images/icons/cursor-pointer.cur') 24 24, pointer;
     display: inline-block;
     position: relative;
     text-decoration: none;

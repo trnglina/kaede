@@ -1,10 +1,19 @@
 @import 'variables';
 
 .header {
-  padding: 0 $base-padding;
+  cursor: url('/images/icons/cursor-default.cur'), default; // IE fallback
+  cursor: url('/images/icons/cursor-default.png') 24 24,
+    url('/images/icons/cursor-default.cur') 24 24, default;
+  margin: 0 $base-padding $base-padding $base-padding;
+
+  a {
+    cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
+    cursor: url('/images/icons/cursor-pointer.png') 24 24,
+      url('/images/icons/cursor-pointer.cur') 24 24, pointer;
+  }
 
   @media screen and (max-width: $double-breakpoint) {
-    padding: 0;
+    margin: 0;
   }
 }
 
@@ -17,6 +26,10 @@
     flex-basis: 100%;
     padding: 0;
   }
+
+  a:visited {
+    color: $visited-colour;
+  }
 }
 
 figure {
@@ -24,13 +37,14 @@ figure {
   width: auto;
 
   img {
+    box-shadow: 1px 1px 8px rgba($color: #000, $alpha: 0.3);
     height: auto;
     width: 100%;
   }
 
   figcaption {
     font-style: italic;
-    line-height: 1.4;
+    line-height: 1.3;
     opacity: 0.8;
 
     @media screen and (min-width: $single-breakpoint) {
