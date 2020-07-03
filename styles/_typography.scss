@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-  font-size: 210%;
+  font-size: 200%;
 }
 
 h3 {
@@ -70,30 +70,30 @@ figure {
 }
 
 .article-title {
-  font-size: 81pt;
+  font-size: 450%;
   font-weight: normal;
   line-height: 1.05;
   margin: 0 0 0.1em;
 
   @media screen and (max-width: $double-breakpoint) {
-    font-size: 42pt;
+    font-size: 300%;
   }
 
   @media screen and (max-width: $single-breakpoint) {
-    font-size: 32pt;
+    font-size: 250%;
   }
 }
 
 .article-information {
-  font-size: 24pt;
+  font-size: 150%;
   font-weight: 200;
   margin-top: 0;
 
   @media screen and (max-width: $double-breakpoint) {
-    font-size: 16pt;
+    font-size: 110%;
   }
 
   @media screen and (max-width: $single-breakpoint) {
-    font-size: 14pt;
+    font-size: 100%;
   }
 }

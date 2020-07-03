@@ -9,7 +9,7 @@
   flex-basis: $side-column-width;
   flex-shrink: 0;
   font-family: inherit;
-  font-size: 16pt;
+  font-size: inherit;
   font-weight: normal;
   line-height: 1.2;
 
@@ -29,7 +29,6 @@
 
   @media screen and (max-width: $single-breakpoint) {
     flex-basis: 100%;
-    font-size: 12pt;
   }
 
   a {
