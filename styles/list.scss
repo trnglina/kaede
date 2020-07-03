@@ -3,7 +3,6 @@
 body {
   background-color: $background-colour;
   color: $body-colour;
-  cursor: url('/images/icons/cursor-default.cur'), default; // IE fallback
   cursor: url('/images/icons/cursor-default.png') 24 24,
     url('/images/icons/cursor-default.cur') 24 24, default;
   min-height: 100vh;
@@ -25,7 +24,6 @@ body {
 }
 
 .list-card {
-  cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
   cursor: url('/images/icons/cursor-pointer.png') 24 24,
     url('/images/icons/cursor-pointer.cur') 24 24, pointer;
   display: inline-block;
@@ -64,39 +62,10 @@ body {
     }
   }
 
-  &.has-thumbnail {
-    &:focus,
-    &:hover {
-      a::before {
-        opacity: 0.6;
-        transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      }
-
-      a::after {
-        opacity: 0;
-      }
-    }
-
-    a::before {
-      background-color: $accent-colour;
-      bottom: $base-padding;
-      content: '';
-      display: block;
-      left: $base-padding;
+  &.has-thumbnail:focus,
+  &.has-thumbnail:hover {
+    a::after {
       opacity: 0;
-      pointer-events: none;
-      position: fixed;
-      right: $base-padding;
-      top: $base-padding;
-      transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      z-index: -1;
-
-      @media screen and (max-width: $double-breakpoint) {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-      }
     }
   }
 
@@ -114,6 +83,20 @@ body {
     top: $base-padding;
     transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
     width: calc(100% - (2 * #{$base-padding}));
+
+    &::after {
+      background: darken($accent-colour, 10%);
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      mix-blend-mode: multiply;
+      opacity: 0.6;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
 
     @media screen and (max-width: $double-breakpoint) {
       bottom: 0;
@@ -143,7 +126,6 @@ body {
   }
 
   a {
-    cursor: url('/images/icons/cursor-pointer.cur'), pointer; // IE fallback
     cursor: url('/images/icons/cursor-pointer.png') 24 24,
       url('/images/icons/cursor-pointer.cur') 24 24, pointer;
     display: inline-block;
