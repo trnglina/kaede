@@ -4,23 +4,12 @@
 @import 'layout';
 
 .breadcrumb {
-  cursor: url('/images/icons/cursor-default.png') 24 24,
-    url('/images/icons/cursor-default.cur') 24 24, default;
   flex-basis: $side-column-width;
   flex-shrink: 0;
   font-family: inherit;
   font-size: inherit;
   font-weight: normal;
   line-height: 1.2;
-
-  h1 {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    position: sticky;
-    top: $base-padding;
-  }
 
   @media screen and (max-width: $double-breakpoint) {
     flex-basis: 100%;
@@ -29,10 +18,5 @@
 
   @media screen and (max-width: $single-breakpoint) {
     flex-basis: 100%;
-  }
-
-  a {
-    cursor: url('/images/icons/cursor-pointer.png') 24 24,
-      url('/images/icons/cursor-pointer.cur') 24 24, pointer;
   }
 }

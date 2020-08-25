@@ -1,8 +1,6 @@
 @import 'variables';
 
 body {
-  cursor: url('/images/icons/cursor-default.png') 24 24,
-    url('/images/icons/cursor-default.cur') 24 24, default;
   min-height: 100vh;
 }
 
@@ -28,8 +26,6 @@ body {
 }
 
 .list-card {
-  cursor: url('/images/icons/cursor-pointer.png') 24 24,
-    url('/images/icons/cursor-pointer.cur') 24 24, pointer;
   display: inline-block;
   margin-bottom: 2em;
 
@@ -127,8 +123,6 @@ body {
   }
 
   a {
-    cursor: url('/images/icons/cursor-pointer.png') 24 24,
-      url('/images/icons/cursor-pointer.cur') 24 24, pointer;
     display: inline-block;
     position: relative;
     text-decoration: none;
