@@ -1,46 +1,5 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
 {{ end }}
 
-{{ define "main" }}
-<main aria-role="main">
-    <nav class="breadcrumb">
-        {{- partial "breadcrumb.html" . -}}
-    </nav>
-    <ul class="list-view">
-        {{ range .Pages }}
-        <li>
-            <div class="list-card
-                     {{ if .Params.thumbnail }}
-                        has-thumbnail
-                     {{ end }}">
-                <h2 class="list-card-heading article-title">
-                    <a href="{{ .Permalink  }}">
-                        {{ .Title }}
-                    </a>
-                </h2>
-                {{ if .Params.thumbnail }}
-                <div class="thumbnail-wrapper" aria-hidden="true"
-                    style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'>
-                </div>
-                {{ end }}
-                {{ if or .Date .Params.tags }}
-                <p class="list-card-information article-information">
-                    {{ if .Date }}
-                        Published <time>{{ dateFormat "02 Jan, 2006" .Date }}</time>
-                    {{ end }}
-                    {{ if and .Date .Params.tags }}in{{ end }}
-                    {{ if .Params.tags }}
-                        {{ $len := len .Params.tags }}
-                        {{ range $index, $element := .Params.tags }}
-                        {{ $element }}{{ if ne $index (sub $len 1) }},{{ end }}
-                        {{ end }}
-                    {{ end }}
-                </p>
-                {{ end }}
-            </div>
-        </li>
-        {{ end }}
-    </ul>
-</main>
+{{ define "contents" }}
 {{ end }}

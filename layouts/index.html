@@ -1,20 +1,5 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
 {{ end }}
 
-{{ define "main" }}
-<main aria-role="main">
-    <nav class="breadcrumb">
-        Home
-    </nav>
-    <ul class="list-view">
-        {{ range .Site.Menus.index }}
-        <li>
-            <div class="list-card">
-                <h2 class="list-card-heading article-title"><a href="{{ .URL }}">{{ .Name }}</a></h2>
-            </div>
-        </li>
-        {{ end }}
-    </ul>
-</main>
+{{ define "contents" }}
 {{ end }}
