@@ -59,7 +59,7 @@ article {
       margin-top: 1em;
 
       &::before {
-        content: '🡑 ';
+        content: '↑ ';
 
         @media screen and (min-width: $two-columns) {
           left: -1em;
