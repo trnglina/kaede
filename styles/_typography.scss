@@ -71,6 +71,8 @@
 }
 
 body {
+  background-color: $background-colour;
+  color: $body-colour;
   font-family: 'Suisse Intl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   line-height: 1.5;

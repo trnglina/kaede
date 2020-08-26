@@ -1,6 +1,6 @@
 $col-left-width: 700px;
 $col-right-width: 350px;
-$col-gutter-width: 30px;
+$col-gutter-width: 50px;
 
 $body-padding: 15px;
 $body-large-padding: 30px;
@@ -11,12 +11,12 @@ $one-column: $col-left-width + (2 * $body-padding);
 
 body {
   margin: 0 auto;
-  max-width: $col-left-width + $col-right-width + $col-gutter-width;
   min-height: 100vh;
   overflow-x: hidden;
   padding: $body-padding;
 
   @media screen and (min-width: $two-columns) {
+    max-width: $col-left-width + $col-right-width + $col-gutter-width;
     padding: $body-large-padding;
   }
 }

@@ -1,11 +1,9 @@
 $breadcrumb-logo-size: 50px;
 $breadcrumb-items-margin: 15px;
-$breadcrumb-bottom-margin: 50px;
 
 .breadcrumb {
   align-items: center;
   display: flex;
-  margin-bottom: $breadcrumb-bottom-margin;
 
   ul {
     display: inline-block;

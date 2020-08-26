@@ -5,7 +5,10 @@
 @import 'components/articleinfo';
 @import 'components/breadcrumb';
 
-$article-header-margin: 50px;
+$article-header-margin: 30px;
+$article-header-large-margin: 50px;
+$article-top-margin: 30px;
+$article-top-large-margin: 50px;
 
 article {
   @media screen and (min-width: $two-columns) {
@@ -24,6 +27,15 @@ article {
 
     > h1 {
       margin-bottom: 0;
+      margin-top: $article-top-margin;
+
+      @media screen and (min-width: $two-columns) {
+        margin-top: $article-top-large-margin;
+      }
+    }
+
+    @media screen and (min-width: $two-columns) {
+      margin-bottom: $article-header-large-margin;
     }
   }
 
@@ -45,6 +57,23 @@ article {
       margin-left: $body-padding;
       margin-right: $body-padding;
       margin-top: 1em;
+
+      &::before {
+        content: '🡑 ';
+
+        @media screen and (min-width: $two-columns) {
+          left: -1em;
+          position: absolute;
+        }
+      }
+
+      @media screen and (min-width: $two-columns) {
+        margin-top: 2em;
+        max-width: $col-right-width;
+        position: absolute;
+        right: 0;
+        top: 100%;
+      }
     }
 
     @media screen and (min-width: $two-columns) {
@@ -52,14 +81,6 @@ article {
       margin-right: 0;
       position: relative;
       width: 100%;
-
-      figcaption {
-        margin-top: 2em;
-        max-width: $col-right-width;
-        position: absolute;
-        right: 0;
-        top: 100%;
-      }
     }
   }
 }
