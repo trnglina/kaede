@@ -1,0 +1,102 @@
+.listview {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+$listview-cards-margin: 30px;
+
+.listview-card {
+  color: $accent-colour;
+  margin: $listview-cards-margin 0;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    background-color: $accent-colour;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: -2;
+  }
+
+  &.has-thumbnail::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus-within {
+    color: $background-colour;
+    z-index: 10;
+
+    &::after,
+    .listview-card-thumbnail {
+      opacity: 1;
+      transition: opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+  }
+}
+
+.listview-card-text {
+  display: inline-block;
+  position: relative;
+  transition: color 0.15s cubic-bezier(0.65, 0, 0.35, 1);
+
+  h2 {
+    font-size: 250%;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    transition: inherit;
+  }
+
+  &:hover,
+  &:focus-within {
+    transition: color 0.15s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+}
+
+$listview-card-thumbnail-large-margin: 50px;
+
+.listview-card-thumbnail {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+
+  &::after {
+    background-color: darken($accent-colour, 10%);
+    bottom: 0;
+    content: '';
+    left: 0;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: $two-columns + (2 * $body-large-padding) + (2 * $listview-card-thumbnail-large-margin)) {
+    bottom: $listview-card-thumbnail-large-margin;
+    left: $listview-card-thumbnail-large-margin;
+    right: $listview-card-thumbnail-large-margin;
+    top: $listview-card-thumbnail-large-margin;
+  }
+}

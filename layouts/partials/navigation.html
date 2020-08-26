@@ -1,0 +1,12 @@
+<nav class="breadcrumb" role="navigation">
+    <a class="breadcrumb-logo" href="{{ "/" | absURL }}"><img src="{{ "/images/icons/icon.svg" | absURL }}"></a>
+    <ul>
+        {{ $levels := (split .RelPermalink "/") | complement (slice "") }}
+        {{ $len := len $levels }}
+        {{ range $index, $element := $levels  }}
+        {{ if ne $index (sub $len 1) }}
+        /<li><a href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize . }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>

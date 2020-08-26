@@ -1,5 +1,16 @@
 {{ define "styles" }}
+<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
 {{ end }}
 
 {{ define "contents" }}
+{{ partial "navigation.html" . }}
+<ul class="listview">
+    {{ range .Site.Menus.index }}
+    <li class="listview-card">
+        <div class="listview-card-text">
+            <h2><a href="{{ .URL }}">{{ .Name }}</a></h2>
+        </div>
+    </li>
+    {{ end }}
+</ul>
 {{ end }}

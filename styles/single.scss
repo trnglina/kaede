@@ -1,0 +1,65 @@
+@import 'colours';
+@import 'layout';
+@import 'typography';
+
+@import 'components/articleinfo';
+@import 'components/breadcrumb';
+
+$article-header-margin: 50px;
+
+article {
+  @media screen and (min-width: $two-columns) {
+    > * {
+      max-width: $col-left-width;
+    }
+
+    figure,
+    header {
+      max-width: 100%;
+    }
+  }
+
+  header {
+    margin-bottom: $article-header-margin;
+
+    > h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  figure {
+    display: inline-block;
+    margin: 1em 0;
+    margin-left: -$body-padding;
+    margin-right: -$body-padding;
+    width: 100vw;
+
+    img {
+      height: auto;
+      vertical-align: top;
+      width: inherit;
+    }
+
+    figcaption {
+      color: $figcaption-colour;
+      margin-left: $body-padding;
+      margin-right: $body-padding;
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: $two-columns) {
+      margin-left: 0;
+      margin-right: 0;
+      position: relative;
+      width: 100%;
+
+      figcaption {
+        margin-top: 2em;
+        max-width: $col-right-width;
+        position: absolute;
+        right: 0;
+        top: 100%;
+      }
+    }
+  }
+}

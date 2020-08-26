@@ -1,5 +1,24 @@
 {{ define "styles" }}
+<link rel="stylesheet" href="{{ "/styles/list.css" | absURL }}">
 {{ end }}
 
 {{ define "contents" }}
+{{ partial "navigation.html" . }}
+<ul class="listview">
+    {{ range .Pages }}
+    <li class="listview-card
+            {{ if .Params.thumbnail }}
+               has-thumbnail
+            {{ end }}">
+        <div class="listview-card-text">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            {{ partial "articleinfo.html" . }}
+        </div>
+        {{ if .Params.thumbnail }}
+        <div class="listview-card-thumbnail" aria-hidden="true" style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'>
+        </div>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
 {{ end }}

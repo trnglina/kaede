@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Suisse Works';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/SuisseWorks-Book-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-Book-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/fonts/SuisseWorks-BookItalic-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-BookItalic-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/SuisseWorks-Bold-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-Bold-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  font-style: italic;
+  font-weight: bold;
+  src: url('/fonts/SuisseWorks-BoldItalic-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-BoldItalic-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/SuisseIntl-Light-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-Light-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/SuisseIntl-Book-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-Book-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/fonts/SuisseIntl-BookItalic-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-BookItalic-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-style: italic;
+  font-weight: bold;
+  src: url('/fonts/SuisseIntl-BoldItalic-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-BoldItalic-WebS.woff') format('woff');
+}
+
+body {
+  font-family: 'Suisse Intl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+
+  *::selection {
+    background-color: $accent-colour;
+    color: $background-colour;
+  }
+
+  @media screen and (max-width: $one-column) {
+    font-size: 18px;
+  }
+}
+
+a {
+  color: $accent-colour;
+  text-decoration: none;
+
+  &:focus-within {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus-within {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $visited-colour;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 250%;
+}

@@ -1,0 +1,22 @@
+$col-left-width: 700px;
+$col-right-width: 350px;
+$col-gutter-width: 30px;
+
+$body-padding: 15px;
+$body-large-padding: 30px;
+
+$two-columns: $col-left-width + $col-gutter-width + $col-right-width +
+  (2 * $body-large-padding);
+$one-column: $col-left-width + (2 * $body-padding);
+
+body {
+  margin: 0 auto;
+  max-width: $col-left-width + $col-right-width + $col-gutter-width;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: $body-padding;
+
+  @media screen and (min-width: $two-columns) {
+    padding: $body-large-padding;
+  }
+}

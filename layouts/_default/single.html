@@ -1,5 +1,14 @@
 {{ define "styles" }}
+<link rel="stylesheet" href="{{ "/styles/single.css" | absURL }}">
 {{ end }}
 
 {{ define "contents" }}
+{{ partial "navigation.html" . }}
+<article>
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ partial "articleinfo.html" . }}
+    </header>
+    {{ .Content }}
+</article>
 {{ end }}
