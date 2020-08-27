@@ -5,7 +5,7 @@
         {{ $len := len $levels }}
         {{ range $index, $element := $levels  }}
         {{ if ne $index (sub $len 1) }}
-        /<li><a href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize . }}</a></li>
+        <li>/<a href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize . }}</a></li>
         {{ end }}
         {{ end }}
     </ul>

@@ -14,10 +14,13 @@ $breadcrumb-items-margin: 15px;
 
   li {
     display: inline-block;
-    margin: 0 ($breadcrumb-items-margin / 2);
 
-    &:last-child {
-      margin: 0 0 0 $breadcrumb-items-margin / 2;
+    a {
+      margin: 0 ($breadcrumb-items-margin / 2);
+
+      &:last-child {
+        margin: 0 0 0 $breadcrumb-items-margin / 2;
+      }
     }
   }
 }
