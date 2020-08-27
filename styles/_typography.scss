@@ -45,6 +45,11 @@ body {
   @media screen and (max-width: $one-column) {
     font-size: 18px;
   }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $body-colour;
+    color: $background-colour;
+  }
 }
 
 a {
