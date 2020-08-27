@@ -48,6 +48,10 @@ $listview-cards-large-margin: 50px;
       color: $background-colour;
       z-index: 10;
 
+      *::selection {
+        background-color: $accent-alt-colour;
+      }
+
       &::after,
       .listview-card-thumbnail {
         opacity: 1;
