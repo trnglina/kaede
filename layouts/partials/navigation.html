@@ -1,4 +1,4 @@
-<nav class="breadcrumb" role="navigation">
+<nav class="breadcrumb">
     <a class="breadcrumb-logo" href="{{ "/" | absURL }}"><img src="{{ "/images/icons/icon.svg" | absURL }}"></a>
     <ul>
         {{ $levels := (split .RelPermalink "/") | complement (slice "") }}
