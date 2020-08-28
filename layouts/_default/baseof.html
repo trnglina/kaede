@@ -32,8 +32,8 @@
     <meta property="og:title" content="{{ $title }}">
 
     {{ if .Params.thumbnail }}
-    <meta name="twitter:image:src" content="{{ .Params.thumbnail | absURL }}" />
-    <meta property="og:image" content="{{ .Params.thumbnail | absURL }}">
+    <meta name="twitter:image:src" content="{{ ((.Resources.GetMatch .Params.thumbnail).Resize "800x").Permalink }}" />
+    <meta property="og:image" content="{{ ((.Resources.GetMatch .Params.thumbnail).Resize "800x").Permalink }}">
     {{ else }}
     <meta name="twitter:image:src" content="{{ "/images/banners/default.png" | absURL }}" />
     <meta property="og:image" content="{{ "/images/banners/default.png" | absURL }}">
