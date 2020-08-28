@@ -11,7 +11,6 @@ $one-column: $col-left-width + (2 * $body-padding);
 
 body {
   margin: 0 auto;
-  min-height: 100vh;
   overflow-x: hidden;
   padding: $body-padding;
 
