@@ -10,38 +10,47 @@ $article-header-large-margin: 50px;
 $article-top-margin: 30px;
 $article-top-large-margin: 50px;
 
-article {
+$article-block-margin: 36px;
+
+// 'Export' this variable so it's accessible from JavaScript.
+:root {
+  --article-block-margin: #{$article-block-margin};
+}
+
+header {
+  margin-bottom: $article-header-margin;
+
+  > h1 {
+    margin-bottom: 0;
+    margin-top: $article-top-margin;
+
+    @media screen and (min-width: $two-columns) {
+      margin-top: $article-top-large-margin;
+    }
+  }
+
+  @media screen and (min-width: $two-columns) {
+    margin-bottom: $article-header-large-margin;
+  }
+}
+
+main {
+  position: relative;
+
   @media screen and (min-width: $two-columns) {
     > * {
       max-width: $col-left-width;
     }
 
     figure,
-    header {
+    .footnotes {
       max-width: 100%;
-    }
-  }
-
-  header {
-    margin-bottom: $article-header-margin;
-
-    > h1 {
-      margin-bottom: 0;
-      margin-top: $article-top-margin;
-
-      @media screen and (min-width: $two-columns) {
-        margin-top: $article-top-large-margin;
-      }
-    }
-
-    @media screen and (min-width: $two-columns) {
-      margin-bottom: $article-header-large-margin;
     }
   }
 
   figure {
     display: inline-block;
-    margin: 1em 0;
+    margin: $article-block-margin 0;
     margin-left: -$body-padding;
     margin-right: -$body-padding;
     width: 100vw;
@@ -81,6 +90,32 @@ article {
       margin-right: 0;
       position: relative;
       width: 100%;
+    }
+  }
+
+  p {
+    margin: $article-block-margin 0;
+  }
+
+  sup {
+    position: relative;
+    top: -0.4em;
+    vertical-align: baseline;
+  }
+
+  .footnote-ref {
+    margin: 0 2px;
+  }
+
+  .footnotes {
+    color: $accent-alt-colour;
+
+    li {
+      margin: $article-block-margin 0;
+
+      p {
+        margin: 0;
+      }
     }
   }
 }

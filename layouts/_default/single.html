@@ -9,6 +9,12 @@
         <h1>{{ .Title }}</h1>
         {{ partial "articleinfo.html" . }}
     </header>
-    {{ .Content }}
+    <main>
+        {{ .Content }}
+    </main>
 </article>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "/scripts/inline-footnotes.js" | absURL }}"></script>
 {{ end }}
