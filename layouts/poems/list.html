@@ -1,0 +1,29 @@
+{{ define "styles" }}
+<link rel="stylesheet" rel=preload href="{{ "/styles/poems.css" | absURL }}">
+{{ end }}
+
+{{ define "contents" }}
+{{ partial "navigation.html" . }}
+<ol class="poemview">
+    {{ range .Pages }}
+    <li>
+        {{ .Content }}
+        {{ if or .Title .Date }}
+        <p class="poeminfo">
+            {{ if .Title }}
+            "{{ .Title }}"
+            {{ end }}
+
+            {{ if and .Title .Date }}
+            &mdash;
+            {{ end }}
+            
+            {{ if .Date }}
+            <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "02 Jan, 2006" .Date }}</time>
+            {{ end }}
+        </p>
+        {{ end }}
+    </li>
+    {{ end }}
+</ol>
+{{ end }}

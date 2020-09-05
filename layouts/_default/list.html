@@ -4,7 +4,7 @@
 
 {{ define "contents" }}
 {{ partial "navigation.html" . }}
-<ul class="listview">
+<ol class="listview">
     {{ range .Pages }}
     <li class="listview-card
             {{ if .Params.thumbnail }}
@@ -20,5 +20,5 @@
         {{ end }}
     </li>
     {{ end }}
-</ul>
+</ol>
 {{ end }}

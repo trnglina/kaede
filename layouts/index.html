@@ -4,7 +4,7 @@
 
 {{ define "contents" }}
 {{ partial "navigation.html" . }}
-<ul class="listview">
+<ol class="listview">
     {{ range .Site.Menus.index }}
     <li class="listview-card">
         <div class="listview-card-text">
@@ -12,5 +12,5 @@
         </div>
     </li>
     {{ end }}
-</ul>
+</ol>
 {{ end }}

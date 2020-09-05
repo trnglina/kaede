@@ -1,0 +1,25 @@
+@import 'colours';
+@import 'layout';
+@import 'typography';
+
+@import 'components/breadcrumb';
+
+$poemview-max-width: $col-left-width;
+
+.poemview {
+  list-style: none;
+  margin-top: 50px;
+  max-width: $poemview-max-width;
+  padding: 0;
+}
+
+$poeminfo-font-size: 18px;
+
+.poeminfo {
+  float: right;
+  font-size: $poeminfo-font-size;
+}
+
+p {
+  margin: 0;
+}
