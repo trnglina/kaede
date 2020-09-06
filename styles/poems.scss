@@ -5,12 +5,18 @@
 @import 'components/breadcrumb';
 
 $poemview-max-width: $col-left-width;
+$poemview-items-margin: 50px;
 
 .poemview {
   list-style: none;
   margin-top: 50px;
   max-width: $poemview-max-width;
   padding: 0;
+
+  li {
+    display: block;
+    margin: $poemview-items-margin 0;
+  }
 }
 
 $poeminfo-font-size: 18px;
