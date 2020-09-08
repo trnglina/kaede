@@ -1,0 +1,16 @@
+{{ define "styles" }}
+<link rel="stylesheet" rel=preload href="{{ "/styles/poems-single.css" | absURL }}">
+{{ end }}
+
+{{ define "contents" }}
+{{ partial "navigation.html" . }}
+<article>
+    <header>
+        <h1>{{ if .Title }}{{ .Title }}{{ else }}<em>Untitled</em>{{ end }}</h1>
+        {{ partial "articleinfo.html" . }}
+    </header>
+    <main>
+        {{ .Content }}
+    </main>
+</article>
+{{ end }}

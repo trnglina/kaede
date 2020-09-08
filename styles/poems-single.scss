@@ -1,0 +1,49 @@
+@import 'colours';
+@import 'layout';
+@import 'typography';
+
+@import 'components/articleinfo';
+@import 'components/breadcrumb';
+
+$article-header-margin: 30px;
+$article-header-large-margin: 50px;
+$article-top-margin: 30px;
+$article-top-large-margin: 50px;
+
+$article-block-margin: 36px;
+
+// 'Export' this variable so it's accessible from JavaScript.
+:root {
+  --article-block-margin: #{$article-block-margin};
+}
+
+header {
+  margin-bottom: $article-header-margin;
+
+  > h1 {
+    margin-bottom: 0;
+    margin-top: $article-top-margin;
+
+    @media screen and (min-width: $two-columns) {
+      margin-top: $article-top-large-margin;
+    }
+  }
+
+  @media screen and (min-width: $two-columns) {
+    margin-bottom: $article-header-large-margin;
+  }
+}
+
+main {
+  position: relative;
+
+  @media screen and (min-width: $two-columns) {
+    > * {
+      max-width: $col-left-width;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
