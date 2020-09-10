@@ -1,5 +1,5 @@
 <nav class="breadcrumb">
-    <a class="breadcrumb-logo" href="{{ "/" | absURL }}"><img src="{{ "/images/icons/icon.svg" | absURL }}" alt=""></a>
+    <a class="breadcrumb-logo" href="{{ "/" | absURL }}"><img src="{{ "/images/icons/icon.svg" | absURL }}" alt="Home"></a>
     {{ $levels := (split .RelPermalink "/") | complement (slice "") }}
     {{ $len := len $levels }}
     {{ if gt $len 1 }}
