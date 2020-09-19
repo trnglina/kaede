@@ -20,31 +20,13 @@ $listview-cards-large-margin: 50px;
   position: relative;
   z-index: 1;
 
-  &::after {
-    background-color: $accent-colour;
-    bottom: 0;
-    content: '';
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1);
-    z-index: -2;
-  }
-
-  &.has-thumbnail::after {
-    display: none;
-  }
-
   @media screen and (min-width: $two-columns) {
     margin: $listview-cards-large-margin 0;
   }
 
   @media screen and (min-width: $one-column) {
-    &:hover,
-    &:focus-within {
+    &.has-thumbnail:hover,
+    &.has-thumbnail:focus-within {
       color: $background-colour;
       z-index: 10;
 
@@ -52,7 +34,6 @@ $listview-cards-large-margin: 50px;
         background-color: $accent-alt-colour;
       }
 
-      &::after,
       .listview-card-thumbnail {
         opacity: 1;
         transition: opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1);
@@ -61,7 +42,6 @@ $listview-cards-large-margin: 50px;
       .listview-card-text,
       .listview-card-text a {
         color: $background-colour;
-        transition: color 0.15s cubic-bezier(0.65, 0, 0.35, 1);
       }
     }
   }
@@ -70,7 +50,6 @@ $listview-cards-large-margin: 50px;
 .listview-card-text {
   display: inline-block;
   position: relative;
-  transition: color 0.15s cubic-bezier(0.65, 0, 0.35, 1);
 
   h2 {
     font-size: 250%;
@@ -79,12 +58,6 @@ $listview-cards-large-margin: 50px;
 
   a {
     color: $accent-colour;
-    transition: color 0.15s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-
-  &:hover,
-  &:focus-within {
-    transition: color 0.15s cubic-bezier(0.65, 0, 0.35, 1);
   }
 }
 
