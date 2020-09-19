@@ -6,7 +6,13 @@
 {{ partial "navigation.html" . }}
 <article>
     <header>
-        <h1>{{ .Title }}</h1>
+        <h1>
+            {{ if .Title }}
+            {{ .Title }}
+            {{ else }}
+            <em>Untitled</em>
+            {{ end }}
+        </h1>
         {{ partial "articleinfo.html" . }}
     </header>
     <main>
