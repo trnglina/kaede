@@ -3,9 +3,8 @@
   font-family: 'Suisse Intl';
   font-style: normal;
   font-weight: normal;
-  src: local('Suisse Intl'), local('Helvetica'), local('Helvetica Neue'),
-    url('/fonts/SuisseIntl-Book-WebXL.woff2') format('woff2'),
-    url('/fonts/SuisseIntl-Book-WebXL.woff') format('woff');
+  src: url('/fonts/SuisseIntl-Book-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-Book-WebS.woff') format('woff');
 }
 
 @font-face {
@@ -13,8 +12,7 @@
   font-family: 'Suisse Intl';
   font-style: italic;
   font-weight: normal;
-  src: local('Suisse Intl'), local('Helvetica'), local('Helvetica Neue'),
-    url('/fonts/SuisseIntl-BookItalic-WebS.woff2') format('woff2'),
+  src: url('/fonts/SuisseIntl-BookItalic-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-BookItalic-WebS.woff') format('woff');
 }
 
@@ -23,8 +21,7 @@
   font-family: 'Suisse Intl';
   font-style: normal;
   font-weight: bold;
-  src: local('Suisse Intl'), local('Helvetica'), local('Helvetica Neue'),
-    url('/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
+  src: url('/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
 }
 
@@ -33,15 +30,54 @@
   font-family: 'Suisse Intl';
   font-style: italic;
   font-weight: bold;
-  src: local('Suisse Intl'), local('Helvetica'), local('Helvetica Neue'),
-    url('/fonts/SuisseIntl-BoldItalic-WebS.woff2') format('woff2'),
+  src: url('/fonts/SuisseIntl-BoldItalic-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-BoldItalic-WebS.woff') format('woff');
 }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/literata-v17-latin-regular.woff2') format('woff2'),
+    url('/fonts/literata-v17-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('/fonts/literata-v17-latin-700.woff2') format('woff2'),
+    url('/fonts/literata-v17-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Literata';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''), url('/fonts/literata-v17-latin-italic.woff2') format('woff2'),
+    url('/fonts/literata-v17-latin-italic.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Literata';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+    url('/fonts/literata-v17-latin-700italic.woff2') format('woff2'),
+    url('/fonts/literata-v17-latin-700italic.woff') format('woff');
+}
+
+$sans-font-stack: 'Suisse Intl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif-font-stack: 'Literata', 'Georgia Pro', 'Georgia', 'Times', serif;
 
 body {
   background-color: $background-colour;
   color: $body-colour;
-  font-family: 'Suisse Intl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $serif-font-stack;
   font-size: 24px;
   line-height: 1.5;
 
@@ -84,6 +120,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $sans-font-stack;
   line-height: 1;
 }
 

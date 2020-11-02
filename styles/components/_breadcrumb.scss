@@ -4,6 +4,7 @@ $breadcrumb-items-margin: 15px;
 .breadcrumb {
   align-items: center;
   display: flex;
+  font-family: $sans-font-stack;
 
   ol {
     display: inline-block;

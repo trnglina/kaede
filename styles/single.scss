@@ -93,7 +93,13 @@ main {
   }
 
   p {
+    hyphens: auto;
     margin: $article-block-margin 0;
+
+    &:first-child {
+      font-family: $sans-font-stack;
+      font-size: 120%;
+    }
   }
 
   sup {

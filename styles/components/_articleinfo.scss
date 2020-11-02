@@ -1,7 +1,8 @@
 $articleinfo-margin: 5px;
-$articleinfo-font-size: 18px;
+$articleinfo-font-size: 21px;
 
 .articleinfo {
+  font-family: $sans-font-stack;
   font-size: $articleinfo-font-size;
   margin: $articleinfo-margin 0 ($articleinfo-margin * 2) 0;
 }
