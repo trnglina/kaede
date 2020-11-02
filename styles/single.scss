@@ -95,8 +95,11 @@ main {
   p {
     hyphens: auto;
     margin: $article-block-margin 0;
+    position: relative;
+    z-index: 1;
 
     &:first-child {
+      color: lighten($body-colour, 10%);
       font-family: $sans-font-stack;
       font-size: 120%;
     }
