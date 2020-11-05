@@ -62,7 +62,8 @@ $listview-cards-large-margin: 50px;
 
   a {
     color: $accent-colour;
-    transition: inherit;
+    transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1),
+      text-shadow 0.2s cubic-bezier(0.65, 0, 0.35, 1);
   }
 }
 
