@@ -14,8 +14,8 @@ ignoreFiles = [ ".git/.*" ]
     url = "/posts"
     weight = 1
   [[menu.index]]
-    name = "Works"
-    url = "/works"
+    name = "Work"
+    url = "/work"
     weight = 2
   [[menu.index]]
     name = "About"

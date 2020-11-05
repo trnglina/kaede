@@ -4,6 +4,7 @@ const babel = require('gulp-babel')
 const git = require('gulp-git')
 const { spawn } = require('child_process')
 const { existsSync } = require('fs')
+const { platform, chdir } = require('process')
 
 const POSTS_REPO = 'https://github.com/trnglina/posts'
 
@@ -13,17 +14,17 @@ const DEPLOY_PATH = '/var/www/trnglina.org/public_html'
 
 sass.compiler = require('node-sass')
 
-function fetchContent(cb) {
+function fetch(cb) {
   if (!existsSync('content')) {
     git.clone(POSTS_REPO, { args: 'content' }, function (err) {
       cb(err)
     })
   } else {
-    process.chdir('./content/')
+    chdir('./content/')
     git.pull('origin', 'master', {}, function (err) {
       cb(err)
     })
-    process.chdir('../')
+    chdir('../')
   }
 }
 
@@ -60,20 +61,16 @@ function serve(cb) {
 }
 
 function deploy(cb) {
-  let rs
-
-  if (process.platform === 'win32') {
-    rs = spawn('wsl', ['rsync', '-Iavz', 'public/', `${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`], { stdio: 'inherit' })
-  } else {
-    rs = spawn('rsync', ['-Iavz', 'public/', `${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`], { stdio: 'inherit' })
-  }
+  const rs = platform === 'win32' ?
+    spawn('wsl', ['rsync', '-Iavz', 'public/', `${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`], { stdio: 'inherit' }) :
+    spawn('rsync', ['-Iavz', 'public/', `${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`], { stdio: 'inherit' })
 
   rs.on('exit', (code) => {
     cb(code === 0 ? null : code)
   })
 }
 
-exports.build = gulp.series(fetchContent, gulp.parallel(styles, scripts, compile))
+exports.build = gulp.series(fetch, gulp.parallel(styles, scripts, compile))
 exports.dev = gulp.series(exports.build, gulp.parallel(watch, serve))
 exports.deploy = gulp.series(exports.build, deploy)
 exports.default = exports.build
