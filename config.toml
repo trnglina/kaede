@@ -25,10 +25,6 @@ ignoreFiles = [ ".git/.*" ]
     name = "Contact"
     url = "/contact"
     weight = 5
-  [[menu.index]]
-    name = "Privacy"
-    url = "/privacy"
-    weight = 6
 
 [markup.goldmark.renderer]
   unsafe = true
