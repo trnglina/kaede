@@ -19,6 +19,7 @@ $article-block-margin: 36px;
 
 header {
   margin-bottom: $article-header-margin;
+  text-align: center;
 
   > h1 {
     margin-bottom: 0;
@@ -43,8 +44,19 @@ main {
     }
 
     figure,
-    .footnotes {
+    .footnotes,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       max-width: 100%;
+    }
+
+    &.no-figures > * {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -97,6 +109,15 @@ main {
     margin: $article-block-margin 0;
     position: relative;
     z-index: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
   }
 
   sup {

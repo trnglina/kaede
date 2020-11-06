@@ -33,6 +33,7 @@ main h6 {
 
 header {
   margin-bottom: $article-header-margin;
+  text-align: center;
 
   > h1 {
     margin-bottom: 0;
@@ -53,6 +54,15 @@ main {
   figure,
   .gallery {
     margin: $article-block-margin auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
   }
 
   .intro_text {
