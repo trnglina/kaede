@@ -1,13 +1,13 @@
 $lt--col-left: 750px;
 $lt--col-right: 350px;
-$lt--col-gutter: 60px;
+$lt--col-gutter: 80px;
 
-$lt--base-padding: 30px;
+$lt--base-padding: 40px;
 
 $lt--max-width: $lt--col-left + $lt--col-gutter + $lt--col-right;
 
 $lt--two-columns: $lt--max-width + (2 * $lt--base-padding);
-$lt--one-column: $lt--col-left + (2 * $lt--base-padding);
+$lt--one-column: $lt--col-left + $lt--base-padding;
 
 :root {
   --lt--two-columns: #{$lt--two-columns};

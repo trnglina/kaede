@@ -2,7 +2,7 @@
 @import 'vars/layout';
 @import 'vars/type';
 
-$lv--thumbnail-margin: 50px;
+$lv--thumbnail-margin: $lt--base-padding;
 $lv--card-margin: 60px;
 
 .list-view {
