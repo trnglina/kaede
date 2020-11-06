@@ -75,4 +75,9 @@ figure {
       }
     }
   }
+
+  @media screen and (max-width: $lt--one-column) {
+    margin-left: -$lt--base-padding / 2;
+    margin-right: -$lt--base-padding / 2;
+  }
 }

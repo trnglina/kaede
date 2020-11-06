@@ -59,4 +59,11 @@ h6,
       width: 100vw;
     }
   }
+
+  @media screen and (max-width: $lt--one-column) {
+    figure {
+      margin-left: -$lt--base-padding / 2;
+      margin-right: -$lt--base-padding / 2;
+    }
+  }
 }
