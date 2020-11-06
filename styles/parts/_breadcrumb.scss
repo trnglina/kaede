@@ -29,6 +29,11 @@ $bc--items-margin: 15px;
   margin-right: ($bc--items-margin / 2) - 5px;
   width: $bc--logo-size;
 
+  &:focus {
+    outline: 4px solid $cl--accent;
+    outline-offset: 4px;
+  }
+
   img {
     height: auto;
     width: inherit;
