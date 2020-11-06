@@ -1,0 +1,100 @@
+@import 'vars/colours';
+@import 'vars/layout';
+@import 'vars/type';
+
+@import 'parts/fonts';
+@import 'parts/breadcrumb';
+@import 'parts/article-info';
+
+body {
+  background-color: $cl--background;
+  color: $cl--body;
+  font-family: $ty--serif;
+  font-size: $ty--size;
+  hyphens: auto;
+  line-height: $ty--line-height;
+  margin: 0;
+  overflow-x: hidden;
+  padding: $lt--base-padding;
+
+  *::selection {
+    background-color: $cl--accent;
+    color: $cl--background;
+  }
+
+  @media screen and (max-width: $lt--one-column) {
+    font-size: 0.8 * $ty--size;
+    padding: $lt--base-padding / 2;
+  }
+}
+
+a {
+  color: $cl--accent;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-within {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $cl--visited;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ol,
+table,
+hr,
+ul,
+video,
+pre {
+  margin-bottom: $ty--block-margin;
+  margin-top: $ty--block-margin;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.article-info {
+  font-family: $ty--sans;
+  line-height: 1;
+}
+
+h1,
+.article-title {
+  font-size: 280%;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 160%;
+}
+
+h4 {
+  font-size: 140%;
+}
+
+h5 {
+  font-size: 120%;
+}
+
+h6 {
+  font-size: 100%;
+}

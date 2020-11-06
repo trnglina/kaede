@@ -8,7 +8,7 @@ function updateInlineFootnotes() {
     const bar = container.querySelector('hr')
     const notes = container.querySelectorAll('li')
 
-    if (window.innerWidth > parseInt(getCSSVariable('--two-columns'))) {
+    if (window.innerWidth > parseInt(getCSSVariable('--lt--two-columns'))) {
       bar.style.display = 'none'
 
       const refs = document.getElementsByClassName('footnote-ref')
@@ -16,7 +16,7 @@ function updateInlineFootnotes() {
         const note = notes[i]
         const offset = refs[i].parentElement.offsetTop + 1
 
-        note.style.width = getCSSVariable('--col-right-width')
+        note.style.width = getCSSVariable('--lt--col-right')
         note.style.position = 'absolute'
         note.style.right = 0
         note.style.margin = 0
@@ -25,7 +25,7 @@ function updateInlineFootnotes() {
         if (i == 0) {
           acc += note.offsetTop
         }
-        acc += note.clientHeight + parseInt(getCSSVariable('--article-block-margin'))
+        acc += note.clientHeight + parseInt(getCSSVariable('--ty--block-margin'))
       }
     } else {
       bar.removeAttribute('style')

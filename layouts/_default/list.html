@@ -3,19 +3,18 @@
 {{ end }}
 
 {{ define "contents" }}
-{{ partial "navigation.html" . }}
-<ol class="listview">
+<ol class="list-view">
     {{ range .Pages }}
-    <li class="listview-card
+    <li class="list-view-card
             {{ if .Params.thumbnail }}
                has-thumbnail
             {{ end }}">
-        <div class="listview-card-text">
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="list-view-card-text">
+            <h2 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             {{ partial "articleinfo.html" . }}
         </div>
         {{ if .Params.thumbnail }}
-        <div class="listview-card-thumbnail" aria-hidden="true" style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></div>
+        <div class="list-view-card-thumbnail" aria-hidden="true" style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></div>
         {{ end }}
     </li>
     {{ end }}

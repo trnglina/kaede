@@ -52,11 +52,27 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
     
-    
+    <link rel="stylesheet" rel=preload href="{{ "/styles/screen.css" | absURL }}">
     {{- block "styles" . }}{{- end }}
 </head>
 <body>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-logo" href="{{ "/" | absURL }}"><img src="{{ "/images/icons/icon.svg" | absURL }}" alt="Home"></a>
+        {{ $levels := (split .RelPermalink "/") | complement (slice "") }}
+        {{ $len := len $levels }}
+        {{ if gt $len 1 }}
+        <ol>
+            {{ range $index, $element := $levels  }}
+            {{ if ne $index (sub $len 1) }}
+            <li>/<a class="breadcrumb-link" href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize . }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ol>
+        {{ end }}
+    </nav>
+
     {{- block "contents" . }}{{- end }}
+    
     {{- block "scripts" . }}{{- end }}
 </body>
 </html>

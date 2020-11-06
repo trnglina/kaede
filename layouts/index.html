@@ -3,12 +3,11 @@
 {{ end }}
 
 {{ define "contents" }}
-{{ partial "navigation.html" . }}
-<ol class="listview">
+<ol class="list-view">
     {{ range .Site.Menus.index }}
-    <li class="listview-card">
-        <div class="listview-card-text">
-            <h2><a href="{{ .URL }}">{{ .Name }}</a></h2>
+    <li class="list-view-card">
+        <div class="list-view-card-text">
+            <h2 class="article-title"><a href="{{ .URL }}">{{ .Name }}</a></h2>
         </div>
     </li>
     {{ end }}

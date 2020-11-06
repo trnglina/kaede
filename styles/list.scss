@@ -1,89 +1,51 @@
-@import 'colours';
-@import 'layout';
-@import 'typography';
+@import 'vars/colours';
+@import 'vars/layout';
+@import 'vars/type';
 
-@import 'components/articleinfo';
-@import 'components/breadcrumb';
+$lv--thumbnail-margin: 50px;
+$lv--card-margin: 60px;
 
-.listview {
-  display: inline-block;
+.list-view {
+  display: block;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  max-width: $lt--max-width;
   padding: 0;
 }
 
-$listview-cards-margin: 30px;
-$listview-cards-large-margin: 50px;
+.list-view-card {
+  margin-bottom: $lv--card-margin;
+}
 
-.listview-card {
-  margin: $listview-cards-margin 0;
+.list-view-card.has-thumbnail {
   position: relative;
-  z-index: 1;
 
-  @media screen and (min-width: $two-columns) {
-    margin: $listview-cards-large-margin 0;
+  .list-view-card-thumbnail {
+    background-size: cover;
+    bottom: $lv--thumbnail-margin;
+    left: $lv--thumbnail-margin;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: $lv--thumbnail-margin;
+    top: $lv--thumbnail-margin;
+    transition: opacity 0.1s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: -1;
   }
 
-  @media screen and (min-width: $one-column) {
-    &.has-thumbnail:hover,
-    &.has-thumbnail:focus-within {
-      z-index: 10;
+  &:hover {
+    color: $cl--background;
+    text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 2px, rgba(0, 0, 0, 0.65) 0 0 2px;
+    z-index: 10;
 
-      *::selection {
-        background-color: $accent-alt-colour;
-      }
-
-      .listview-card-thumbnail {
-        opacity: 1;
-        transition: opacity 0.25s cubic-bezier(0.65, 0, 0.35, 1);
-      }
-
-      .listview-card-text,
-      .listview-card-text a {
-        color: $background-colour;
-        text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 2px,
-          rgba(0, 0, 0, 0.65) 0 0 2px;
-        transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1),
-          text-shadow 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      }
+    a {
+      color: inherit;
+      text-shadow: inherit;
     }
-  }
-}
 
-.listview-card-text {
-  display: inline-block;
-  position: relative;
-
-  h2 {
-    font-size: 280%;
-    margin: 0;
-  }
-
-  a {
-    color: $accent-colour;
-  }
-}
-
-$listview-card-thumbnail-large-margin: 50px;
-
-.listview-card-thumbnail {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1);
-  z-index: -1;
-
-  @media screen and (min-width: $two-columns + (2 * $body-large-padding) + (2 * $listview-card-thumbnail-large-margin)) {
-    bottom: $listview-card-thumbnail-large-margin;
-    left: $listview-card-thumbnail-large-margin;
-    right: $listview-card-thumbnail-large-margin;
-    top: $listview-card-thumbnail-large-margin;
+    .list-view-card-thumbnail {
+      opacity: 1;
+      transition: opacity 0.25s cubic-bezier(0.65, 0, 0.35, 1);
+    }
   }
 }

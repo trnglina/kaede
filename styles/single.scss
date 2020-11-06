@@ -1,143 +1,77 @@
-@import 'colours';
-@import 'layout';
-@import 'typography';
+@import 'vars/colours';
+@import 'vars/layout';
+@import 'vars/type';
 
-@import 'components/articleinfo';
-@import 'components/breadcrumb';
-
-$article-header-margin: 30px;
-$article-header-large-margin: 50px;
-$article-top-margin: 30px;
-$article-top-large-margin: 50px;
-
-$article-block-margin: 36px;
-
-// 'Export' this variable so it's accessible from JavaScript.
-:root {
-  --article-block-margin: #{$article-block-margin};
-}
-
+main,
 header {
-  margin-bottom: $article-header-margin;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $lt--max-width;
 
-  > h1 {
-    margin-bottom: 0;
-    margin-top: $article-top-margin;
-
-    @media screen and (min-width: $two-columns) {
-      margin-top: $article-top-large-margin;
-    }
+  p {
+    max-width: $lt--col-left;
   }
 
-  @media screen and (min-width: $two-columns) {
-    margin-bottom: $article-header-large-margin;
-  }
-}
+  @media screen and (max-width: $lt--two-columns) {
+    max-width: 100%;
 
-main {
-  position: relative;
-
-  @media screen and (min-width: $two-columns) {
-    > * {
-      max-width: $col-left-width;
-    }
-
-    figure,
-    .footnotes,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      max-width: 100%;
-    }
-
-    &.no-figures > * {
+    p {
       margin-left: auto;
       margin-right: auto;
     }
   }
+}
 
-  figure {
-    display: block;
-    margin: $article-block-margin 0;
-    margin-left: -$body-padding;
-    margin-right: -$body-padding;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.article-info {
+  text-align: center;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: auto;
+    vertical-align: top;
+    width: inherit;
+  }
+
+  figcaption {
+    color: $cl--accent-alt;
+    margin-left: $lt--base-padding;
+    margin-right: $lt--base-padding;
+    margin-top: $ty--block-margin;
+    max-width: $lt--col-right;
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    &::before {
+      content: '↑ ';
+      left: -1em;
+      position: absolute;
+    }
+  }
+
+  @media screen and (max-width: $lt--two-columns) {
+    margin-left: -$lt--base-padding;
+    margin-right: -$lt--base-padding;
     width: 100vw;
 
-    img {
-      height: auto;
-      vertical-align: top;
-      width: inherit;
-    }
-
     figcaption {
-      color: $accent-alt-colour;
-      margin-left: $body-padding;
-      margin-right: $body-padding;
-      margin-top: $article-block-margin;
+      max-width: 100%;
+      position: static;
+      text-align: center;
 
       &::before {
-        content: '↑ ';
-
-        @media screen and (min-width: $two-columns) {
-          left: -1em;
-          position: absolute;
-        }
-      }
-
-      @media screen and (min-width: $two-columns) {
-        max-width: $col-right-width;
-        position: absolute;
-        right: 0;
-        top: 100%;
-      }
-    }
-
-    @media screen and (min-width: $two-columns) {
-      margin-left: 0;
-      margin-right: 0;
-      position: relative;
-      width: 100%;
-    }
-  }
-
-  p {
-    hyphens: auto;
-    margin: $article-block-margin 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-  }
-
-  sup {
-    position: relative;
-    top: -0.4em;
-    vertical-align: baseline;
-  }
-
-  .footnote-ref {
-    margin: 0 2px;
-  }
-
-  .footnotes {
-    color: $accent-alt-colour;
-
-    li {
-      margin: $article-block-margin 0;
-
-      p {
-        margin: 0;
+        display: none;
       }
     }
   }

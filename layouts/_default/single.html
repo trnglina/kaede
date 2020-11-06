@@ -3,25 +3,9 @@
 {{ end }}
 
 {{ define "contents" }}
-{{ partial "navigation.html" . }}
-<article>
-    <header>
-        <h1>
-            {{ if .Title }}
-            {{ .Title }}
-            {{ else }}
-            <em>Untitled</em>
-            {{ end }}
-        </h1>
-        {{ partial "articleinfo.html" . }}
-    </header>
-    <main>
-        {{ .Content }}
-    </main>
-</article>
+{{ partial "article.html" . }}
 {{ end }}
 
 {{ define "scripts" }}
-<script src="{{ "/scripts/alignment.js" | absURL }}"></script>
 <script src="{{ "/scripts/inline-footnotes.js" | absURL }}"></script>
 {{ end }}

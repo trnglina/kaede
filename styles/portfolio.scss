@@ -1,107 +1,62 @@
-@import 'colours';
-@import 'layout';
-@import 'typography';
+@import 'vars/colours';
+@import 'vars/layout';
+@import 'vars/type';
 
-@import 'components/articleinfo';
-@import 'components/breadcrumb';
+main > *,
+header > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $lt--max-width;
+}
 
-$article-header-margin: 30px;
-$article-header-large-margin: 50px;
-$article-top-margin: 30px;
-$article-top-large-margin: 50px;
-
-$article-block-margin: 36px;
-
-body {
+main > .gallery {
   max-width: 100%;
 }
 
-.breadcrumb,
-header,
-main p,
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
-  @media screen and (min-width: $two-columns) {
-    margin: 0 auto;
-    max-width: $col-left-width + $col-right-width + $col-gutter-width;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.article-info {
+  text-align: center;
 }
 
-header {
-  margin-bottom: $article-header-margin;
-  text-align: center;
+.intro-text {
+  font-family: $ty--sans;
+  font-size: 150%;
+  opacity: 0.8;
+}
 
-  > h1 {
-    margin-bottom: 0;
-    margin-top: $article-top-margin;
+.gallery {
+  font-size: 0;
+}
 
-    @media screen and (min-width: $two-columns) {
-      margin-top: $article-top-large-margin;
+.gallery-row {
+  display: flex;
+  flex-wrap: nowrap;
+
+  figure {
+    margin: 0;
+    min-width: 0;
+    padding: 10px;
+    width: 100%;
+
+    img {
+      height: auto;
+      width: inherit;
     }
   }
 
-  @media screen and (min-width: $two-columns) {
-    margin-bottom: $article-header-large-margin;
-  }
-}
-
-main {
-  p,
-  figure,
-  .gallery {
-    margin: $article-block-margin auto;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-  }
-
-  .intro_text {
-    font-family: $sans-font-stack;
-    font-size: 150%;
-    opacity: 0.8;
-  }
-
-  .gallery {
-    font-size: 0;
-  }
-
-  .gallery-row {
-    margin-left: -$body-padding;
-    margin-right: -$body-padding;
+  @media screen and (max-width: $lt--two-columns) {
+    display: block;
 
     figure {
-      margin: 0;
-      min-width: 0;
-      padding-bottom: $article-block-margin;
+      margin-left: -$lt--base-padding;
+      margin-right: -$lt--base-padding;
+      padding: 0 0 $ty--block-margin 0;
       width: 100vw;
-
-      @media screen and (min-width: $two-columns) {
-        padding: 10px;
-      }
-
-      img {
-        height: auto;
-        width: inherit;
-      }
-
-      @media screen and (min-width: $two-columns) {
-        width: 100%;
-      }
-    }
-
-    @media screen and (min-width: $two-columns) {
-      display: flex;
-      flex-wrap: nowrap;
     }
   }
 }

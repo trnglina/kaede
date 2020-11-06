@@ -1,15 +1,17 @@
-<div class="articleinfo">
+{{ if or .Date .Params.tags }}
+<div class="article-info">
     {{ if .Date }}
-    <span class="articleinfo-time">
+    <span class="article-info-time">
         <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "02 Jan, 2006" .Date }}</time>
     </span>
     {{ end }}
 
     {{ if .Params.tags }}
-    <ul class="articleinfo-tags">
+    <ul class="article-info-tags">
         {{ range .Params.tags }}
         <li><a href="{{ (printf "/tags/%s" (. | urlize)) | absURL }}">{{ . }}</a></li>
         {{ end }}
     </ul>
     {{ end }}
 </div>
+{{ end }}
