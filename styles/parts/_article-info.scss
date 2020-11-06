@@ -4,8 +4,12 @@
 .article-info {
   font-family: $ty--sans;
   font-size: 85%;
-  margin-bottom: 50px;
-  margin-top: -25px;
+  margin-bottom: $lt--base-padding;
+  margin-top: 10px;
+
+  @media screen and (max-width: $lt--two-columns) {
+    margin-bottom: $lt--base-padding / 2;
+  }
 }
 
 .article-info-tags {

@@ -15,6 +15,10 @@ $lv--card-margin: 60px;
 
 .list-view-card {
   margin-bottom: $lv--card-margin;
+
+  @media screen and (max-width: $lt--two-columns) {
+    margin-bottom: $lv--card-margin / 2;
+  }
 }
 
 .list-view-card.has-thumbnail {
