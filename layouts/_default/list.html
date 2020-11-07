@@ -10,8 +10,12 @@
                  {{ if .Params.thumbnail }}
                     has-thumbnail
                  {{ end }}"
-             {{ if .Params.accentBg }}data-accent-bg="{{ .Params.accentBg }}"{{ end }}
-             {{ if .Params.accentFg }}data-accent-fg="{{ .Params.accentFg }}"{{ end }}>
+          {{ if .Params.accentBg }}
+             data-accent-bg="{{ .Params.accentBg }}"
+          {{ end }}
+          {{ if .Params.accentFg }}
+             data-accent-fg="{{ .Params.accentFg }}"
+          {{ end }}>
             <div class="list-view-card-text">
                 <h2 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 {{ partial "articleinfo.html" . }}
@@ -26,5 +30,5 @@
 {{ end }}
 
 {{ define "scripts" }}
-<script src="{{ "/scripts/accent.js" | absURL }}"></script>
+<script src="{{ "/scripts/accent-list.js" | absURL }}"></script>
 {{ end }}

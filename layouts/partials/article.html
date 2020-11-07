@@ -1,5 +1,7 @@
 <article>
-    <header>
+    <header class="article-header"
+            {{ if .Params.accentBg }}data-accent-bg="{{ .Params.accentBg }}"{{ end }}
+            {{ if .Params.accentFg }}data-accent-fg="{{ .Params.accentFg }}"{{ end }}>
         <h1 class="article-title">
             {{ if .Title }}
             {{ .Title }}
@@ -9,7 +11,7 @@
         </h1>
         {{ partial "articleinfo.html" . }}
     </header>
-    <main>
+    <main class="article-main">
         {{ .Content }}
     </main>
 </article>

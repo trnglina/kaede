@@ -19,6 +19,7 @@ $ty--line-height: 1.5;
 $ty--block-margin: 36px;
 
 :root {
+  --lt--base-padding: #{$lt--base-padding};
   --lt--two-columns: #{$lt--two-columns};
   --lt--col-right: #{$lt--col-right};
   --ty--block-margin: #{$ty--block-margin};
