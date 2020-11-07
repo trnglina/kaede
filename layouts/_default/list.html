@@ -5,17 +5,25 @@
 {{ define "contents" }}
 <ol class="list-view">
     {{ range .Pages }}
-    <li class="list-view-card
+    <li>
+        <div class="list-view-card
+                 {{ if .Params.accent }}
+                    has-accent
+                 {{ end }}
+                 {{ if .Params.thumbnail }}
+                    has-thumbnail
+                 {{ end }}">
+            <div class="list-view-card-text">
+                <h2 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                {{ partial "articleinfo.html" . }}
+            </div>
+            {{ if .Params.accent }}
+            <div class="list-view-card-accent" aria-hidden="true" style='background-color: {{ .Params.accent }};'></div>
+            {{ end }}
             {{ if .Params.thumbnail }}
-               has-thumbnail
-            {{ end }}">
-        <div class="list-view-card-text">
-            <h2 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            {{ partial "articleinfo.html" . }}
+            <div class="list-view-card-thumbnail" aria-hidden="true" style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></div>
+            {{ end }}
         </div>
-        {{ if .Params.thumbnail }}
-        <div class="list-view-card-thumbnail" aria-hidden="true" style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></div>
-        {{ end }}
     </li>
     {{ end }}
 </ol>

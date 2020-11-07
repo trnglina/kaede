@@ -2,82 +2,84 @@
 @import 'vars/layout';
 @import 'vars/type';
 
-main,
-header {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $lt--max-width;
-
-  p {
-    max-width: $lt--col-left;
-  }
-
-  @media screen and (max-width: $lt--two-columns) {
-    max-width: 100%;
+article {
+  main,
+  header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $lt--max-width;
 
     p {
-      margin-left: auto;
-      margin-right: auto;
+      max-width: $lt--col-left;
     }
-  }
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.article-info {
-  text-align: center;
-}
-
-figure {
-  margin: 0;
-  position: relative;
-  width: 100%;
-
-  img {
-    height: auto;
-    vertical-align: top;
-    width: inherit;
-  }
-
-  figcaption {
-    color: $cl--accent-alt;
-    margin-left: $lt--base-padding;
-    margin-right: $lt--base-padding;
-    margin-top: $ty--block-margin;
-    max-width: $lt--col-right;
-    position: absolute;
-    right: 0;
-    top: 100%;
-
-    &::before {
-      content: '↑ ';
-      left: -1em;
-      position: absolute;
-    }
-  }
-
-  @media screen and (max-width: $lt--two-columns) {
-    margin-left: -$lt--base-padding;
-    margin-right: -$lt--base-padding;
-    width: 100vw;
-
-    figcaption {
+    @media screen and (max-width: $lt--two-columns) {
       max-width: 100%;
-      position: static;
-      text-align: center;
 
-      &::before {
-        display: none;
+      p {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
 
-  @media screen and (max-width: $lt--one-column) {
-    margin-left: -$lt--base-padding / 2;
-    margin-right: -$lt--base-padding / 2;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .article-info {
+    text-align: center;
+  }
+
+  figure {
+    margin: 0;
+    position: relative;
+    width: 100%;
+
+    img {
+      height: auto;
+      vertical-align: top;
+      width: inherit;
+    }
+
+    figcaption {
+      color: $cl--accent-alt;
+      margin-left: $lt--base-padding;
+      margin-right: $lt--base-padding;
+      margin-top: $ty--block-margin;
+      max-width: $lt--col-right;
+      position: absolute;
+      right: 0;
+      top: 100%;
+
+      &::before {
+        content: '↑ ';
+        left: -1em;
+        position: absolute;
+      }
+    }
+
+    @media screen and (max-width: $lt--two-columns) {
+      margin-left: -$lt--base-padding;
+      margin-right: -$lt--base-padding;
+      width: 100vw;
+
+      figcaption {
+        max-width: 100%;
+        position: static;
+        text-align: center;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: $lt--one-column) {
+      margin-left: -$lt--base-padding / 2;
+      margin-right: -$lt--base-padding / 2;
+    }
   }
 }

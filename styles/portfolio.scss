@@ -2,68 +2,70 @@
 @import 'vars/layout';
 @import 'vars/type';
 
-main > *,
-header > * {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $lt--max-width;
-}
-
-main > .gallery {
-  max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.article-info {
-  text-align: center;
-}
-
-.intro-text {
-  font-family: $ty--sans;
-  font-size: 150%;
-  opacity: 0.8;
-}
-
-.gallery {
-  font-size: 0;
-}
-
-.gallery-row {
-  display: flex;
-  flex-wrap: nowrap;
-
-  figure {
-    margin: 0;
-    min-width: 0;
-    padding: 10px;
-    width: 100%;
-
-    img {
-      height: auto;
-      width: inherit;
-    }
+article {
+  main > *,
+  header > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $lt--max-width;
   }
 
-  @media screen and (max-width: $lt--two-columns) {
-    display: block;
-
-    figure {
-      margin-left: -$lt--base-padding;
-      margin-right: -$lt--base-padding;
-      padding: 0 0 $ty--block-margin 0;
-      width: 100vw;
-    }
+  main > .gallery {
+    max-width: 100%;
   }
 
-  @media screen and (max-width: $lt--one-column) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .article-info {
+    text-align: center;
+  }
+
+  .intro-text {
+    font-family: $ty--sans;
+    font-size: 150%;
+    opacity: 0.8;
+  }
+
+  .gallery {
+    font-size: 0;
+  }
+
+  .gallery-row {
+    display: flex;
+    flex-wrap: nowrap;
+
     figure {
-      margin-left: -$lt--base-padding / 2;
-      margin-right: -$lt--base-padding / 2;
+      margin: 0;
+      min-width: 0;
+      padding: 10px;
+      width: 100%;
+
+      img {
+        height: auto;
+        width: inherit;
+      }
+    }
+
+    @media screen and (max-width: $lt--two-columns) {
+      display: block;
+
+      figure {
+        margin-left: -$lt--base-padding;
+        margin-right: -$lt--base-padding;
+        padding: 0 0 $ty--block-margin 0;
+        width: 100vw;
+      }
+    }
+
+    @media screen and (max-width: $lt--one-column) {
+      figure {
+        margin-left: -$lt--base-padding / 2;
+        margin-right: -$lt--base-padding / 2;
+      }
     }
   }
 }

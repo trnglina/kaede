@@ -5,10 +5,12 @@
 {{ define "contents" }}
 <ol class="list-view">
     {{ range .Site.Menus.index }}
-    <li class="list-view-card">
-        <div class="list-view-card-text">
-            <h2 class="article-title"><a href="{{ .URL }}">{{ .Name }}</a></h2>
-        </div>
+    <li>
+        <div class="list-view-card">
+            <div class="list-view-card-text">
+                <h2 class="article-title"><a href="{{ .URL }}">{{ .Name }}</a></h2>
+            </div>
+        </div>    
     </li>
     {{ end }}
 </ol>

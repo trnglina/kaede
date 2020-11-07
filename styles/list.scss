@@ -2,55 +2,74 @@
 @import 'vars/layout';
 @import 'vars/type';
 
-$lv--thumbnail-margin: $lt--base-padding;
+$lv--thumbnail-margin: $lt--base-padding * 2;
 $lv--card-margin: 60px;
 
 .list-view {
-  display: block;
   list-style: none;
-  margin: 0 auto;
+  margin: 50px auto 0;
   max-width: $lt--max-width;
   padding: 0;
 }
 
 .list-view-card {
+  color: inherit;
+  display: inline-block;
   margin-bottom: $lv--card-margin;
+  opacity: 1;
+
+  a {
+    color: $cl--accent;
+  }
+
+  .article-title {
+    margin-top: 0;
+  }
+
+  .article-info {
+    margin-bottom: 0;
+  }
 
   @media screen and (max-width: $lt--two-columns) {
     margin-bottom: $lv--card-margin / 2;
   }
 }
 
-@media screen and (min-width: $lt--two-columns) {
+@media screen and (min-width: $lt--max-width  + (2 * $lv--thumbnail-margin)) {
   .list-view-card.has-thumbnail {
-    position: relative;
-
     .list-view-card-thumbnail {
       background-size: cover;
+      border-radius: 2px;
       bottom: $lv--thumbnail-margin;
+      box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px;
+      filter: grayscale(20%) brightness(90%);
       left: $lv--thumbnail-margin;
       opacity: 0;
       pointer-events: none;
       position: fixed;
       right: $lv--thumbnail-margin;
       top: $lv--thumbnail-margin;
-      transition: opacity 0.1s cubic-bezier(0.65, 0, 0.35, 1);
-      z-index: -1;
+      transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+      z-index: -10;
     }
 
     &:hover {
       color: $cl--background;
-      text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 2px, rgba(0, 0, 0, 0.65) 0 0 2px;
-      z-index: 10;
+      text-shadow: $cl--body 0 0 5px;
 
       a {
-        color: inherit;
-        text-shadow: inherit;
+        color: $cl--background;
+      }
+
+      .list-view-card-text {
+        position: relative;
+        z-index: 100;
       }
 
       .list-view-card-thumbnail {
         opacity: 1;
-        transition: opacity 0.25s cubic-bezier(0.65, 0, 0.35, 1);
+        transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+        z-index: 10;
       }
     }
   }

@@ -71,8 +71,10 @@
         {{ end }}
     </nav>
 
-    {{- block "contents" . }}{{- end }}
-    
+    <main>
+        {{- block "contents" . }}{{- end }}
+    </main>
+
     {{- block "scripts" . }}{{- end }}
 </body>
 </html>

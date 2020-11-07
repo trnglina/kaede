@@ -2,36 +2,38 @@
 @import 'vars/layout';
 @import 'vars/type';
 
-main > *,
-header > * {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $lt--col-left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.article-info {
-  text-align: center;
-}
-
-figure {
-  margin-left: -$lt--base-padding;
-  margin-right: -$lt--base-padding;
-  width: 100vw;
-
-  img {
-    height: auto;
-    vertical-align: top;
-    width: inherit;
+article {
+  main > *,
+  header > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $lt--col-left;
   }
 
-  @media screen and (max-width: $lt--one-column) {
-    margin-left: -$lt--base-padding / 2;
-    margin-right: -$lt--base-padding / 2;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .article-info {
+    text-align: center;
+  }
+
+  figure {
+    margin-left: -$lt--base-padding;
+    margin-right: -$lt--base-padding;
+    width: 100vw;
+
+    img {
+      height: auto;
+      vertical-align: top;
+      width: inherit;
+    }
+
+    @media screen and (max-width: $lt--one-column) {
+      margin-left: -$lt--base-padding / 2;
+      margin-right: -$lt--base-padding / 2;
+    }
   }
 }
