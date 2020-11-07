@@ -64,7 +64,7 @@
         <ol>
             {{ range $index, $element := $levels  }}
             {{ if ne $index (sub $len 1) }}
-            <li>/<a class="breadcrumb-link" href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize . }}</a></li>
+            <li><span>/</span><a class="breadcrumb-link" href="{{ (delimit (first (add $index 1) $levels) "/") | absURL }}">{{ humanize . }}</a></li>
             {{ end }}
             {{ end }}
         </ol>

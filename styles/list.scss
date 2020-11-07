@@ -10,16 +10,36 @@ $lv--card-margin: 60px;
   margin: 50px auto 0;
   max-width: $lt--max-width;
   padding: 0;
+
+  > li {
+    padding: $lv--card-margin / 2 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
 }
 
 .list-view-card {
-  color: inherit;
   display: inline-block;
-  margin-bottom: $lv--card-margin;
   opacity: 1;
+  transition: color 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+    text-shadow 0.2s cubic-bezier(0.65, 0, 0.35, 1);
 
   a {
     color: $cl--accent;
+    transition: color 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+      text-shadow 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  &:hover {
+    transition: color 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+      text-shadow 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+
+    a {
+      transition: color 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+        text-shadow 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+    }
   }
 
   .article-title {
@@ -49,27 +69,14 @@ $lv--card-margin: 60px;
       position: fixed;
       right: $lv--thumbnail-margin;
       top: $lv--thumbnail-margin;
-      transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      z-index: -10;
+      transition: opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      z-index: -1;
     }
 
     &:hover {
-      color: $cl--background;
-      text-shadow: $cl--body 0 0 5px;
-
-      a {
-        color: $cl--background;
-      }
-
-      .list-view-card-text {
-        position: relative;
-        z-index: 100;
-      }
-
       .list-view-card-thumbnail {
         opacity: 1;
-        transition: opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-        z-index: 10;
+        transition: opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1);
       }
     }
   }

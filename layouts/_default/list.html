@@ -7,19 +7,15 @@
     {{ range .Pages }}
     <li>
         <div class="list-view-card
-                 {{ if .Params.accent }}
-                    has-accent
-                 {{ end }}
                  {{ if .Params.thumbnail }}
                     has-thumbnail
-                 {{ end }}">
+                 {{ end }}"
+             {{ if .Params.accentBg }}data-accent-bg="{{ .Params.accentBg }}"{{ end }}
+             {{ if .Params.accentFg }}data-accent-fg="{{ .Params.accentFg }}"{{ end }}>
             <div class="list-view-card-text">
                 <h2 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 {{ partial "articleinfo.html" . }}
             </div>
-            {{ if .Params.accent }}
-            <div class="list-view-card-accent" aria-hidden="true" style='background-color: {{ .Params.accent }};'></div>
-            {{ end }}
             {{ if .Params.thumbnail }}
             <div class="list-view-card-thumbnail" aria-hidden="true" style='background-image: url({{ ((.Resources.GetMatch .Params.thumbnail).Resize "1200x").Permalink }});'></div>
             {{ end }}
@@ -27,4 +23,8 @@
     </li>
     {{ end }}
 </ol>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "/scripts/accent.js" | absURL }}"></script>
 {{ end }}
