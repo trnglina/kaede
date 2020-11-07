@@ -1,0 +1,25 @@
+$cl--background: #f7f7f7;
+$cl--body: #201c1c;
+$cl--accent: #ff5e00;
+$cl--accent-alt: #008cff;
+$cl--visited: #ae51bd;
+
+$lt--col-left: 750px;
+$lt--col-right: 350px;
+$lt--col-gutter: 80px;
+$lt--base-padding: 40px;
+$lt--max-width: $lt--col-left + $lt--col-gutter + $lt--col-right;
+$lt--two-columns: $lt--max-width + (2 * $lt--base-padding);
+$lt--one-column: $lt--col-left + $lt--base-padding;
+
+$ty--sans: 'Suisse Intl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ty--serif: 'Literata', 'Georgia Pro', 'Georgia', 'Times', serif;
+$ty--size: 24px;
+$ty--line-height: 1.5;
+$ty--block-margin: 36px;
+
+:root {
+  --lt--two-columns: #{$lt--two-columns};
+  --lt--col-right: #{$lt--col-right};
+  --ty--block-margin: #{$ty--block-margin};
+}
