@@ -19,7 +19,7 @@ $lv--card-margin: 60px;
     }
 
     @media screen and (max-width: $lt--one-column) {
-      padding: 5px 0;
+      padding: $lv--card-margin / 4 0;
     }
   }
 }
@@ -52,10 +52,6 @@ $lv--card-margin: 60px;
 
   .article-info {
     margin-bottom: 0;
-  }
-
-  @media screen and (max-width: $lt--two-columns) {
-    margin-bottom: $lv--card-margin / 2;
   }
 }
 
