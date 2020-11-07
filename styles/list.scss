@@ -17,6 +17,10 @@ $lv--card-margin: 60px;
     &:first-child {
       padding-top: 0;
     }
+
+    @media screen and (max-width: $lt--one-column) {
+      padding: 5px 0;
+    }
   }
 }
 
