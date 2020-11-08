@@ -63,7 +63,7 @@
 
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].dataset.accentBg) {
-      cards[i].addEventListener('mouseover', setAccent)
+      cards[i].addEventListener('mouseenter', setAccent)
       cards[i].addEventListener('mouseleave', clearAccent)
     }
   }
