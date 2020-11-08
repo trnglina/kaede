@@ -18,22 +18,29 @@
     }
   }
 
+  const getVar = (key) => {
+    return getComputedStyle(document.documentElement).getPropertyValue(key).trim()
+  }
+
   const cards = document.getElementsByClassName('list-view-card')
+  const disableSize = parseInt(getVar('--lt--one-column'))
 
   const setAccent = (e) => {
-    const active = e.target.closest('.list-view-card')
-    active.style.color = '#fff'
-    active.style.textShadow = 'rgba(0, 0, 0, 0.6) 0 0 6px'
+    if (window.innerWidth > disableSize) {
+      const active = e.target.closest('.list-view-card')
+      active.style.color = '#fff'
+      active.style.textShadow = 'rgba(0, 0, 0, 0.8) 0 0 6px'
 
-    document.body.style.backgroundColor = active.dataset.accentBg
-    document.body.style.color = active.dataset.accentFg
+      document.body.style.backgroundColor = active.dataset.accentBg
+      document.body.style.color = active.dataset.accentFg
 
-    const links = document.getElementsByTagName('a')
-    for (let i = 0; i < links.length; i++) {
-      if (links[i].closest('.list-view-card') == active) {
-        links[i].style.color = '#fff'
-      } else {
-        links[i].style.color = active.dataset.accentFg
+      const links = document.getElementsByTagName('a')
+      for (let i = 0; i < links.length; i++) {
+        if (links[i].closest('.list-view-card') == active) {
+          links[i].style.color = '#fff'
+        } else {
+          links[i].style.color = active.dataset.accentFg
+        }
       }
     }
   }

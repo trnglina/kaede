@@ -5,6 +5,7 @@
 
   const header = document.getElementsByClassName('article-header')[0]
   const main = document.getElementsByClassName('article-main')[0]
+  const padding = parseInt(getVar('--lt--base-padding'))
   const fg = header.dataset.accentFg
   const bg = header.dataset.accentBg
 
@@ -29,12 +30,17 @@
     accentHeader.style.top = '0'
     accentHeader.style.left = '0'
     accentHeader.style.right = '0'
-    accentHeader.style.height = `${main.offsetTop - parseInt(getVar('--lt--base-padding'))}px`
+    accentHeader.style.height = `${main.offsetTop - padding}px`
     accentHeader.style.background = bg
     accentHeader.style.zIndex = -100
+    accentHeader.style.boxShadow = 'rgba(0, 0, 0, 0.5) 0 0 8px'
 
     const stylesheet = document.createElement('style')
     stylesheet.innerHTML = `body ::selection { background-color: ${bg}; color: ${fg}; }`
+
+    window.addEventListener('resize', (e) => {
+      accentHeader.style.height = `${main.offsetTop - padding}px`
+    })
 
     document.body.appendChild(accentHeader)
     document.body.appendChild(stylesheet)
